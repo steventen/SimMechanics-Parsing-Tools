@@ -1,0 +1,4854 @@
+Model {
+  Name			  "AIRCRAFT_ENGINE"
+  Version		  7.3
+  MdlSubVersion		  0
+  GraphicalInterface {
+    NumRootInports	    0
+    NumRootOutports	    0
+    ParameterArgumentNames  ""
+    ComputedModelVersion    "1.7"
+    NumModelReferences	    0
+    NumTestPointedSignals   0
+  }
+  SavedCharacterEncoding  "windows-1252"
+  SaveDefaultBlockParams  on
+  ScopeRefreshTime	  0.035000
+  OverrideScopeRefreshTime on
+  DisableAllScopes	  off
+  DataTypeOverride	  "UseLocalSettings"
+  MinMaxOverflowLogging	  "UseLocalSettings"
+  MinMaxOverflowArchiveMode "Overwrite"
+  UserBdParams		  "PhysicalModelingChecksum;PhysicalModelingParameterChecksum;PhysicalModelingProducts"
+  PhysicalModelingChecksum "2655844272"
+  PhysicalModelingParameterChecksum "4210001010"
+  PhysicalModelingProducts "SimMechanics"
+  Created		  "Thu Jan 07 10:14:32 2010"
+  Creator		  "alvarez3"
+  UpdateHistory		  "UpdateHistoryNever"
+  ModifiedByFormat	  "%<Auto>"
+  LastModifiedBy	  "congyue1"
+  ModifiedDateFormat	  "%<Auto>"
+  LastModifiedDate	  "Mon Jan 11 16:06:34 2010"
+  RTWModifiedTimeStamp	  185126789
+  ModelVersionFormat	  "1.%<AutoIncrement:7>"
+  ConfigurationManager	  "None"
+  SampleTimeColors	  off
+  SampleTimeAnnotations	  off
+  LibraryLinkDisplay	  "none"
+  WideLines		  off
+  ShowLineDimensions	  off
+  ShowPortDataTypes	  off
+  ShowLoopsOnError	  on
+  IgnoreBidirectionalLines off
+  ShowStorageClass	  off
+  ShowTestPointIcons	  on
+  ShowSignalResolutionIcons on
+  ShowViewerIcons	  on
+  SortedOrder		  off
+  ExecutionContextIcon	  off
+  ShowLinearizationAnnotations on
+  BlockNameDataTip	  off
+  BlockParametersDataTip  off
+  BlockDescriptionStringDataTip	off
+  ToolBar		  on
+  StatusBar		  on
+  BrowserShowLibraryLinks off
+  BrowserLookUnderMasks	  off
+  SimulationMode	  "normal"
+  LinearizationMsg	  "none"
+  Profile		  off
+  ParamWorkspaceSource	  "MATLABWorkspace"
+  AccelSystemTargetFile	  "accel.tlc"
+  AccelTemplateMakefile	  "accel_default_tmf"
+  AccelMakeCommand	  "make_rtw"
+  TryForcingSFcnDF	  off
+  RecordCoverage	  off
+  CovPath		  "/"
+  CovSaveName		  "covdata"
+  CovMetricSettings	  "dw"
+  CovNameIncrementing	  off
+  CovHtmlReporting	  on
+  covSaveCumulativeToWorkspaceVar on
+  CovSaveSingleToWorkspaceVar on
+  CovCumulativeVarName	  "covCumulativeData"
+  CovCumulativeReport	  off
+  CovReportOnPause	  on
+  CovModelRefEnable	  "Off"
+  CovExternalEMLEnable	  off
+  ExtModeBatchMode	  off
+  ExtModeEnableFloating	  on
+  ExtModeTrigType	  "manual"
+  ExtModeTrigMode	  "normal"
+  ExtModeTrigPort	  "1"
+  ExtModeTrigElement	  "any"
+  ExtModeTrigDuration	  1000
+  ExtModeTrigDurationFloating "auto"
+  ExtModeTrigHoldOff	  0
+  ExtModeTrigDelay	  0
+  ExtModeTrigDirection	  "rising"
+  ExtModeTrigLevel	  0
+  ExtModeArchiveMode	  "off"
+  ExtModeAutoIncOneShot	  off
+  ExtModeIncDirWhenArm	  off
+  ExtModeAddSuffixToVar	  off
+  ExtModeWriteAllDataToWs off
+  ExtModeArmWhenConnect	  on
+  ExtModeSkipDownloadWhenConnect off
+  ExtModeLogAll		  on
+  ExtModeAutoUpdateStatusClock on
+  BufferReuse		  on
+  ShowModelReferenceBlockVersion off
+  ShowModelReferenceBlockIO off
+  Array {
+    Type		    "Handle"
+    Dimension		    1
+    Simulink.ConfigSet {
+      $ObjectID		      1
+      Version		      "1.6.0"
+      Array {
+	Type			"Handle"
+	Dimension		9
+	Simulink.SolverCC {
+	  $ObjectID		  2
+	  Version		  "1.6.0"
+	  StartTime		  "0.0"
+	  StopTime		  "10.0"
+	  AbsTol		  "auto"
+	  FixedStep		  "auto"
+	  InitialStep		  "auto"
+	  MaxNumMinSteps	  "-1"
+	  MaxOrder		  5
+	  ZcThreshold		  "auto"
+	  ConsecutiveZCsStepRelTol "10*128*eps"
+	  MaxConsecutiveZCs	  "1000"
+	  ExtrapolationOrder	  4
+	  NumberNewtonIterations  1
+	  MaxStep		  "auto"
+	  MinStep		  "auto"
+	  MaxConsecutiveMinStep	  "1"
+	  RelTol		  "1e-3"
+	  SolverMode		  "Auto"
+	  Solver		  "ode45"
+	  SolverName		  "ode45"
+	  ShapePreserveControl	  "DisableAll"
+	  ZeroCrossControl	  "UseLocalSettings"
+	  ZeroCrossAlgorithm	  "Nonadaptive"
+	  AlgebraicLoopSolver	  "TrustRegion"
+	  SolverResetMethod	  "Fast"
+	  PositivePriorityOrder	  off
+	  AutoInsertRateTranBlk	  off
+	  SampleTimeConstraint	  "Unconstrained"
+	  InsertRTBMode		  "Whenever possible"
+	  SignalSizeVariationType "Allow only fixed size"
+	}
+	Simulink.DataIOCC {
+	  $ObjectID		  3
+	  Version		  "1.6.0"
+	  Decimation		  "1"
+	  ExternalInput		  "[t, u]"
+	  FinalStateName	  "xFinal"
+	  InitialState		  "xInitial"
+	  LimitDataPoints	  on
+	  MaxDataPoints		  "1000"
+	  LoadExternalInput	  off
+	  LoadInitialState	  off
+	  SaveFinalState	  off
+	  SaveCompleteFinalSimState off
+	  SaveFormat		  "Array"
+	  SaveOutput		  on
+	  SaveState		  off
+	  SignalLogging		  on
+	  InspectSignalLogs	  off
+	  SaveTime		  on
+	  StateSaveName		  "xout"
+	  TimeSaveName		  "tout"
+	  OutputSaveName	  "yout"
+	  SignalLoggingName	  "logsout"
+	  OutputOption		  "RefineOutputTimes"
+	  OutputTimes		  "[]"
+	  Refine		  "1"
+	}
+	Simulink.OptimizationCC {
+	  $ObjectID		  4
+	  Version		  "1.6.0"
+	  Array {
+	    Type		    "Cell"
+	    Dimension		    7
+	    Cell		    "BooleansAsBitfields"
+	    Cell		    "PassReuseOutputArgsAs"
+	    Cell		    "PassReuseOutputArgsThreshold"
+	    Cell		    "ZeroExternalMemoryAtStartup"
+	    Cell		    "ZeroInternalMemoryAtStartup"
+	    Cell		    "OptimizeModelRefInitCode"
+	    Cell		    "NoFixptDivByZeroProtection"
+	    PropName		    "DisabledProps"
+	  }
+	  BlockReduction	  on
+	  BooleanDataType	  on
+	  ConditionallyExecuteInputs on
+	  InlineParams		  off
+	  InlineInvariantSignals  off
+	  OptimizeBlockIOStorage  on
+	  BufferReuse		  on
+	  EnhancedBackFolding	  off
+	  StrengthReduction	  off
+	  EnforceIntegerDowncast  on
+	  ExpressionFolding	  on
+	  EnableMemcpy		  on
+	  MemcpyThreshold	  64
+	  PassReuseOutputArgsAs	  "Structure reference"
+	  ExpressionDepthLimit	  2147483647
+	  FoldNonRolledExpr	  on
+	  LocalBlockOutputs	  on
+	  RollThreshold		  5
+	  SystemCodeInlineAuto	  off
+	  StateBitsets		  off
+	  DataBitsets		  off
+	  UseTempVars		  off
+	  ZeroExternalMemoryAtStartup on
+	  ZeroInternalMemoryAtStartup on
+	  InitFltsAndDblsToZero	  off
+	  NoFixptDivByZeroProtection off
+	  EfficientFloat2IntCast  off
+	  EfficientMapNaN2IntZero on
+	  OptimizeModelRefInitCode off
+	  LifeSpan		  "inf"
+	  BufferReusableBoundary  on
+	  SimCompilerOptimization "Off"
+	  AccelVerboseBuild	  off
+	}
+	Simulink.DebuggingCC {
+	  $ObjectID		  5
+	  Version		  "1.6.0"
+	  RTPrefix		  "error"
+	  ConsistencyChecking	  "none"
+	  ArrayBoundsChecking	  "none"
+	  SignalInfNanChecking	  "none"
+	  SignalRangeChecking	  "none"
+	  ReadBeforeWriteMsg	  "UseLocalSettings"
+	  WriteAfterWriteMsg	  "UseLocalSettings"
+	  WriteAfterReadMsg	  "UseLocalSettings"
+	  AlgebraicLoopMsg	  "warning"
+	  ArtificialAlgebraicLoopMsg "warning"
+	  SaveWithDisabledLinksMsg "warning"
+	  SaveWithParameterizedLinksMsg	"warning"
+	  CheckSSInitialOutputMsg on
+	  UnderspecifiedInitializationDetection	"Classic"
+	  MergeDetectMultiDrivingBlocksExec "none"
+	  CheckExecutionContextPreStartOutputMsg off
+	  CheckExecutionContextRuntimeOutputMsg	off
+	  SignalResolutionControl "UseLocalSettings"
+	  BlockPriorityViolationMsg "warning"
+	  MinStepSizeMsg	  "warning"
+	  TimeAdjustmentMsg	  "none"
+	  MaxConsecutiveZCsMsg	  "error"
+	  SolverPrmCheckMsg	  "warning"
+	  InheritedTsInSrcMsg	  "warning"
+	  DiscreteInheritContinuousMsg "warning"
+	  MultiTaskDSMMsg	  "error"
+	  MultiTaskCondExecSysMsg "error"
+	  MultiTaskRateTransMsg	  "error"
+	  SingleTaskRateTransMsg  "none"
+	  TasksWithSamePriorityMsg "warning"
+	  SigSpecEnsureSampleTimeMsg "warning"
+	  CheckMatrixSingularityMsg "none"
+	  IntegerOverflowMsg	  "warning"
+	  Int32ToFloatConvMsg	  "warning"
+	  ParameterDowncastMsg	  "error"
+	  ParameterOverflowMsg	  "error"
+	  ParameterUnderflowMsg	  "none"
+	  ParameterPrecisionLossMsg "warning"
+	  ParameterTunabilityLossMsg "warning"
+	  UnderSpecifiedDataTypeMsg "none"
+	  UnnecessaryDatatypeConvMsg "none"
+	  VectorMatrixConversionMsg "none"
+	  InvalidFcnCallConnMsg	  "error"
+	  FcnCallInpInsideContextMsg "Use local settings"
+	  SignalLabelMismatchMsg  "none"
+	  UnconnectedInputMsg	  "warning"
+	  UnconnectedOutputMsg	  "warning"
+	  UnconnectedLineMsg	  "warning"
+	  SFcnCompatibilityMsg	  "none"
+	  UniqueDataStoreMsg	  "none"
+	  BusObjectLabelMismatch  "warning"
+	  RootOutportRequireBusObject "warning"
+	  AssertControl		  "UseLocalSettings"
+	  EnableOverflowDetection off
+	  ModelReferenceIOMsg	  "none"
+	  ModelReferenceVersionMismatchMessage "none"
+	  ModelReferenceIOMismatchMessage "none"
+	  ModelReferenceCSMismatchMessage "none"
+	  UnknownTsInhSupMsg	  "warning"
+	  ModelReferenceDataLoggingMessage "warning"
+	  ModelReferenceSymbolNameMessage "warning"
+	  ModelReferenceExtraNoncontSigs "error"
+	  StateNameClashWarn	  "warning"
+	  StrictBusMsg		  "Warning"
+	  LoggingUnavailableSignals "error"
+	  BlockIODiagnostic	  "none"
+	}
+	Simulink.HardwareCC {
+	  $ObjectID		  6
+	  Version		  "1.6.0"
+	  ProdBitPerChar	  8
+	  ProdBitPerShort	  16
+	  ProdBitPerInt		  32
+	  ProdBitPerLong	  32
+	  ProdIntDivRoundTo	  "Undefined"
+	  ProdEndianess		  "Unspecified"
+	  ProdWordSize		  32
+	  ProdShiftRightIntArith  on
+	  ProdHWDeviceType	  "32-bit Generic"
+	  TargetBitPerChar	  8
+	  TargetBitPerShort	  16
+	  TargetBitPerInt	  32
+	  TargetBitPerLong	  32
+	  TargetShiftRightIntArith on
+	  TargetIntDivRoundTo	  "Undefined"
+	  TargetEndianess	  "Unspecified"
+	  TargetWordSize	  32
+	  TargetTypeEmulationWarnSuppressLevel 0
+	  TargetPreprocMaxBitsSint 32
+	  TargetPreprocMaxBitsUint 32
+	  TargetHWDeviceType	  "Specified"
+	  TargetUnknown		  off
+	  ProdEqTarget		  on
+	}
+	Simulink.ModelReferenceCC {
+	  $ObjectID		  7
+	  Version		  "1.6.0"
+	  UpdateModelReferenceTargets "IfOutOfDateOrStructuralChange"
+	  CheckModelReferenceTargetMessage "error"
+	  ModelReferenceNumInstancesAllowed "Multi"
+	  ModelReferencePassRootInputsByReference on
+	  ModelReferenceMinAlgLoopOccurrences off
+	}
+	Simulink.SFSimCC {
+	  $ObjectID		  8
+	  Version		  "1.6.0"
+	  SFSimEnableDebug	  on
+	  SFSimOverflowDetection  on
+	  SFSimEcho		  on
+	  SimBlas		  on
+	  SimUseLocalCustomCode	  off
+	  SimBuildMode		  "sf_incremental_build"
+	}
+	Simulink.RTWCC {
+	  $BackupClass		  "Simulink.RTWCC"
+	  $ObjectID		  9
+	  Version		  "1.6.0"
+	  Array {
+	    Type		    "Cell"
+	    Dimension		    6
+	    Cell		    "IncludeHyperlinkInReport"
+	    Cell		    "GenerateTraceInfo"
+	    Cell		    "GenerateTraceReport"
+	    Cell		    "GenerateTraceReportSl"
+	    Cell		    "GenerateTraceReportSf"
+	    Cell		    "GenerateTraceReportEml"
+	    PropName		    "DisabledProps"
+	  }
+	  SystemTargetFile	  "grt.tlc"
+	  GenCodeOnly		  off
+	  MakeCommand		  "make_rtw"
+	  GenerateMakefile	  on
+	  TemplateMakefile	  "grt_default_tmf"
+	  GenerateReport	  off
+	  SaveLog		  off
+	  RTWVerbose		  on
+	  RetainRTWFile		  off
+	  ProfileTLC		  off
+	  TLCDebug		  off
+	  TLCCoverage		  off
+	  TLCAssert		  off
+	  ProcessScriptMode	  "Default"
+	  ConfigurationMode	  "Optimized"
+	  ConfigAtBuild		  off
+	  RTWUseLocalCustomCode	  off
+	  RTWUseSimCustomCode	  off
+	  IncludeHyperlinkInReport off
+	  LaunchReport		  off
+	  TargetLang		  "C"
+	  IncludeBusHierarchyInRTWFileBlockHierarchyMap	off
+	  IncludeERTFirstTime	  off
+	  GenerateTraceInfo	  off
+	  GenerateTraceReport	  off
+	  GenerateTraceReportSl	  off
+	  GenerateTraceReportSf	  off
+	  GenerateTraceReportEml  off
+	  GenerateCodeInfo	  off
+	  RTWCompilerOptimization "Off"
+	  CheckMdlBeforeBuild	  "Off"
+	  Array {
+	    Type		    "Handle"
+	    Dimension		    2
+	    Simulink.CodeAppCC {
+	      $ObjectID		      10
+	      Version		      "1.6.0"
+	      Array {
+		Type			"Cell"
+		Dimension		19
+		Cell			"IgnoreCustomStorageClasses"
+		Cell			"IgnoreTestpoints"
+		Cell			"InsertBlockDesc"
+		Cell			"SFDataObjDesc"
+		Cell			"SimulinkDataObjDesc"
+		Cell			"DefineNamingRule"
+		Cell			"SignalNamingRule"
+		Cell			"ParamNamingRule"
+		Cell			"InlinedPrmAccess"
+		Cell			"CustomSymbolStr"
+		Cell			"CustomSymbolStrGlobalVar"
+		Cell			"CustomSymbolStrType"
+		Cell			"CustomSymbolStrField"
+		Cell			"CustomSymbolStrFcn"
+		Cell			"CustomSymbolStrFcnArg"
+		Cell			"CustomSymbolStrBlkIO"
+		Cell			"CustomSymbolStrTmpVar"
+		Cell			"CustomSymbolStrMacro"
+		Cell			"ReqsInCode"
+		PropName		"DisabledProps"
+	      }
+	      ForceParamTrailComments off
+	      GenerateComments	      on
+	      IgnoreCustomStorageClasses on
+	      IgnoreTestpoints	      off
+	      IncHierarchyInIds	      off
+	      MaxIdLength	      31
+	      PreserveName	      off
+	      PreserveNameWithParent  off
+	      ShowEliminatedStatement off
+	      IncAutoGenComments      off
+	      SimulinkDataObjDesc     off
+	      SFDataObjDesc	      off
+	      IncDataTypeInIds	      off
+	      MangleLength	      1
+	      CustomSymbolStrGlobalVar "$R$N$M"
+	      CustomSymbolStrType     "$N$R$M"
+	      CustomSymbolStrField    "$N$M"
+	      CustomSymbolStrFcn      "$R$N$M$F"
+	      CustomSymbolStrBlkIO    "rtb_$N$M"
+	      CustomSymbolStrTmpVar   "$N$M"
+	      CustomSymbolStrMacro    "$R$N$M"
+	      DefineNamingRule	      "None"
+	      ParamNamingRule	      "None"
+	      SignalNamingRule	      "None"
+	      InsertBlockDesc	      off
+	      SimulinkBlockComments   on
+	      EnableCustomComments    off
+	      InlinedPrmAccess	      "Literals"
+	      ReqsInCode	      off
+	      UseSimReservedNames     off
+	    }
+	    Simulink.GRTTargetCC {
+	      $BackupClass	      "Simulink.TargetCC"
+	      $ObjectID		      11
+	      Version		      "1.6.0"
+	      Array {
+		Type			"Cell"
+		Dimension		17
+		Cell			"GeneratePreprocessorConditionals"
+		Cell			"IncludeMdlTerminateFcn"
+		Cell			"CombineOutputUpdateFcns"
+		Cell			"SuppressErrorStatus"
+		Cell			"ERTCustomFileBanners"
+		Cell			"GenerateSampleERTMain"
+		Cell			"GenerateTestInterfaces"
+		Cell			"ModelStepFunctionPrototypeControlCompliant"
+		Cell			"CPPClassGenCompliant"
+		Cell			"MultiInstanceERTCode"
+		Cell			"PurelyIntegerCode"
+		Cell			"SupportNonFinite"
+		Cell			"SupportComplex"
+		Cell			"SupportAbsoluteTime"
+		Cell			"SupportContinuousTime"
+		Cell			"SupportNonInlinedSFcns"
+		Cell			"PortableWordSizes"
+		PropName		"DisabledProps"
+	      }
+	      TargetFcnLib	      "ansi_tfl_table_tmw.mat"
+	      TargetLibSuffix	      ""
+	      TargetPreCompLibLocation ""
+	      TargetFunctionLibrary   "ANSI_C"
+	      UtilityFuncGeneration   "Auto"
+	      ERTMultiwordTypeDef     "System defined"
+	      ERTMultiwordLength      256
+	      MultiwordLength	      2048
+	      GenerateFullHeader      on
+	      GenerateSampleERTMain   off
+	      GenerateTestInterfaces  off
+	      IsPILTarget	      off
+	      ModelReferenceCompliant on
+	      ParMdlRefBuildCompliant on
+	      CompOptLevelCompliant   on
+	      IncludeMdlTerminateFcn  on
+	      CombineOutputUpdateFcns off
+	      SuppressErrorStatus     off
+	      ERTFirstTimeCompliant   off
+	      IncludeFileDelimiter    "Auto"
+	      ERTCustomFileBanners    off
+	      SupportAbsoluteTime     on
+	      LogVarNameModifier      "rt_"
+	      MatFileLogging	      on
+	      MultiInstanceERTCode    off
+	      SupportNonFinite	      on
+	      SupportComplex	      on
+	      PurelyIntegerCode	      off
+	      SupportContinuousTime   on
+	      SupportNonInlinedSFcns  on
+	      EnableShiftOperators    on
+	      ParenthesesLevel	      "Nominal"
+	      PortableWordSizes	      off
+	      ModelStepFunctionPrototypeControlCompliant off
+	      CPPClassGenCompliant    off
+	      AutosarCompliant	      off
+	      UseMalloc		      off
+	      ExtMode		      off
+	      ExtModeStaticAlloc      off
+	      ExtModeTesting	      off
+	      ExtModeStaticAllocSize  1000000
+	      ExtModeTransport	      0
+	      ExtModeMexFile	      "ext_comm"
+	      ExtModeIntrfLevel	      "Level1"
+	      RTWCAPISignals	      off
+	      RTWCAPIParams	      off
+	      RTWCAPIStates	      off
+	      GenerateASAP2	      off
+	    }
+	    PropName		    "Components"
+	  }
+	}
+	SSC.SimscapeCC {
+	  $ObjectID		  12
+	  Version		  "1.0"
+	  Array {
+	    Type		    "Cell"
+	    Dimension		    1
+	    Cell		    "Name"
+	    PropName		    "DisabledProps"
+	  }
+	  Array {
+	    Type		    "Handle"
+	    Dimension		    1
+	    MECH.SimMechanicsCC {
+	      $ObjectID		      13
+	      Version		      "1.6.0"
+	      Name		      "SimMechanics"
+	      WarnOnRedundantConstraints on
+	      WarnOnSingularInitialAssembly off
+	      ShowCutJoints	      off
+	      VisOnUpdateDiagram      on
+	      VisDuringSimulation     on
+	      EnableVisSimulationTime on
+	      VisSampleTime	      "0"
+	      DisableBodyVisControl   off
+	      ShowCG		      on
+	      ShowCS		      on
+	      ShowOnlyPortCS	      off
+	      HighlightModel	      on
+	      FramesToBeSkipped	      "0"
+	      AnimationDelay	      "3"
+	      RecordAVI		      off
+	      CompressAVI	      on
+	      AutoFitVis	      "off"
+	      EnableSelection	      on
+	      LastVizWinPosition      "[-1 -1 -1 -1]"
+	      CamPosition	      "[0 0 0]"
+	      CamTarget		      "[0 0 -1]"
+	      CamUpVector	      "[0 1 0]"
+	      CamHeight		      "-1"
+	      CamViewAngle	      "0"
+	      VisBackgroundColor      "[0.9 0.9 0.95]"
+	      DefaultBodyColor	      "[1 0 0]"
+	      MDLBodyVisualizationType "Convex hull from body CS locations"
+	      OVRRIDBodyVisualizationType "NONE"
+	    }
+	    PropName		    "Components"
+	  }
+	  Name			  "Simscape"
+	  EditingMode		  "Full"
+	  ExplicitSolverDiagnosticOptions "warning"
+	  InputDerivativeDiagnosticOptions "warning"
+	}
+	PropName		"Components"
+      }
+      Name		      "Configuration"
+      CurrentDlgPage	      "Simscape/SimMechanics"
+      ConfigPrmDlgPosition    " [ 400, 210, 1280, 840 ] "
+    }
+    PropName		    "ConfigurationSets"
+  }
+  Simulink.ConfigSet {
+    $PropName		    "ActiveConfigurationSet"
+    $ObjectID		    1
+  }
+  BlockDefaults {
+    ForegroundColor	    "black"
+    BackgroundColor	    "white"
+    DropShadow		    off
+    NamePlacement	    "normal"
+    FontName		    "Helvetica"
+    FontSize		    10
+    FontWeight		    "normal"
+    FontAngle		    "normal"
+    ShowName		    on
+    BlockRotation	    0
+    BlockMirror		    off
+  }
+  AnnotationDefaults {
+    HorizontalAlignment	    "center"
+    VerticalAlignment	    "middle"
+    ForegroundColor	    "black"
+    BackgroundColor	    "white"
+    DropShadow		    off
+    FontName		    "Helvetica"
+    FontSize		    10
+    FontWeight		    "normal"
+    FontAngle		    "normal"
+    UseDisplayTextAsClickCallback off
+  }
+  LineDefaults {
+    FontName		    "Helvetica"
+    FontSize		    9
+    FontWeight		    "normal"
+    FontAngle		    "normal"
+  }
+  BlockParameterDefaults {
+    Block {
+      BlockType		      Constant
+      Value		      "1"
+      VectorParams1D	      on
+      SamplingMode	      "Sample based"
+      OutMin		      "[]"
+      OutMax		      "[]"
+      OutDataTypeMode	      "Inherit from 'Constant value'"
+      OutDataType	      "fixdt(1,16,0)"
+      ConRadixGroup	      "Use specified scaling"
+      OutScaling	      "[]"
+      OutDataTypeStr	      "Inherit: Inherit from 'Constant value'"
+      LockScale		      off
+      SampleTime	      "inf"
+      FramePeriod	      "inf"
+    }
+    Block {
+      BlockType		      Scope
+      ModelBased	      off
+      TickLabels	      "OneTimeTick"
+      ZoomMode		      "on"
+      Grid		      "on"
+      TimeRange		      "auto"
+      YMin		      "-5"
+      YMax		      "5"
+      SaveToWorkspace	      off
+      SaveName		      "ScopeData"
+      LimitDataPoints	      on
+      MaxDataPoints	      "5000"
+      Decimation	      "1"
+      SampleInput	      off
+      SampleTime	      "-1"
+    }
+  }
+  System {
+    Name		    "AIRCRAFT_ENGINE"
+    Location		    [-157, 292, 753, 942]
+    Open		    on
+    ModelBrowserVisibility  off
+    ModelBrowserWidth	    200
+    ScreenColor		    "white"
+    PaperOrientation	    "landscape"
+    PaperPositionMode	    "auto"
+    PaperType		    "usletter"
+    PaperUnits		    "inches"
+    TiledPaperMargins	    [0.500000, 0.500000, 0.500000, 0.500000]
+    TiledPageScale	    1
+    ShowPageBoundaries	    off
+    ZoomFactor		    "100"
+    ReportName		    "simulink-default.rpt"
+    Block {
+      BlockType		      Reference
+      Name		      "Body Sensor"
+      Ports		      [0, 1, 0, 0, 0, 1]
+      Position		      [1035, 1940, 1075, 1980]
+      DialogController	      "MECH.DynMechDlgSource"
+      SourceBlock	      "mblibv1/Sensors & \nActuators/Body Sensor"
+      SourceType	      "Body Sensor"
+      ShowPortLabels	      "FromPortIcon"
+      SystemSampleTime	      "-1"
+      FunctionWithSeparateData off
+      RTWMemSecFuncInitTerm   "Inherit from model"
+      RTWMemSecFuncExecute    "Inherit from model"
+      RTWMemSecDataConstants  "Inherit from model"
+      RTWMemSecDataInternal   "Inherit from model"
+      RTWMemSecDataParameters "Inherit from model"
+      UpdateFromCAD	      "off"
+      PhysicalDomain	      "Mechanical"
+      PortType		      "blob"
+      Muxed		      "on"
+      Pose		      "off"
+      Angle		      "on"
+      AngleUnits	      "deg"
+      ArcVelocity	      "off"
+      ArcVelocityUnits	      "deg/s"
+      ArcAcceleration	      "off"
+      ArcAccelerationUnits    "deg/s^2"
+      CoordPosition	      "on"
+      CoordPositionUnits      "m"
+      Velocity		      "off"
+      VelocityUnits	      "m/s"
+      Acceleration	      "off"
+      AccelerationUnits	      "m/s^2"
+      Quaternion	      "on"
+      QuaternionDT	      "off"
+      QuaternionDDT	      "off"
+      QuaternionUnits	      "off"
+      OutputVector	      "[1]"
+      ActiveIO		      "off"
+      Width		      "3"
+      ClassName		      "BodySensor"
+      DialogClass	      "MechanicalSensorBlock"
+      ReferenceFrame	      "Absolute (World)"
+    }
+    Block {
+      BlockType		      Reference
+      Name		      "Body Sensor1"
+      Ports		      [0, 1, 0, 0, 0, 1]
+      Position		      [695, 2155, 735, 2195]
+      DialogController	      "MECH.DynMechDlgSource"
+      SourceBlock	      "mblibv1/Sensors & \nActuators/Body Sensor"
+      SourceType	      "Body Sensor"
+      ShowPortLabels	      "FromPortIcon"
+      SystemSampleTime	      "-1"
+      FunctionWithSeparateData off
+      RTWMemSecFuncInitTerm   "Inherit from model"
+      RTWMemSecFuncExecute    "Inherit from model"
+      RTWMemSecDataConstants  "Inherit from model"
+      RTWMemSecDataInternal   "Inherit from model"
+      RTWMemSecDataParameters "Inherit from model"
+      UpdateFromCAD	      "off"
+      PhysicalDomain	      "Mechanical"
+      PortType		      "blob"
+      Muxed		      "on"
+      Pose		      "on"
+      Angle		      "on"
+      AngleUnits	      "deg"
+      ArcVelocity	      "off"
+      ArcVelocityUnits	      "deg/s"
+      ArcAcceleration	      "off"
+      ArcAccelerationUnits    "deg/s^2"
+      CoordPosition	      "on"
+      CoordPositionUnits      "m"
+      Velocity		      "off"
+      VelocityUnits	      "m/s"
+      Acceleration	      "off"
+      AccelerationUnits	      "m/s^2"
+      Quaternion	      "on"
+      QuaternionDT	      "off"
+      QuaternionDDT	      "off"
+      QuaternionUnits	      "off"
+      OutputVector	      "[1]"
+      ActiveIO		      "on"
+      Width		      "12"
+      ClassName		      "BodySensor"
+      DialogClass	      "MechanicalSensorBlock"
+      ReferenceFrame	      "Absolute (World)"
+    }
+    Block {
+      BlockType		      Constant
+      Name		      "Constant"
+      Position		      [435, 2035, 465, 2065]
+      Value		      "1000000000"
+      OutDataType	      "fixdt(1, 16)"
+      OutScaling	      "2^0"
+    }
+    Block {
+      BlockType		      Reference
+      Name		      "Cylindrical"
+      Ports		      [0, 0, 0, 0, 0, 1, 1]
+      Position		      [850, 1410, 900, 1460]
+      ForegroundColor	      "[0.000000, 0.501961, 0.752941]"
+      DialogController	      "MECH.DynMechDlgSource"
+      SourceBlock	      "mblibv1/Joints/Cylindrical"
+      SourceType	      "Cylindrical"
+      PhysicalDomain	      "mechanical"
+      SubClassName	      "Unknown"
+      LeftPortType	      "blob"
+      RightPortType	      "blob"
+      LConnTagsString	      "__newl0"
+      RConnTagsString	      "__newr0"
+      PMImportedID	      "110:-:62"
+      UpdateFromCAD	      "on"
+      NumSAPorts	      "0"
+      CutJoint		      "off"
+      MarkAsCut		      "off"
+      Primitives	      "prismatic"
+      PrimitiveProps	      "P1$WORLD$[0,-0.309017,-0.951057]$prismatic#R1$WORLD$[0,0.309017,0.951057]$revolute"
+      ClassName		      "CylindricalJoint"
+      DialogClass	      "JointBlock"
+      P1Axis		      "[0,-0.309017,-0.951057]"
+      R1Axis		      "[0,0.309017,0.951057]"
+    }
+    Block {
+      BlockType		      Reference
+      Name		      "Cylindrical1"
+      Ports		      [0, 0, 0, 0, 0, 1, 1]
+      Position		      [850, 1585, 900, 1635]
+      ForegroundColor	      "[0.000000, 0.501961, 0.752941]"
+      DialogController	      "MECH.DynMechDlgSource"
+      SourceBlock	      "mblibv1/Joints/Cylindrical"
+      SourceType	      "Cylindrical"
+      PhysicalDomain	      "mechanical"
+      SubClassName	      "Unknown"
+      LeftPortType	      "blob"
+      RightPortType	      "blob"
+      LConnTagsString	      "__newl0"
+      RConnTagsString	      "__newr0"
+      PMImportedID	      "81:-:89"
+      UpdateFromCAD	      "on"
+      NumSAPorts	      "0"
+      CutJoint		      "off"
+      MarkAsCut		      "off"
+      Primitives	      "prismatic"
+      PrimitiveProps	      "P1$WORLD$[0,0.809017,-0.587785]$prismatic#R1$WORLD$[0,-0.809017,0.587785]$revolute"
+      ClassName		      "CylindricalJoint"
+      DialogClass	      "JointBlock"
+      P1Axis		      "[0,0.809017,-0.587785]"
+      R1Axis		      "[0,-0.809017,0.587785]"
+    }
+    Block {
+      BlockType		      Reference
+      Name		      "Cylindrical10"
+      Ports		      [0, 0, 0, 0, 0, 1, 1]
+      Position		      [850, 1970, 900, 2020]
+      ForegroundColor	      "[0.000000, 0.501961, 0.752941]"
+      DialogController	      "MECH.DynMechDlgSource"
+      SourceBlock	      "mblibv1/Joints/Cylindrical"
+      SourceType	      "Cylindrical"
+      PhysicalDomain	      "mechanical"
+      SubClassName	      "Unknown"
+      LeftPortType	      "blob"
+      RightPortType	      "blob"
+      LConnTagsString	      "__newl0"
+      RConnTagsString	      "__newr0"
+      PMImportedID	      "29:-:75"
+      UpdateFromCAD	      "on"
+      NumSAPorts	      "0"
+      CutJoint		      "off"
+      MarkAsCut		      "off"
+      Primitives	      "prismatic"
+      PrimitiveProps	      "P1$WORLD$[0,-0.309017,0.951057]$prismatic#R1$WORLD$[0,0.309017,-0.951057]$revolute"
+      ClassName		      "CylindricalJoint"
+      DialogClass	      "JointBlock"
+      P1Axis		      "[0,-0.309017,0.951057]"
+      R1Axis		      "[0,0.309017,-0.951057]"
+    }
+    Block {
+      BlockType		      Reference
+      Name		      "Cylindrical2"
+      Ports		      [0, 0, 0, 0, 0, 2, 1]
+      Position		      [705, 1902, 755, 1953]
+      ForegroundColor	      "[0.000000, 0.501961, 0.752941]"
+      DialogController	      "MECH.DynMechDlgSource"
+      SourceBlock	      "mblibv1/Joints/Cylindrical"
+      SourceType	      "Cylindrical"
+      PhysicalDomain	      "mechanical"
+      SubClassName	      "Unknown"
+      LeftPortType	      "blob"
+      RightPortType	      "blob"
+      LConnTagsString	      "__newl0|SA1"
+      RConnTagsString	      "__newr0"
+      PMImportedID	      "74:-:76"
+      UpdateFromCAD	      "on"
+      NumSAPorts	      "1"
+      CutJoint		      "off"
+      MarkAsCut		      "off"
+      Primitives	      "prismatic"
+      PrimitiveProps	      "P1$World$[-1,0,0]$prismatic#R1$World$[1,0,0]$revolute"
+      ClassName		      "CylindricalJoint"
+      DialogClass	      "JointBlock"
+      P1Axis		      "[-1,0,0]"
+      R1Axis		      "[1,0,0]"
+    }
+    Block {
+      BlockType		      Reference
+      Name		      "Cylindrical3"
+      Ports		      [0, 0, 0, 0, 0, 1, 1]
+      Position		      [985, 2000, 1035, 2050]
+      ForegroundColor	      "[0.000000, 0.501961, 0.752941]"
+      DialogController	      "MECH.DynMechDlgSource"
+      SourceBlock	      "mblibv1/Joints/Cylindrical"
+      SourceType	      "Cylindrical"
+      PhysicalDomain	      "mechanical"
+      SubClassName	      "Unknown"
+      LeftPortType	      "blob"
+      RightPortType	      "blob"
+      LConnTagsString	      "__newl0"
+      RConnTagsString	      "__newr0"
+      PMImportedID	      "74:-:75"
+      UpdateFromCAD	      "on"
+      NumSAPorts	      "0"
+      CutJoint		      "off"
+      MarkAsCut		      "off"
+      Primitives	      "prismatic"
+      PrimitiveProps	      "P1$WORLD$[1,0,0]$prismatic#R1$WORLD$[-1,0,0]$revolute"
+      ClassName		      "CylindricalJoint"
+      DialogClass	      "JointBlock"
+      P1Axis		      "[1,0,0]"
+      R1Axis		      "[-1,0,0]"
+    }
+    Block {
+      BlockType		      Reference
+      Name		      "Cylindrical4"
+      Ports		      [0, 0, 0, 0, 0, 1, 1]
+      Position		      [1255, 1345, 1305, 1395]
+      ForegroundColor	      "[0.000000, 0.501961, 0.752941]"
+      DialogController	      "MECH.DynMechDlgSource"
+      SourceBlock	      "mblibv1/Joints/Cylindrical"
+      SourceType	      "Cylindrical"
+      PhysicalDomain	      "mechanical"
+      SubClassName	      "Unknown"
+      LeftPortType	      "blob"
+      RightPortType	      "blob"
+      LConnTagsString	      "__newl0"
+      RConnTagsString	      "__newr0"
+      PMImportedID	      "106:-:79"
+      UpdateFromCAD	      "on"
+      NumSAPorts	      "0"
+      CutJoint		      "off"
+      MarkAsCut		      "off"
+      Primitives	      "prismatic"
+      PrimitiveProps	      "P1$WORLD$[1,0,0]$prismatic#R1$WORLD$[1,0,0]$revolute"
+      ClassName		      "CylindricalJoint"
+      DialogClass	      "JointBlock"
+      P1Axis		      "[1,0,0]"
+      R1Axis		      "[1,0,0]"
+    }
+    Block {
+      BlockType		      Reference
+      Name		      "Cylindrical5"
+      Ports		      [0, 0, 0, 0, 0, 1, 1]
+      Position		      [1255, 1480, 1305, 1530]
+      ForegroundColor	      "[0.000000, 0.501961, 0.752941]"
+      DialogController	      "MECH.DynMechDlgSource"
+      SourceBlock	      "mblibv1/Joints/Cylindrical"
+      SourceType	      "Cylindrical"
+      PhysicalDomain	      "mechanical"
+      SubClassName	      "Unknown"
+      LeftPortType	      "blob"
+      RightPortType	      "blob"
+      LConnTagsString	      "__newl0"
+      RConnTagsString	      "__newr0"
+      PMImportedID	      "108:-:81"
+      UpdateFromCAD	      "on"
+      NumSAPorts	      "0"
+      CutJoint		      "off"
+      MarkAsCut		      "off"
+      Primitives	      "prismatic"
+      PrimitiveProps	      "P1$WORLD$[1,0,0]$prismatic#R1$WORLD$[-1,0,0]$revolute"
+      ClassName		      "CylindricalJoint"
+      DialogClass	      "JointBlock"
+      P1Axis		      "[1,0,0]"
+      R1Axis		      "[-1,0,0]"
+    }
+    Block {
+      BlockType		      Reference
+      Name		      "Cylindrical6"
+      Ports		      [0, 0, 0, 0, 0, 1, 1]
+      Position		      [1255, 1670, 1305, 1720]
+      ForegroundColor	      "[0.000000, 0.501961, 0.752941]"
+      DialogController	      "MECH.DynMechDlgSource"
+      SourceBlock	      "mblibv1/Joints/Cylindrical"
+      SourceType	      "Cylindrical"
+      PhysicalDomain	      "mechanical"
+      SubClassName	      "Unknown"
+      LeftPortType	      "blob"
+      RightPortType	      "blob"
+      LConnTagsString	      "__newl0"
+      RConnTagsString	      "__newr0"
+      PMImportedID	      "110:-:113"
+      UpdateFromCAD	      "on"
+      NumSAPorts	      "0"
+      CutJoint		      "off"
+      MarkAsCut		      "off"
+      Primitives	      "prismatic"
+      PrimitiveProps	      "P1$WORLD$[1,0,0]$prismatic#R1$WORLD$[1,0,0]$revolute"
+      ClassName		      "CylindricalJoint"
+      DialogClass	      "JointBlock"
+      P1Axis		      "[1,0,0]"
+      R1Axis		      "[1,0,0]"
+    }
+    Block {
+      BlockType		      Reference
+      Name		      "Cylindrical7"
+      Ports		      [0, 0, 0, 0, 0, 1, 1]
+      Position		      [1255, 1900, 1305, 1950]
+      ForegroundColor	      "[0.000000, 0.501961, 0.752941]"
+      DialogController	      "MECH.DynMechDlgSource"
+      SourceBlock	      "mblibv1/Joints/Cylindrical"
+      SourceType	      "Cylindrical"
+      PhysicalDomain	      "mechanical"
+      SubClassName	      "Unknown"
+      LeftPortType	      "blob"
+      RightPortType	      "blob"
+      LConnTagsString	      "__newl0"
+      RConnTagsString	      "__newr0"
+      PMImportedID	      "104:-:73"
+      UpdateFromCAD	      "on"
+      NumSAPorts	      "0"
+      CutJoint		      "off"
+      MarkAsCut		      "off"
+      Primitives	      "prismatic"
+      PrimitiveProps	      "P1$WORLD$[1,0,0]$prismatic#R1$WORLD$[1,0,0]$revolute"
+      ClassName		      "CylindricalJoint"
+      DialogClass	      "JointBlock"
+      P1Axis		      "[1,0,0]"
+      R1Axis		      "[1,0,0]"
+    }
+    Block {
+      BlockType		      Reference
+      Name		      "Cylindrical8"
+      Ports		      [0, 0, 0, 0, 0, 1, 1]
+      Position		      [850, 1280, 900, 1330]
+      ForegroundColor	      "[0.000000, 0.501961, 0.752941]"
+      DialogController	      "MECH.DynMechDlgSource"
+      SourceBlock	      "mblibv1/Joints/Cylindrical"
+      SourceType	      "Cylindrical"
+      PhysicalDomain	      "mechanical"
+      SubClassName	      "Unknown"
+      LeftPortType	      "blob"
+      RightPortType	      "blob"
+      LConnTagsString	      "__newl0"
+      RConnTagsString	      "__newr0"
+      PMImportedID	      "106:-:42"
+      UpdateFromCAD	      "on"
+      NumSAPorts	      "0"
+      CutJoint		      "off"
+      MarkAsCut		      "off"
+      Primitives	      "prismatic"
+      PrimitiveProps	      "P1$WORLD$[0,0.809017,0.587785]$prismatic#R1$WORLD$[0,-0.809017,-0.587785]$revolute"
+      ClassName		      "CylindricalJoint"
+      DialogClass	      "JointBlock"
+      P1Axis		      "[0,0.809017,0.587785]"
+      R1Axis		      "[0,-0.809017,-0.587785]"
+    }
+    Block {
+      BlockType		      Reference
+      Name		      "Cylindrical9"
+      Ports		      [0, 0, 0, 0, 0, 1, 1]
+      Position		      [1255, 2050, 1305, 2100]
+      ForegroundColor	      "[0.000000, 0.501961, 0.752941]"
+      DialogController	      "MECH.DynMechDlgSource"
+      SourceBlock	      "mblibv1/Joints/Cylindrical"
+      SourceType	      "Cylindrical"
+      PhysicalDomain	      "mechanical"
+      SubClassName	      "Unknown"
+      LeftPortType	      "blob"
+      RightPortType	      "blob"
+      LConnTagsString	      "__newl0"
+      RConnTagsString	      "__newr0"
+      PMImportedID	      "18:-:73"
+      UpdateFromCAD	      "on"
+      NumSAPorts	      "0"
+      CutJoint		      "off"
+      MarkAsCut		      "off"
+      Primitives	      "prismatic"
+      PrimitiveProps	      "P1$WORLD$[0,-1,0]$prismatic#R1$WORLD$[0,1,0]$revolute"
+      ClassName		      "CylindricalJoint"
+      DialogClass	      "JointBlock"
+      P1Axis		      "[0,-1,0]"
+      R1Axis		      "[0,1,0]"
+    }
+    Block {
+      BlockType		      Reference
+      Name		      "HAUPT_PLEUEL"
+      Ports		      [0, 0, 0, 0, 0, 1, 5]
+      Position		      [845, 1764, 905, 1866]
+      ForegroundColor	      "[0.000000, 0.501961, 0.752941]"
+      DialogController	      "MECH.DynMechDlgSource"
+      SourceBlock	      "mblibv1/Bodies/Body"
+      SourceType	      "Body"
+      PhysicalDomain	      "mechanical"
+      SubClassName	      "Unknown"
+      LeftPortType	      "workingframe"
+      RightPortType	      "workingframe"
+      LConnTagsString	      "CS2"
+      RConnTagsString	      "CS3|CS4|CS5|CS6|CS7"
+      PMImportedID	      "74"
+      UpdateFromCAD	      "on"
+      ClassName		      "Body"
+      DialogClass	      "MechanicalBodyBlock"
+      Mass		      "1.80809e+007"
+      MassUnits		      "kg"
+      InertiaUnits	      "kg*m^2"
+      Inertia		      "[2281.27,0,0;0,8743.05,0;0,0,10016.5]"
+      Shape		      "Cylinder"
+      ShapeDims		      "[1 1]"
+      ShapeUnits	      "m"
+      ShapeUse		      "false"
+      Density		      "1"
+      DensityUnits	      "kg/m^3"
+      DensityUse	      "false"
+      GraphicsMode	      "GFXFILE"
+      GraphicsFileName	      "HAUPT_PLEUEL_prt.stl"
+      BodyColorSelMode	      "MACHINE_DEFAULT"
+      BodyColor		      "[1 0 0]"
+      AttachedToCS	      "CS1"
+      CG		      "Right$CG$[-20.2 0.0648404 0.83431]$WORLD$WORLD$mm$[0 0 -1;-0.303086 0.952963 0;0.952963 0.303086 0]$3"
+      "x3 Transform$rad$WORLD$false$74::CG(AUTOGEN)"
+      WorkingFrames	      "Right$CS1$[-20.2 9.54534 -28.9743]$WORLD$WORLD$mm$[0 0 -1;-0.303086 0.952963 0;0.952963 0.3"
+      "03086 0]$3x3 Transform$rad$WORLD$false$74::CS1(AUTOGEN)#Left$CS2$[-33.05 -3.03256 10.5737]$WORLD$WORLD$mm$[1 0 0"
+      ";0 1 0;0 0 1]$3x3 Transform$rad$WORLD$true$74:-:76::74(AUTOGEN)#Right$CS3$[-15.2998 -19.2856 -1.08076]$WORLD$WOR"
+      "LD$mm$[1 0 0;0 1 0;0 0 1]$3x3 Transform$rad$WORLD$true$74:-:79::74(AUTOGEN)#Right$CS4$[-29 -19.1395 22.43]$WORLD"
+      "$WORLD$mm$[1 0 0;0 1 0;0 0 1]$3x3 Transform$rad$WORLD$true$108:-:74::74(AUTOGEN)#Right$CS5$[-25.1002 3.26616 29."
+      "556]$WORLD$WORLD$mm$[1 0 0;0 1 0;0 0 1]$3x3 Transform$rad$WORLD$true$113:-:74::74(AUTOGEN)#Right$CS6$[-29 16.966"
+      "9 10.4491]$WORLD$WORLD$mm$[1 0 0;0 1 0;0 0 1]$3x3 Transform$rad$WORLD$true$104:-:74::74(AUTOGEN)#Right$CS7$[-15."
+      "3 15.6071 -48.0336]$WORLD$WORLD$mm$[1 0 0;0 1 0;0 0 1]$3x3 Transform$rad$WORLD$true$74:-:75::74(AUTOGEN)"
+      CGPos		      "[-20.2 0.0648404 0.83431]"
+      CGRot		      "[0 0 -1;-0.303086 0.952963 0;0.952963 0.303086 0]"
+      CS0Pos		      "[]"
+      CS0Rot		      "[]"
+      CS1Pos		      "[-20.2 9.54534 -28.9743]"
+      CS1Rot		      "[0 0 -1;-0.303086 0.952963 0;0.952963 0.303086 0]"
+      CS2Pos		      "[-33.05 -3.03256 10.5737]"
+      CS2Rot		      "[1 0 0;0 1 0;0 0 1]"
+      CS3Pos		      "[-15.2998 -19.2856 -1.08076]"
+      CS3Rot		      "[1 0 0;0 1 0;0 0 1]"
+      CS4Pos		      "[-29 -19.1395 22.43]"
+      CS4Rot		      "[1 0 0;0 1 0;0 0 1]"
+      CS5Pos		      "[-25.1002 3.26616 29.556]"
+      CS5Rot		      "[1 0 0;0 1 0;0 0 1]"
+      CS6Pos		      "[-29 16.9669 10.4491]"
+      CS6Rot		      "[1 0 0;0 1 0;0 0 1]"
+      CS7Pos		      "[-15.3 15.6071 -48.0336]"
+      CS7Rot		      "[1 0 0;0 1 0;0 0 1]"
+      CS8Pos		      "[]"
+      CS8Rot		      "[]"
+      CS9Pos		      "[]"
+      CS9Rot		      "[]"
+      CS10Pos		      "[]"
+      CS10Rot		      "[]"
+      CS11Pos		      "[]"
+      CS11Rot		      "[]"
+      CS12Pos		      "[]"
+      CS12Rot		      "[]"
+      CS13Pos		      "[]"
+      CS13Rot		      "[]"
+      CS14Pos		      "[]"
+      CS14Rot		      "[]"
+      CS15Pos		      "[]"
+      CS15Rot		      "[]"
+      CS16Pos		      "[]"
+      CS16Rot		      "[]"
+      CS17Pos		      "[]"
+      CS17Rot		      "[]"
+      CS18Pos		      "[]"
+      CS18Rot		      "[]"
+      CS19Pos		      "[]"
+      CS19Rot		      "[]"
+      CS20Pos		      "[]"
+      CS20Rot		      "[]"
+    }
+    Block {
+      BlockType		      Reference
+      Name		      "Joint Actuator"
+      Ports		      [1, 0, 0, 0, 0, 0, 1]
+      Position		      [530, 2035, 570, 2075]
+      DialogController	      "MECH.DynMechDlgSource"
+      SourceBlock	      "mblibv1/Sensors & \nActuators/Joint Actuator"
+      SourceType	      "Joint Actuator"
+      ShowPortLabels	      "FromPortIcon"
+      SystemSampleTime	      "-1"
+      FunctionWithSeparateData off
+      RTWMemSecFuncInitTerm   "Inherit from model"
+      RTWMemSecFuncExecute    "Inherit from model"
+      RTWMemSecDataConstants  "Inherit from model"
+      RTWMemSecDataInternal   "Inherit from model"
+      RTWMemSecDataParameters "Inherit from model"
+      UpdateFromCAD	      "off"
+      PhysicalDomain	      "Mechanical"
+      PortType		      "blob"
+      ActuationStyle	      "Force"
+      AngleUnits	      "deg"
+      ArcVelocityUnits	      "deg/s"
+      ArcAccelerationUnits    "deg/s^2"
+      CoordPositionUnits      "m"
+      VelocityUnits	      "m/s"
+      AccelerationUnits	      "m/s^2"
+      ForceUnits	      "N"
+      TorqueUnits	      "N*m"
+      ActiveIO		      "on"
+      Width		      "1"
+      ClassName		      "JointActuator"
+      DialogClass	      "MechanicalActuatorBlock"
+      Primitive		      "R1"
+      ReferenceFrame	      "Absolute (World)"
+    }
+    Block {
+      BlockType		      Reference
+      Name		      "KOLBEN"
+      Ports		      [0, 0, 0, 0, 0, 2]
+      Position		      [1385, 1277, 1445, 1333]
+      ForegroundColor	      "[0.000000, 0.501961, 0.752941]"
+      DialogController	      "MECH.DynMechDlgSource"
+      SourceBlock	      "mblibv1/Bodies/Body"
+      SourceType	      "Body"
+      PhysicalDomain	      "mechanical"
+      SubClassName	      "Unknown"
+      LeftPortType	      "workingframe"
+      RightPortType	      "workingframe"
+      LConnTagsString	      "CS2|CS3"
+      PMImportedID	      "106"
+      UpdateFromCAD	      "on"
+      ClassName		      "Body"
+      DialogClass	      "MechanicalBodyBlock"
+      Mass		      "4.9128e+006"
+      MassUnits		      "kg"
+      InertiaUnits	      "kg*m^2"
+      Inertia		      "[374.226,0,0;0,458.442,0;0,0,380.048]"
+      Shape		      "Cylinder"
+      ShapeDims		      "[1 1]"
+      ShapeUnits	      "m"
+      ShapeUse		      "false"
+      Density		      "1"
+      DensityUnits	      "kg/m^3"
+      DensityUse	      "false"
+      GraphicsMode	      "GFXFILE"
+      GraphicsFileName	      "KOLBEN_prt.stl"
+      BodyColorSelMode	      "MACHINE_DEFAULT"
+      BodyColor		      "[1 0 0]"
+      AttachedToCS	      "CS1"
+      CG		      "Right$CG$[-25 -48.5239 -35.2546]$WORLD$WORLD$mm$[1 0 0;0 0.809017 -0.587785;0 0.587785 0.809017]$3x3 "
+      "Transform$rad$WORLD$false$106::CG(AUTOGEN)"
+      WorkingFrames	      "Right$CS1$[-25 -55.3483 -40.2129]$WORLD$WORLD$mm$[1 0 0;0 0.809017 -0.587785;0 0.587785 0.8"
+      "09017]$3x3 Transform$rad$WORLD$false$106::CS1(AUTOGEN)#Left$CS2$[-25.1 -46.0446 -33.4533]$WORLD$WORLD$mm$[1 0 0;"
+      "0 1 0;0 0 1]$3x3 Transform$rad$WORLD$true$106:-:79::106(AUTOGEN)#Left$CS3$[-25 -33.5491 -24.3749]$WORLD$WORLD$mm"
+      "$[1 0 0;0 1 0;0 0 1]$3x3 Transform$rad$WORLD$true$106:-:42::106(AUTOGEN)"
+      CGPos		      "[-25 -48.5239 -35.2546]"
+      CGRot		      "[1 0 0;0 0.809017 -0.587785;0 0.587785 0.809017]"
+      CS0Pos		      "[]"
+      CS0Rot		      "[]"
+      CS1Pos		      "[-25 -55.3483 -40.2129]"
+      CS1Rot		      "[1 0 0;0 0.809017 -0.587785;0 0.587785 0.809017]"
+      CS2Pos		      "[-25.1 -46.0446 -33.4533]"
+      CS2Rot		      "[1 0 0;0 1 0;0 0 1]"
+      CS3Pos		      "[-25 -33.5491 -24.3749]"
+      CS3Rot		      "[1 0 0;0 1 0;0 0 1]"
+      CS4Pos		      "[]"
+      CS4Rot		      "[]"
+      CS5Pos		      "[]"
+      CS5Rot		      "[]"
+      CS6Pos		      "[]"
+      CS6Rot		      "[]"
+      CS7Pos		      "[]"
+      CS7Rot		      "[]"
+      CS8Pos		      "[]"
+      CS8Rot		      "[]"
+      CS9Pos		      "[]"
+      CS9Rot		      "[]"
+      CS10Pos		      "[]"
+      CS10Rot		      "[]"
+      CS11Pos		      "[]"
+      CS11Rot		      "[]"
+      CS12Pos		      "[]"
+      CS12Rot		      "[]"
+      CS13Pos		      "[]"
+      CS13Rot		      "[]"
+      CS14Pos		      "[]"
+      CS14Rot		      "[]"
+      CS15Pos		      "[]"
+      CS15Rot		      "[]"
+      CS16Pos		      "[]"
+      CS16Rot		      "[]"
+      CS17Pos		      "[]"
+      CS17Rot		      "[]"
+      CS18Pos		      "[]"
+      CS18Rot		      "[]"
+      CS19Pos		      "[]"
+      CS19Rot		      "[]"
+      CS20Pos		      "[]"
+      CS20Rot		      "[]"
+    }
+    Block {
+      BlockType		      Reference
+      Name		      "KOLBEN-1"
+      Ports		      [0, 0, 0, 0, 0, 2]
+      Position		      [1385, 1972, 1445, 2028]
+      ForegroundColor	      "[0.000000, 0.501961, 0.752941]"
+      DialogController	      "MECH.DynMechDlgSource"
+      SourceBlock	      "mblibv1/Bodies/Body"
+      SourceType	      "Body"
+      PhysicalDomain	      "mechanical"
+      SubClassName	      "Unknown"
+      LeftPortType	      "workingframe"
+      RightPortType	      "workingframe"
+      LConnTagsString	      "CS2|CS3"
+      PMImportedID	      "73"
+      UpdateFromCAD	      "on"
+      ClassName		      "Body"
+      DialogClass	      "MechanicalBodyBlock"
+      Mass		      "4.9128e+006"
+      MassUnits		      "kg"
+      InertiaUnits	      "kg*m^2"
+      Inertia		      "[374.226,0,0;0,458.442,0;0,0,380.048]"
+      Shape		      "Cylinder"
+      ShapeDims		      "[1 1]"
+      ShapeUnits	      "m"
+      ShapeUse		      "false"
+      Density		      "1"
+      DensityUnits	      "kg/m^3"
+      DensityUse	      "false"
+      GraphicsMode	      "GFXFILE"
+      GraphicsFileName	      "KOLBEN_prt.stl"
+      BodyColorSelMode	      "MACHINE_DEFAULT"
+      BodyColor		      "[1 0 0]"
+      AttachedToCS	      "CS1"
+      CG		      "Right$CG$[-25 60.711 0]$WORLD$WORLD$mm$[1 0 0;0 -1 0;0 0 -1]$3x3 Transform$rad$WORLD$false$73::CG(AUT"
+      "OGEN)"
+      WorkingFrames	      "Right$CS1$[-25 69.1465 0]$WORLD$WORLD$mm$[1 0 0;0 -1 0;0 0 -1]$3x3 Transform$rad$WORLD$fals"
+      "e$73::CS1(AUTOGEN)#Left$CS2$[-25.1 57.6465 0]$WORLD$WORLD$mm$[1 0 0;0 1 0;0 0 1]$3x3 Transform$rad$WORLD$true$10"
+      "4:-:73::73(AUTOGEN)#Left$CS3$[-25 41.469 0]$WORLD$WORLD$mm$[1 0 0;0 1 0;0 0 1]$3x3 Transform$rad$WORLD$true$18:-"
+      ":73::73(AUTOGEN)"
+      CGPos		      "[-25 60.711 0]"
+      CGRot		      "[1 0 0;0 -1 0;0 0 -1]"
+      CS0Pos		      "[]"
+      CS0Rot		      "[]"
+      CS1Pos		      "[-25 69.1465 0]"
+      CS1Rot		      "[1 0 0;0 -1 0;0 0 -1]"
+      CS2Pos		      "[-25.1 57.6465 0]"
+      CS2Rot		      "[1 0 0;0 1 0;0 0 1]"
+      CS3Pos		      "[-25 41.469 0]"
+      CS3Rot		      "[1 0 0;0 1 0;0 0 1]"
+      CS4Pos		      "[]"
+      CS4Rot		      "[]"
+      CS5Pos		      "[]"
+      CS5Rot		      "[]"
+      CS6Pos		      "[]"
+      CS6Rot		      "[]"
+      CS7Pos		      "[]"
+      CS7Rot		      "[]"
+      CS8Pos		      "[]"
+      CS8Rot		      "[]"
+      CS9Pos		      "[]"
+      CS9Rot		      "[]"
+      CS10Pos		      "[]"
+      CS10Rot		      "[]"
+      CS11Pos		      "[]"
+      CS11Rot		      "[]"
+      CS12Pos		      "[]"
+      CS12Rot		      "[]"
+      CS13Pos		      "[]"
+      CS13Rot		      "[]"
+      CS14Pos		      "[]"
+      CS14Rot		      "[]"
+      CS15Pos		      "[]"
+      CS15Rot		      "[]"
+      CS16Pos		      "[]"
+      CS16Rot		      "[]"
+      CS17Pos		      "[]"
+      CS17Rot		      "[]"
+      CS18Pos		      "[]"
+      CS18Rot		      "[]"
+      CS19Pos		      "[]"
+      CS19Rot		      "[]"
+      CS20Pos		      "[]"
+      CS20Rot		      "[]"
+    }
+    Block {
+      BlockType		      Reference
+      Name		      "KOLBEN-2"
+      Ports		      [0, 0, 0, 0, 0, 2]
+      Position		      [1115, 1997, 1175, 2053]
+      ForegroundColor	      "[0.000000, 0.501961, 0.752941]"
+      DialogController	      "MECH.DynMechDlgSource"
+      SourceBlock	      "mblibv1/Bodies/Body"
+      SourceType	      "Body"
+      PhysicalDomain	      "mechanical"
+      SubClassName	      "Unknown"
+      LeftPortType	      "workingframe"
+      RightPortType	      "workingframe"
+      LConnTagsString	      "CS2|CS3"
+      PMImportedID	      "75"
+      UpdateFromCAD	      "on"
+      ClassName		      "Body"
+      DialogClass	      "MechanicalBodyBlock"
+      Mass		      "4.9128e+006"
+      MassUnits		      "kg"
+      InertiaUnits	      "kg*m^2"
+      Inertia		      "[374.226,0,0;0,458.442,0;0,0,380.048]"
+      Shape		      "Cylinder"
+      ShapeDims		      "[1 1]"
+      ShapeUnits	      "m"
+      ShapeUse		      "false"
+      Density		      "1"
+      DensityUnits	      "kg/m^3"
+      DensityUse	      "false"
+      GraphicsMode	      "GFXFILE"
+      GraphicsFileName	      "KOLBEN_prt.stl"
+      BodyColorSelMode	      "MACHINE_DEFAULT"
+      BodyColor		      "[1 0 0]"
+      AttachedToCS	      "CS1"
+      CG		      "Right$CG$[-25 16.5541 -50.9481]$WORLD$WORLD$mm$[1 0 0;0 -0.309017 -0.951057;0 0.951057 -0.309017]$3x3"
+      " Transform$rad$WORLD$false$75::CG(AUTOGEN)"
+      WorkingFrames	      "Right$CS1$[-25 19.1607 -58.9707]$WORLD$WORLD$mm$[1 0 0;0 -0.309017 -0.951057;0 0.951057 -0."
+      "309017]$3x3 Transform$rad$WORLD$false$75::CS1(AUTOGEN)#Left$CS2$[-15.3 15.6071 -48.0336]$WORLD$WORLD$mm$[1 0 0;0"
+      " 1 0;0 0 1]$3x3 Transform$rad$WORLD$true$74:-:75::75(AUTOGEN)#Left$CS3$[-25 12.8146 -39.4393]$WORLD$WORLD$mm$[1 "
+      "0 0;0 1 0;0 0 1]$3x3 Transform$rad$WORLD$true$29:-:75::75(AUTOGEN)"
+      CGPos		      "[-25 16.5541 -50.9481]"
+      CGRot		      "[1 0 0;0 -0.309017 -0.951057;0 0.951057 -0.309017]"
+      CS0Pos		      "[]"
+      CS0Rot		      "[]"
+      CS1Pos		      "[-25 19.1607 -58.9707]"
+      CS1Rot		      "[1 0 0;0 -0.309017 -0.951057;0 0.951057 -0.309017]"
+      CS2Pos		      "[-15.3 15.6071 -48.0336]"
+      CS2Rot		      "[1 0 0;0 1 0;0 0 1]"
+      CS3Pos		      "[-25 12.8146 -39.4393]"
+      CS3Rot		      "[1 0 0;0 1 0;0 0 1]"
+      CS4Pos		      "[]"
+      CS4Rot		      "[]"
+      CS5Pos		      "[]"
+      CS5Rot		      "[]"
+      CS6Pos		      "[]"
+      CS6Rot		      "[]"
+      CS7Pos		      "[]"
+      CS7Rot		      "[]"
+      CS8Pos		      "[]"
+      CS8Rot		      "[]"
+      CS9Pos		      "[]"
+      CS9Rot		      "[]"
+      CS10Pos		      "[]"
+      CS10Rot		      "[]"
+      CS11Pos		      "[]"
+      CS11Rot		      "[]"
+      CS12Pos		      "[]"
+      CS12Rot		      "[]"
+      CS13Pos		      "[]"
+      CS13Rot		      "[]"
+      CS14Pos		      "[]"
+      CS14Rot		      "[]"
+      CS15Pos		      "[]"
+      CS15Rot		      "[]"
+      CS16Pos		      "[]"
+      CS16Rot		      "[]"
+      CS17Pos		      "[]"
+      CS17Rot		      "[]"
+      CS18Pos		      "[]"
+      CS18Rot		      "[]"
+      CS19Pos		      "[]"
+      CS19Rot		      "[]"
+      CS20Pos		      "[]"
+      CS20Rot		      "[]"
+    }
+    Block {
+      BlockType		      Reference
+      Name		      "KOLBEN-3"
+      Ports		      [0, 0, 0, 0, 0, 2]
+      Position		      [1385, 1607, 1445, 1663]
+      ForegroundColor	      "[0.000000, 0.501961, 0.752941]"
+      DialogController	      "MECH.DynMechDlgSource"
+      SourceBlock	      "mblibv1/Bodies/Body"
+      SourceType	      "Body"
+      PhysicalDomain	      "mechanical"
+      SubClassName	      "Unknown"
+      LeftPortType	      "workingframe"
+      RightPortType	      "workingframe"
+      LConnTagsString	      "CS2|CS3"
+      PMImportedID	      "110"
+      UpdateFromCAD	      "on"
+      ClassName		      "Body"
+      DialogClass	      "MechanicalBodyBlock"
+      Mass		      "4.9128e+006"
+      MassUnits		      "kg"
+      InertiaUnits	      "kg*m^2"
+      Inertia		      "[374.226,0,0;0,458.442,0;0,0,380.048]"
+      Shape		      "Cylinder"
+      ShapeDims		      "[1 1]"
+      ShapeUnits	      "m"
+      ShapeUse		      "false"
+      Density		      "1"
+      DensityUnits	      "kg/m^3"
+      DensityUse	      "false"
+      GraphicsMode	      "GFXFILE"
+      GraphicsFileName	      "KOLBEN_prt.stl"
+      BodyColorSelMode	      "MACHINE_DEFAULT"
+      BodyColor		      "[1 0 0]"
+      AttachedToCS	      "CS1"
+      CG		      "Right$CG$[-25 22.7896 70.1391]$WORLD$WORLD$mm$[1 0 0;0 -0.309017 0.951057;0 -0.951057 -0.309017]$3x3 "
+      "Transform$rad$WORLD$false$110::CG(AUTOGEN)"
+      WorkingFrames	      "Right$CS1$[-25 25.3963 78.1616]$WORLD$WORLD$mm$[1 0 0;0 -0.309017 0.951057;0 -0.951057 -0.3"
+      "09017]$3x3 Transform$rad$WORLD$false$110::CS1(AUTOGEN)#Left$CS2$[-25 12.8146 39.4393]$WORLD$WORLD$mm$[1 0 0;0 1 "
+      "0;0 0 1]$3x3 Transform$rad$WORLD$true$110:-:62::110(AUTOGEN)#Left$CS3$[-25.1 21.8426 67.2245]$WORLD$WORLD$mm$[1 "
+      "0 0;0 1 0;0 0 1]$3x3 Transform$rad$WORLD$true$110:-:113::110(AUTOGEN)"
+      CGPos		      "[-25 22.7896 70.1391]"
+      CGRot		      "[1 0 0;0 -0.309017 0.951057;0 -0.951057 -0.309017]"
+      CS0Pos		      "[]"
+      CS0Rot		      "[]"
+      CS1Pos		      "[-25 25.3963 78.1616]"
+      CS1Rot		      "[1 0 0;0 -0.309017 0.951057;0 -0.951057 -0.309017]"
+      CS2Pos		      "[-25 12.8146 39.4393]"
+      CS2Rot		      "[1 0 0;0 1 0;0 0 1]"
+      CS3Pos		      "[-25.1 21.8426 67.2245]"
+      CS3Rot		      "[1 0 0;0 1 0;0 0 1]"
+      CS4Pos		      "[]"
+      CS4Rot		      "[]"
+      CS5Pos		      "[]"
+      CS5Rot		      "[]"
+      CS6Pos		      "[]"
+      CS6Rot		      "[]"
+      CS7Pos		      "[]"
+      CS7Rot		      "[]"
+      CS8Pos		      "[]"
+      CS8Rot		      "[]"
+      CS9Pos		      "[]"
+      CS9Rot		      "[]"
+      CS10Pos		      "[]"
+      CS10Rot		      "[]"
+      CS11Pos		      "[]"
+      CS11Rot		      "[]"
+      CS12Pos		      "[]"
+      CS12Rot		      "[]"
+      CS13Pos		      "[]"
+      CS13Rot		      "[]"
+      CS14Pos		      "[]"
+      CS14Rot		      "[]"
+      CS15Pos		      "[]"
+      CS15Rot		      "[]"
+      CS16Pos		      "[]"
+      CS16Rot		      "[]"
+      CS17Pos		      "[]"
+      CS17Rot		      "[]"
+      CS18Pos		      "[]"
+      CS18Rot		      "[]"
+      CS19Pos		      "[]"
+      CS19Rot		      "[]"
+      CS20Pos		      "[]"
+      CS20Rot		      "[]"
+    }
+    Block {
+      BlockType		      Reference
+      Name		      "KOLBEN-4"
+      Ports		      [0, 0, 0, 0, 0, 2]
+      Position		      [1385, 1442, 1445, 1498]
+      ForegroundColor	      "[0.000000, 0.501961, 0.752941]"
+      DialogController	      "MECH.DynMechDlgSource"
+      SourceBlock	      "mblibv1/Bodies/Body"
+      SourceType	      "Body"
+      PhysicalDomain	      "mechanical"
+      SubClassName	      "Unknown"
+      LeftPortType	      "workingframe"
+      RightPortType	      "workingframe"
+      LConnTagsString	      "CS2|CS3"
+      PMImportedID	      "81"
+      UpdateFromCAD	      "on"
+      ClassName		      "Body"
+      DialogClass	      "MechanicalBodyBlock"
+      Mass		      "4.9128e+006"
+      MassUnits		      "kg"
+      InertiaUnits	      "kg*m^2"
+      Inertia		      "[374.226,0,0;0,458.442,0;0,0,380.048]"
+      Shape		      "Cylinder"
+      ShapeDims		      "[1 1]"
+      ShapeUnits	      "m"
+      ShapeUse		      "false"
+      Density		      "1"
+      DensityUnits	      "kg/m^3"
+      DensityUse	      "false"
+      GraphicsMode	      "GFXFILE"
+      GraphicsFileName	      "KOLBEN_prt.stl"
+      BodyColorSelMode	      "MACHINE_DEFAULT"
+      BodyColor		      "[1 0 0]"
+      AttachedToCS	      "CS1"
+      CG		      "Right$CG$[-25 -59.1898 43.0039]$WORLD$WORLD$mm$[1 0 0;0 0.809017 0.587785;0 -0.587785 0.809017]$3x3 T"
+      "ransform$rad$WORLD$false$81::CG(AUTOGEN)"
+      WorkingFrames	      "Right$CS1$[-25 -66.0142 47.9621]$WORLD$WORLD$mm$[1 0 0;0 0.809017 0.587785;0 -0.587785 0.80"
+      "9017]$3x3 Transform$rad$WORLD$false$81::CS1(AUTOGEN)#Left$CS2$[-25 -33.5491 24.3749]$WORLD$WORLD$mm$[1 0 0;0 1 0"
+      ";0 0 1]$3x3 Transform$rad$WORLD$true$81:-:89::81(AUTOGEN)#Left$CS3$[-15.3 -56.7105 41.2026]$WORLD$WORLD$mm$[1 0 "
+      "0;0 1 0;0 0 1]$3x3 Transform$rad$WORLD$true$108:-:81::81(AUTOGEN)"
+      CGPos		      "[-25 -59.1898 43.0039]"
+      CGRot		      "[1 0 0;0 0.809017 0.587785;0 -0.587785 0.809017]"
+      CS0Pos		      "[]"
+      CS0Rot		      "[]"
+      CS1Pos		      "[-25 -66.0142 47.9621]"
+      CS1Rot		      "[1 0 0;0 0.809017 0.587785;0 -0.587785 0.809017]"
+      CS2Pos		      "[-25 -33.5491 24.3749]"
+      CS2Rot		      "[1 0 0;0 1 0;0 0 1]"
+      CS3Pos		      "[-15.3 -56.7105 41.2026]"
+      CS3Rot		      "[1 0 0;0 1 0;0 0 1]"
+      CS4Pos		      "[]"
+      CS4Rot		      "[]"
+      CS5Pos		      "[]"
+      CS5Rot		      "[]"
+      CS6Pos		      "[]"
+      CS6Rot		      "[]"
+      CS7Pos		      "[]"
+      CS7Rot		      "[]"
+      CS8Pos		      "[]"
+      CS8Rot		      "[]"
+      CS9Pos		      "[]"
+      CS9Rot		      "[]"
+      CS10Pos		      "[]"
+      CS10Rot		      "[]"
+      CS11Pos		      "[]"
+      CS11Rot		      "[]"
+      CS12Pos		      "[]"
+      CS12Rot		      "[]"
+      CS13Pos		      "[]"
+      CS13Rot		      "[]"
+      CS14Pos		      "[]"
+      CS14Rot		      "[]"
+      CS15Pos		      "[]"
+      CS15Rot		      "[]"
+      CS16Pos		      "[]"
+      CS16Rot		      "[]"
+      CS17Pos		      "[]"
+      CS17Rot		      "[]"
+      CS18Pos		      "[]"
+      CS18Rot		      "[]"
+      CS19Pos		      "[]"
+      CS19Rot		      "[]"
+      CS20Pos		      "[]"
+      CS20Rot		      "[]"
+    }
+    Block {
+      BlockType		      Reference
+      Name		      "KURBELWELLE"
+      Ports		      [0, 0, 0, 0, 0, 1, 2]
+      Position		      [560, 1927, 620, 1983]
+      ForegroundColor	      "[0.000000, 0.501961, 0.752941]"
+      DialogController	      "MECH.DynMechDlgSource"
+      SourceBlock	      "mblibv1/Bodies/Body"
+      SourceType	      "Body"
+      PhysicalDomain	      "mechanical"
+      SubClassName	      "Unknown"
+      LeftPortType	      "workingframe"
+      RightPortType	      "workingframe"
+      LConnTagsString	      "CS4"
+      RConnTagsString	      "CS2|CS3"
+      PMImportedID	      "76"
+      UpdateFromCAD	      "on"
+      ClassName		      "Body"
+      DialogClass	      "MechanicalBodyBlock"
+      Mass		      "3.09e+007"
+      MassUnits		      "kg"
+      InertiaUnits	      "kg*m^2"
+      Inertia		      "[5969.93,-2644.36,0;-2644.36,31773.2,0;0,0,31794]"
+      Shape		      "Cylinder"
+      ShapeDims		      "[1 1]"
+      ShapeUnits	      "m"
+      ShapeUse		      "false"
+      Density		      "1"
+      DensityUnits	      "kg/m^3"
+      DensityUse	      "false"
+      GraphicsMode	      "GFXFILE"
+      GraphicsFileName	      "KURBELWELLE_prt.stl"
+      BodyColorSelMode	      "MACHINE_DEFAULT"
+      BodyColor		      "[1 0 0]"
+      AttachedToCS	      "CS1"
+      CG		      "Right$CG$[12.4062 1.16057 -4.0466]$WORLD$WORLD$mm$[1 0 0;0 -0.275687 -0.961247;0 0.961247 -0.275687]$"
+      "3x3 Transform$rad$WORLD$false$76::CG(AUTOGEN)"
+      WorkingFrames	      "Right$CS1$[17.45 0 0]$WORLD$WORLD$mm$[1 0 0;0 -0.275687 -0.961247;0 0.961247 -0.275687]$3x3"
+      " Transform$rad$WORLD$false$76::CS1(AUTOGEN)#Right$CS2$[-33.05 -3.03256 10.5737]$WORLD$WORLD$mm$[1 0 0;0 1 0;0 0 "
+      "1]$3x3 Transform$rad$WORLD$true$74:-:76::76(AUTOGEN)#Right$CS3$[90.95 0 0]$WORLD$WORLD$mm$[1 0 0;0 1 0;0 0 1]$3x"
+      "3 Transform$rad$WORLD$true$111:-:76::76(AUTOGEN)#Left$CS4$[-5.05 0 0]$WORLD$WORLD$mm$[1 0 0;0 1 0;0 0 1]$3x3 Tra"
+      "nsform$rad$WORLD$true$:-:RootPart::76(AUTOGEN)"
+      CGPos		      "[12.4062 1.16057 -4.0466]"
+      CGRot		      "[1 0 0;0 -0.275687 -0.961247;0 0.961247 -0.275687]"
+      CS0Pos		      "[]"
+      CS0Rot		      "[]"
+      CS1Pos		      "[17.45 0 0]"
+      CS1Rot		      "[1 0 0;0 -0.275687 -0.961247;0 0.961247 -0.275687]"
+      CS2Pos		      "[-33.05 -3.03256 10.5737]"
+      CS2Rot		      "[1 0 0;0 1 0;0 0 1]"
+      CS3Pos		      "[90.95 0 0]"
+      CS3Rot		      "[1 0 0;0 1 0;0 0 1]"
+      CS4Pos		      "[-5.05 0 0]"
+      CS4Rot		      "[1 0 0;0 1 0;0 0 1]"
+      CS5Pos		      "[]"
+      CS5Rot		      "[]"
+      CS6Pos		      "[]"
+      CS6Rot		      "[]"
+      CS7Pos		      "[]"
+      CS7Rot		      "[]"
+      CS8Pos		      "[]"
+      CS8Rot		      "[]"
+      CS9Pos		      "[]"
+      CS9Rot		      "[]"
+      CS10Pos		      "[]"
+      CS10Rot		      "[]"
+      CS11Pos		      "[]"
+      CS11Rot		      "[]"
+      CS12Pos		      "[]"
+      CS12Rot		      "[]"
+      CS13Pos		      "[]"
+      CS13Rot		      "[]"
+      CS14Pos		      "[]"
+      CS14Rot		      "[]"
+      CS15Pos		      "[]"
+      CS15Rot		      "[]"
+      CS16Pos		      "[]"
+      CS16Rot		      "[]"
+      CS17Pos		      "[]"
+      CS17Rot		      "[]"
+      CS18Pos		      "[]"
+      CS18Rot		      "[]"
+      CS19Pos		      "[]"
+      CS19Rot		      "[]"
+      CS20Pos		      "[]"
+      CS20Rot		      "[]"
+    }
+    Block {
+      BlockType		      Reference
+      Name		      "Machine\nEnvironment"
+      Ports		      [0, 0, 0, 0, 0, 0, 1]
+      Position		      [40, 980, 80, 1000]
+      BlockMirror	      on
+      ShowName		      off
+      DialogController	      "MECH.DialogSource"
+      SourceBlock	      "mblibv1/Bodies/Machine\nEnvironment"
+      SourceType	      "Machine Environment"
+      ShowPortLabels	      "FromPortIcon"
+      SystemSampleTime	      "-1"
+      FunctionWithSeparateData off
+      RTWMemSecFuncInitTerm   "Inherit from model"
+      RTWMemSecFuncExecute    "Inherit from model"
+      RTWMemSecDataConstants  "Inherit from model"
+      RTWMemSecDataInternal   "Inherit from model"
+      RTWMemSecDataParameters "Inherit from model"
+      PortType		      "env"
+      PhysicalDomain	      "Mechanical"
+      ClassName		      "Environment"
+      DialogTemplateClass     "MECH.MachineEnvironment"
+      SyncWhenCopied	      "off"
+      Gravity		      "[0 -9.81 0]"
+      GravityUnits	      "m/s^2"
+      GravityAsSignal	      off
+      Dimensionality	      "Auto-detect"
+      AnalysisType	      "Forward dynamics"
+      LinearAssemblyTolerance "1e-3"
+      LinearAssemblyToleranceUnits "m"
+      AngularAssemblyTolerance "1e-3"
+      AngularAssemblyToleranceUnits "rad"
+      ConstraintSolverType    "Stabilizing"
+      ConstraintRelTolerance  "1e-4"
+      ConstraintAbsTolerance  "1e-4"
+      UseRobustSingularityHandling off
+      RedundancyAnalysisToleranceType "Automatically select tolerance"
+      RedundancyAnalysisTolerance "1e-14"
+      StatePerturbationType   "Fixed"
+      PerturbationSize	      "1e-5"
+      VisualizeMachine	      on
+      BodyVisualizationType   "Use model default body geometries"
+      BodyColorSelMode	      "Use model default"
+      DefaultBodyColor	      "[1 0 0]"
+    }
+    Block {
+      BlockType		      Reference
+      Name		      "PLEUEL"
+      Ports		      [0, 0, 0, 0, 0, 1, 1]
+      Position		      [1115, 1480, 1175, 1520]
+      ForegroundColor	      "[0.000000, 0.501961, 0.752941]"
+      DialogController	      "MECH.DynMechDlgSource"
+      SourceBlock	      "mblibv1/Bodies/Body"
+      SourceType	      "Body"
+      PhysicalDomain	      "mechanical"
+      SubClassName	      "Unknown"
+      LeftPortType	      "workingframe"
+      RightPortType	      "workingframe"
+      LConnTagsString	      "CS2"
+      RConnTagsString	      "CS3"
+      PMImportedID	      "79"
+      UpdateFromCAD	      "on"
+      ClassName		      "Body"
+      DialogClass	      "MechanicalBodyBlock"
+      Mass		      "4.9128e+006"
+      MassUnits		      "kg"
+      InertiaUnits	      "kg*m^2"
+      Inertia		      "[14.226,0,0;0,458.442,0;0,0,380.048]"
+      Shape		      "Cylinder"
+      ShapeDims		      "[1 1]"
+      ShapeUnits	      "m"
+      ShapeUse		      "false"
+      Density		      "1"
+      DensityUnits	      "kg/m^3"
+      DensityUse	      "false"
+      GraphicsMode	      "GFXFILE"
+      GraphicsFileName	      "C:\\Documents and Settings\\alvarez3\\Desktop\\test\\pleuel_prt.stl"
+      BodyColorSelMode	      "MACHINE_DEFAULT"
+      BodyColor		      "[1 0 0]"
+      AttachedToCS	      "CS1"
+      CG		      "Right$CG$[-20.2 -32.6652 -17.2671]$WORLD$WORLD$mm$[0 0 1;-0.637111 0.770772 0;-0.770772 -0.637111 0]$"
+      "3x3 Transform$rad$WORLD$false$79::CG(AUTOGEN)"
+      WorkingFrames	      "Right$CS1$[-20.2 -32.6652 -17.2671]$WORLD$WORLD$mm$[0 0 1;-0.637111 0.770772 0;-0.770772 -0"
+      ".637111 0]$3x3 Transform$rad$WORLD$false$79::CS1(AUTOGEN)#Left$CS2$[-15.2998 -19.2856 -1.08076]$WORLD$WORLD$mm$["
+      "1 0 0;0 1 0;0 0 1]$3x3 Transform$rad$WORLD$true$74:-:79::79(AUTOGEN)#Right$CS3$[-25.1 -46.0446 -33.4533]$WORLD$W"
+      "ORLD$mm$[1 0 0;0 1 0;0 0 1]$3x3 Transform$rad$WORLD$true$106:-:79::79(AUTOGEN)"
+      CGPos		      "[-20.2 -32.6652 -17.2671]"
+      CGRot		      "[0 0 1;-0.637111 0.770772 0;-0.770772 -0.637111 0]"
+      CS0Pos		      "[]"
+      CS0Rot		      "[]"
+      CS1Pos		      "[-20.2 -32.6652 -17.2671]"
+      CS1Rot		      "[0 0 1;-0.637111 0.770772 0;-0.770772 -0.637111 0]"
+      CS2Pos		      "[-15.2998 -19.2856 -1.08076]"
+      CS2Rot		      "[1 0 0;0 1 0;0 0 1]"
+      CS3Pos		      "[-25.1 -46.0446 -33.4533]"
+      CS3Rot		      "[1 0 0;0 1 0;0 0 1]"
+      CS4Pos		      "[]"
+      CS4Rot		      "[]"
+      CS5Pos		      "[]"
+      CS5Rot		      "[]"
+      CS6Pos		      "[]"
+      CS6Rot		      "[]"
+      CS7Pos		      "[]"
+      CS7Rot		      "[]"
+      CS8Pos		      "[]"
+      CS8Rot		      "[]"
+      CS9Pos		      "[]"
+      CS9Rot		      "[]"
+      CS10Pos		      "[]"
+      CS10Rot		      "[]"
+      CS11Pos		      "[]"
+      CS11Rot		      "[]"
+      CS12Pos		      "[]"
+      CS12Rot		      "[]"
+      CS13Pos		      "[]"
+      CS13Rot		      "[]"
+      CS14Pos		      "[]"
+      CS14Rot		      "[]"
+      CS15Pos		      "[]"
+      CS15Rot		      "[]"
+      CS16Pos		      "[]"
+      CS16Rot		      "[]"
+      CS17Pos		      "[]"
+      CS17Rot		      "[]"
+      CS18Pos		      "[]"
+      CS18Rot		      "[]"
+      CS19Pos		      "[]"
+      CS19Rot		      "[]"
+      CS20Pos		      "[]"
+      CS20Rot		      "[]"
+    }
+    Block {
+      BlockType		      Reference
+      Name		      "PLEUEL-1"
+      Ports		      [0, 0, 0, 0, 0, 1, 1]
+      Position		      [1115, 1605, 1175, 1645]
+      ForegroundColor	      "[0.000000, 0.501961, 0.752941]"
+      DialogController	      "MECH.DynMechDlgSource"
+      SourceBlock	      "mblibv1/Bodies/Body"
+      SourceType	      "Body"
+      PhysicalDomain	      "mechanical"
+      SubClassName	      "Unknown"
+      LeftPortType	      "workingframe"
+      RightPortType	      "workingframe"
+      LConnTagsString	      "CS2"
+      RConnTagsString	      "CS3"
+      PMImportedID	      "108"
+      UpdateFromCAD	      "on"
+      ClassName		      "Body"
+      DialogClass	      "MechanicalBodyBlock"
+      Mass		      "4.9128e+006"
+      MassUnits		      "kg"
+      InertiaUnits	      "kg*m^2"
+      Inertia		      "[14.226,0,0;0,458.442,0;0,0,380.048]"
+      Shape		      "Cylinder"
+      ShapeDims		      "[1 1]"
+      ShapeUnits	      "m"
+      ShapeUse		      "false"
+      Density		      "1"
+      DensityUnits	      "kg/m^3"
+      DensityUse	      "false"
+      GraphicsMode	      "GFXFILE"
+      GraphicsFileName	      "PLEUEL_prt.stl"
+      BodyColorSelMode	      "MACHINE_DEFAULT"
+      BodyColor		      "[1 0 0]"
+      AttachedToCS	      "CS1"
+      CG		      "Right$CG$[-20.2 -37.9249 31.8163]$WORLD$WORLD$mm$[0 0 -1;0.894551 -0.446966 0;-0.446966 -0.894551 0]$"
+      "3x3 Transform$rad$WORLD$false$108::CG(AUTOGEN)"
+      WorkingFrames	      "Right$CS1$[-20.2 -37.9249 31.8163]$WORLD$WORLD$mm$[0 0 -1;0.894551 -0.446966 0;-0.446966 -0"
+      ".894551 0]$3x3 Transform$rad$WORLD$false$108::CS1(AUTOGEN)#Left$CS2$[-29 -19.1395 22.43]$WORLD$WORLD$mm$[1 0 0;0"
+      " 1 0;0 0 1]$3x3 Transform$rad$WORLD$true$108:-:74::108(AUTOGEN)#Right$CS3$[-15.3 -56.7105 41.2026]$WORLD$WORLD$m"
+      "m$[1 0 0;0 1 0;0 0 1]$3x3 Transform$rad$WORLD$true$108:-:81::108(AUTOGEN)"
+      CGPos		      "[-20.2 -37.9249 31.8163]"
+      CGRot		      "[0 0 -1;0.894551 -0.446966 0;-0.446966 -0.894551 0]"
+      CS0Pos		      "[]"
+      CS0Rot		      "[]"
+      CS1Pos		      "[-20.2 -37.9249 31.8163]"
+      CS1Rot		      "[0 0 -1;0.894551 -0.446966 0;-0.446966 -0.894551 0]"
+      CS2Pos		      "[-29 -19.1395 22.43]"
+      CS2Rot		      "[1 0 0;0 1 0;0 0 1]"
+      CS3Pos		      "[-15.3 -56.7105 41.2026]"
+      CS3Rot		      "[1 0 0;0 1 0;0 0 1]"
+      CS4Pos		      "[]"
+      CS4Rot		      "[]"
+      CS5Pos		      "[]"
+      CS5Rot		      "[]"
+      CS6Pos		      "[]"
+      CS6Rot		      "[]"
+      CS7Pos		      "[]"
+      CS7Rot		      "[]"
+      CS8Pos		      "[]"
+      CS8Rot		      "[]"
+      CS9Pos		      "[]"
+      CS9Rot		      "[]"
+      CS10Pos		      "[]"
+      CS10Rot		      "[]"
+      CS11Pos		      "[]"
+      CS11Rot		      "[]"
+      CS12Pos		      "[]"
+      CS12Rot		      "[]"
+      CS13Pos		      "[]"
+      CS13Rot		      "[]"
+      CS14Pos		      "[]"
+      CS14Rot		      "[]"
+      CS15Pos		      "[]"
+      CS15Rot		      "[]"
+      CS16Pos		      "[]"
+      CS16Rot		      "[]"
+      CS17Pos		      "[]"
+      CS17Rot		      "[]"
+      CS18Pos		      "[]"
+      CS18Rot		      "[]"
+      CS19Pos		      "[]"
+      CS19Rot		      "[]"
+      CS20Pos		      "[]"
+      CS20Rot		      "[]"
+    }
+    Block {
+      BlockType		      Reference
+      Name		      "PLEUEL-2"
+      Ports		      [0, 0, 0, 0, 0, 1, 1]
+      Position		      [1115, 1730, 1175, 1770]
+      ForegroundColor	      "[0.000000, 0.501961, 0.752941]"
+      DialogController	      "MECH.DynMechDlgSource"
+      SourceBlock	      "mblibv1/Bodies/Body"
+      SourceType	      "Body"
+      PhysicalDomain	      "mechanical"
+      SubClassName	      "Unknown"
+      LeftPortType	      "workingframe"
+      RightPortType	      "workingframe"
+      LConnTagsString	      "CS2"
+      RConnTagsString	      "CS3"
+      PMImportedID	      "113"
+      UpdateFromCAD	      "on"
+      ClassName		      "Body"
+      DialogClass	      "MechanicalBodyBlock"
+      Mass		      "4.9128e+006"
+      MassUnits		      "kg"
+      InertiaUnits	      "kg*m^2"
+      Inertia		      "[14.226,0,0;0,458.442,0;0,0,380.048]"
+      Shape		      "Cylinder"
+      ShapeDims		      "[1 1]"
+      ShapeUnits	      "m"
+      ShapeUse		      "false"
+      Density		      "1"
+      DensityUnits	      "kg/m^3"
+      DensityUse	      "false"
+      GraphicsMode	      "GFXFILE"
+      GraphicsFileName	      "PLEUEL_prt.stl"
+      BodyColorSelMode	      "MACHINE_DEFAULT"
+      BodyColor		      "[1 0 0]"
+      AttachedToCS	      "CS1"
+      CG		      "Right$CG$[-20.2 12.5544 48.3902]$WORLD$WORLD$mm$[0 0 1;0.442295 -0.89687 0;0.89687 0.442295 0]$3x3 Tr"
+      "ansform$rad$WORLD$false$113::CG(AUTOGEN)"
+      WorkingFrames	      "Right$CS1$[-20.2 12.5544 48.3902]$WORLD$WORLD$mm$[0 0 1;0.442295 -0.89687 0;0.89687 0.44229"
+      "5 0]$3x3 Transform$rad$WORLD$false$113::CS1(AUTOGEN)#Left$CS2$[-25.1002 3.26616 29.556]$WORLD$WORLD$mm$[1 0 0;0 "
+      "1 0;0 0 1]$3x3 Transform$rad$WORLD$true$113:-:74::113(AUTOGEN)#Right$CS3$[-25.1 21.8426 67.2245]$WORLD$WORLD$mm$"
+      "[1 0 0;0 1 0;0 0 1]$3x3 Transform$rad$WORLD$true$110:-:113::113(AUTOGEN)"
+      CGPos		      "[-20.2 12.5544 48.3902]"
+      CGRot		      "[0 0 1;0.442295 -0.89687 0;0.89687 0.442295 0]"
+      CS0Pos		      "[]"
+      CS0Rot		      "[]"
+      CS1Pos		      "[-20.2 12.5544 48.3902]"
+      CS1Rot		      "[0 0 1;0.442295 -0.89687 0;0.89687 0.442295 0]"
+      CS2Pos		      "[-25.1002 3.26616 29.556]"
+      CS2Rot		      "[1 0 0;0 1 0;0 0 1]"
+      CS3Pos		      "[-25.1 21.8426 67.2245]"
+      CS3Rot		      "[1 0 0;0 1 0;0 0 1]"
+      CS4Pos		      "[]"
+      CS4Rot		      "[]"
+      CS5Pos		      "[]"
+      CS5Rot		      "[]"
+      CS6Pos		      "[]"
+      CS6Rot		      "[]"
+      CS7Pos		      "[]"
+      CS7Rot		      "[]"
+      CS8Pos		      "[]"
+      CS8Rot		      "[]"
+      CS9Pos		      "[]"
+      CS9Rot		      "[]"
+      CS10Pos		      "[]"
+      CS10Rot		      "[]"
+      CS11Pos		      "[]"
+      CS11Rot		      "[]"
+      CS12Pos		      "[]"
+      CS12Rot		      "[]"
+      CS13Pos		      "[]"
+      CS13Rot		      "[]"
+      CS14Pos		      "[]"
+      CS14Rot		      "[]"
+      CS15Pos		      "[]"
+      CS15Rot		      "[]"
+      CS16Pos		      "[]"
+      CS16Rot		      "[]"
+      CS17Pos		      "[]"
+      CS17Rot		      "[]"
+      CS18Pos		      "[]"
+      CS18Rot		      "[]"
+      CS19Pos		      "[]"
+      CS19Rot		      "[]"
+      CS20Pos		      "[]"
+      CS20Rot		      "[]"
+    }
+    Block {
+      BlockType		      Reference
+      Name		      "PLEUEL-3"
+      Ports		      [0, 0, 0, 0, 0, 1, 1]
+      Position		      [1115, 1875, 1175, 1915]
+      ForegroundColor	      "[0.000000, 0.501961, 0.752941]"
+      DialogController	      "MECH.DynMechDlgSource"
+      SourceBlock	      "mblibv1/Bodies/Body"
+      SourceType	      "Body"
+      PhysicalDomain	      "mechanical"
+      SubClassName	      "Unknown"
+      LeftPortType	      "workingframe"
+      RightPortType	      "workingframe"
+      LConnTagsString	      "CS2"
+      RConnTagsString	      "CS3"
+      PMImportedID	      "104"
+      UpdateFromCAD	      "on"
+      ClassName		      "Body"
+      DialogClass	      "MechanicalBodyBlock"
+      Mass		      "4.9128e+006"
+      MassUnits		      "kg"
+      InertiaUnits	      "kg*m^2"
+      Inertia		      "[14.226,0,0;0,458.442,0;0,0,380.048]"
+      Shape		      "Cylinder"
+      ShapeDims		      "[1 1]"
+      ShapeUnits	      "m"
+      ShapeUse		      "false"
+      Density		      "1"
+      DensityUnits	      "kg/m^3"
+      DensityUse	      "false"
+      GraphicsMode	      "GFXFILE"
+      GraphicsFileName	      "PLEUEL_prt.stl"
+      BodyColorSelMode	      "MACHINE_DEFAULT"
+      BodyColor		      "[1 0 0]"
+      AttachedToCS	      "CS1"
+      CG		      "Right$CG$[-20.2 37.3067 5.22453]$WORLD$WORLD$mm$[0 0 1;0.968558 0.248787 0;-0.248787 0.968558 0]$3x3 "
+      "Transform$rad$WORLD$false$104::CG(AUTOGEN)"
+      WorkingFrames	      "Right$CS1$[-20.2 37.3067 5.22453]$WORLD$WORLD$mm$[0 0 1;0.968558 0.248787 0;-0.248787 0.968"
+      "558 0]$3x3 Transform$rad$WORLD$false$104::CS1(AUTOGEN)#Left$CS2$[-29 16.9669 10.4491]$WORLD$WORLD$mm$[1 0 0;0 1 "
+      "0;0 0 1]$3x3 Transform$rad$WORLD$true$104:-:74::104(AUTOGEN)#Right$CS3$[-25.1 57.6465 0]$WORLD$WORLD$mm$[1 0 0;0"
+      " 1 0;0 0 1]$3x3 Transform$rad$WORLD$true$104:-:73::104(AUTOGEN)"
+      CGPos		      "[-20.2 37.3067 5.22453]"
+      CGRot		      "[0 0 1;0.968558 0.248787 0;-0.248787 0.968558 0]"
+      CS0Pos		      "[]"
+      CS0Rot		      "[]"
+      CS1Pos		      "[-20.2 37.3067 5.22453]"
+      CS1Rot		      "[0 0 1;0.968558 0.248787 0;-0.248787 0.968558 0]"
+      CS2Pos		      "[-29 16.9669 10.4491]"
+      CS2Rot		      "[1 0 0;0 1 0;0 0 1]"
+      CS3Pos		      "[-25.1 57.6465 0]"
+      CS3Rot		      "[1 0 0;0 1 0;0 0 1]"
+      CS4Pos		      "[]"
+      CS4Rot		      "[]"
+      CS5Pos		      "[]"
+      CS5Rot		      "[]"
+      CS6Pos		      "[]"
+      CS6Rot		      "[]"
+      CS7Pos		      "[]"
+      CS7Rot		      "[]"
+      CS8Pos		      "[]"
+      CS8Rot		      "[]"
+      CS9Pos		      "[]"
+      CS9Rot		      "[]"
+      CS10Pos		      "[]"
+      CS10Rot		      "[]"
+      CS11Pos		      "[]"
+      CS11Rot		      "[]"
+      CS12Pos		      "[]"
+      CS12Rot		      "[]"
+      CS13Pos		      "[]"
+      CS13Rot		      "[]"
+      CS14Pos		      "[]"
+      CS14Rot		      "[]"
+      CS15Pos		      "[]"
+      CS15Rot		      "[]"
+      CS16Pos		      "[]"
+      CS16Rot		      "[]"
+      CS17Pos		      "[]"
+      CS17Rot		      "[]"
+      CS18Pos		      "[]"
+      CS18Rot		      "[]"
+      CS19Pos		      "[]"
+      CS19Rot		      "[]"
+      CS20Pos		      "[]"
+      CS20Rot		      "[]"
+    }
+    Block {
+      BlockType		      Reference
+      Name		      "PROPELLER"
+      Ports		      [0, 0, 0, 0, 0, 1, 2]
+      Position		      [845, 2135, 905, 2175]
+      ForegroundColor	      "[0.000000, 0.501961, 0.752941]"
+      DialogController	      "MECH.DynMechDlgSource"
+      SourceBlock	      "mblibv1/Bodies/Body"
+      SourceType	      "Body"
+      PhysicalDomain	      "mechanical"
+      SubClassName	      "Unknown"
+      LeftPortType	      "workingframe"
+      RightPortType	      "workingframe"
+      LConnTagsString	      "CS2"
+      RConnTagsString	      "CS3|CS4"
+      PMImportedID	      "111"
+      UpdateFromCAD	      "on"
+      ClassName		      "Body"
+      DialogClass	      "MechanicalBodyBlock"
+      Mass		      "3.09e+007"
+      MassUnits		      "kg"
+      InertiaUnits	      "kg*m^2"
+      Inertia		      "[5969.93,-2644.36,0;-2644.36,31773.2,0;0,0,31794]"
+      Shape		      "Cylinder"
+      ShapeDims		      "[1 1]"
+      ShapeUnits	      "m"
+      ShapeUse		      "false"
+      Density		      "1"
+      DensityUnits	      "kg/m^3"
+      DensityUse	      "false"
+      GraphicsMode	      "CONVHULL"
+      GraphicsFileName	      "PROPELLER3_prt.stl"
+      BodyColorSelMode	      "COLORPALETTE"
+      BodyColor		      "[0.16863 0.50588 0.33725]"
+      AttachedToCS	      "CS1"
+      CG		      "Right$CG$[65.5473 -42.515 -5.01496]$WORLD$WORLD$mm$[0 -1 0;-0.275687 0 -0.961247;0.961247 0 -0.275687"
+      "]$3x3 Transform$rad$WORLD$false$111::CG(AUTOGEN)"
+      WorkingFrames	      "Right$CS1$[65.5473 -42.515 -5.01496]$WORLD$WORLD$mm$[0 -1 0;-0.275687 0 -0.961247;0.961247 "
+      "0 -0.275687]$3x3 Transform$rad$WORLD$false$111::CS1(AUTOGEN)#Left$CS2$[90.95 0 0]$WORLD$WORLD$mm$[1 0 0;0 1 0;0 "
+      "0 1]$3x3 Transform$rad$WORLD$true$111:-:76::111(AUTOGEN)#Right$CS3$[77.2473 0 0]$WORLD$WORLD$mm$[1 0 0;0 1 0;0 0"
+      " 1]$3x3 Transform$rad$WORLD$true$111:-:112::111(AUTOGEN)#Right$CS4$[0 0 0]$CS3$CS3$mm$[1 0 0;0 1 0;0 0 1]$3x3 Tr"
+      "ansform$rad$WORLD$true$none"
+      CGPos		      "[65.5473 -42.515 -5.01496]"
+      CGRot		      "[0 -1 0;-0.275687 0 -0.961247;0.961247 0 -0.275687]"
+      CS0Pos		      "[]"
+      CS0Rot		      "[]"
+      CS1Pos		      "[65.5473 -42.515 -5.01496]"
+      CS1Rot		      "[0 -1 0;-0.275687 0 -0.961247;0.961247 0 -0.275687]"
+      CS2Pos		      "[90.95 0 0]"
+      CS2Rot		      "[1 0 0;0 1 0;0 0 1]"
+      CS3Pos		      "[77.2473 0 0]"
+      CS3Rot		      "[1 0 0;0 1 0;0 0 1]"
+      CS4Pos		      "[0 0 0]"
+      CS4Rot		      "[1 0 0;0 1 0;0 0 1]"
+      CS5Pos		      "[]"
+      CS5Rot		      "[]"
+      CS6Pos		      "[]"
+      CS6Rot		      "[]"
+      CS7Pos		      "[]"
+      CS7Rot		      "[]"
+      CS8Pos		      "[]"
+      CS8Rot		      "[]"
+      CS9Pos		      "[]"
+      CS9Rot		      "[]"
+      CS10Pos		      "[]"
+      CS10Rot		      "[]"
+      CS11Pos		      "[]"
+      CS11Rot		      "[]"
+      CS12Pos		      "[]"
+      CS12Rot		      "[]"
+      CS13Pos		      "[]"
+      CS13Rot		      "[]"
+      CS14Pos		      "[]"
+      CS14Rot		      "[]"
+      CS15Pos		      "[]"
+      CS15Rot		      "[]"
+      CS16Pos		      "[]"
+      CS16Rot		      "[]"
+      CS17Pos		      "[]"
+      CS17Rot		      "[]"
+      CS18Pos		      "[]"
+      CS18Rot		      "[]"
+      CS19Pos		      "[]"
+      CS19Rot		      "[]"
+      CS20Pos		      "[]"
+      CS20Rot		      "[]"
+    }
+    Block {
+      BlockType		      Reference
+      Name		      "Revolute"
+      Ports		      [0, 0, 0, 0, 0, 1, 1]
+      Position		      [430, 1815, 480, 1865]
+      ForegroundColor	      "[0.000000, 0.501961, 0.752941]"
+      DialogController	      "MECH.DynMechDlgSource"
+      SourceBlock	      "mblibv1/Joints/Revolute"
+      SourceType	      "Revolute"
+      PhysicalDomain	      "mechanical"
+      SubClassName	      "Unknown"
+      LeftPortType	      "blob"
+      RightPortType	      "blob"
+      LConnTagsString	      "__newl0"
+      RConnTagsString	      "__newr0"
+      PMImportedID	      ":-:RootPart"
+      UpdateFromCAD	      "on"
+      NumSAPorts	      "0"
+      CutJoint		      "off"
+      MarkAsCut		      "off"
+      Primitives	      "prismatic"
+      PrimitiveProps	      "R1$WORLD$[-1,0,0]$revolute"
+      ClassName		      "Joint"
+      DialogClass	      "JointBlock"
+      R1Axis		      "[-1,0,0]"
+    }
+    Block {
+      BlockType		      Reference
+      Name		      "Revolute1"
+      Ports		      [0, 0, 0, 0, 0, 1, 1]
+      Position		      [985, 1480, 1035, 1530]
+      ForegroundColor	      "[0.000000, 0.501961, 0.752941]"
+      DialogController	      "MECH.DynMechDlgSource"
+      SourceBlock	      "mblibv1/Joints/Revolute"
+      SourceType	      "Revolute"
+      PhysicalDomain	      "mechanical"
+      SubClassName	      "Unknown"
+      LeftPortType	      "blob"
+      RightPortType	      "blob"
+      LConnTagsString	      "__newl0"
+      RConnTagsString	      "__newr0"
+      PMImportedID	      "74:-:79"
+      UpdateFromCAD	      "on"
+      NumSAPorts	      "0"
+      CutJoint		      "off"
+      MarkAsCut		      "off"
+      Primitives	      "prismatic"
+      PrimitiveProps	      "R1$WORLD$[1,0,0]$revolute"
+      ClassName		      "Joint"
+      DialogClass	      "JointBlock"
+      R1Axis		      "[1,0,0]"
+    }
+    Block {
+      BlockType		      Reference
+      Name		      "Revolute2"
+      Ports		      [0, 0, 0, 0, 0, 1, 1]
+      Position		      [985, 1610, 1035, 1660]
+      ForegroundColor	      "[0.000000, 0.501961, 0.752941]"
+      DialogController	      "MECH.DynMechDlgSource"
+      SourceBlock	      "mblibv1/Joints/Revolute"
+      SourceType	      "Revolute"
+      PhysicalDomain	      "mechanical"
+      SubClassName	      "Unknown"
+      LeftPortType	      "blob"
+      RightPortType	      "blob"
+      LConnTagsString	      "__newl0"
+      RConnTagsString	      "__newr0"
+      PMImportedID	      "108:-:74"
+      UpdateFromCAD	      "on"
+      NumSAPorts	      "0"
+      CutJoint		      "off"
+      MarkAsCut		      "off"
+      Primitives	      "prismatic"
+      PrimitiveProps	      "R1$WORLD$[1,0,0]$revolute"
+      ClassName		      "Joint"
+      DialogClass	      "JointBlock"
+      R1Axis		      "[1,0,0]"
+    }
+    Block {
+      BlockType		      Reference
+      Name		      "Revolute3"
+      Ports		      [0, 0, 0, 0, 0, 1, 1]
+      Position		      [985, 1740, 1035, 1790]
+      ForegroundColor	      "[0.000000, 0.501961, 0.752941]"
+      DialogController	      "MECH.DynMechDlgSource"
+      SourceBlock	      "mblibv1/Joints/Revolute"
+      SourceType	      "Revolute"
+      PhysicalDomain	      "mechanical"
+      SubClassName	      "Unknown"
+      LeftPortType	      "blob"
+      RightPortType	      "blob"
+      LConnTagsString	      "__newl0"
+      RConnTagsString	      "__newr0"
+      PMImportedID	      "113:-:74"
+      UpdateFromCAD	      "on"
+      NumSAPorts	      "0"
+      CutJoint		      "off"
+      MarkAsCut		      "off"
+      Primitives	      "prismatic"
+      PrimitiveProps	      "R1$WORLD$[1,0,0]$revolute"
+      ClassName		      "Joint"
+      DialogClass	      "JointBlock"
+      R1Axis		      "[1,0,0]"
+    }
+    Block {
+      BlockType		      Reference
+      Name		      "Revolute4"
+      Ports		      [0, 0, 0, 0, 0, 1, 1]
+      Position		      [985, 1870, 1035, 1920]
+      ForegroundColor	      "[0.000000, 0.501961, 0.752941]"
+      DialogController	      "MECH.DynMechDlgSource"
+      SourceBlock	      "mblibv1/Joints/Revolute"
+      SourceType	      "Revolute"
+      PhysicalDomain	      "mechanical"
+      SubClassName	      "Unknown"
+      LeftPortType	      "blob"
+      RightPortType	      "blob"
+      LConnTagsString	      "__newl0"
+      RConnTagsString	      "__newr0"
+      PMImportedID	      "104:-:74"
+      UpdateFromCAD	      "on"
+      NumSAPorts	      "0"
+      CutJoint		      "off"
+      MarkAsCut		      "off"
+      Primitives	      "prismatic"
+      PrimitiveProps	      "R1$WORLD$[1,0,0]$revolute"
+      ClassName		      "Joint"
+      DialogClass	      "JointBlock"
+      R1Axis		      "[1,0,0]"
+    }
+    Block {
+      BlockType		      Reference
+      Name		      "RootGround"
+      Ports		      [0, 0, 0, 0, 0, 1, 1]
+      Position		      [40, 1020, 80, 1060]
+      ForegroundColor	      "[0.000000, 0.501961, 0.752941]"
+      UserDataPersistent      on
+      UserData		      "DataTag0"
+      DialogController	      "MECH.DynMechDlgSource"
+      SourceBlock	      "mblibv1/Bodies/Ground"
+      SourceType	      "Ground"
+      ShowPortLabels	      "FromPortIcon"
+      SystemSampleTime	      "-1"
+      FunctionWithSeparateData off
+      RTWMemSecFuncInitTerm   "Inherit from model"
+      RTWMemSecFuncExecute    "Inherit from model"
+      RTWMemSecDataConstants  "Inherit from model"
+      RTWMemSecDataInternal   "Inherit from model"
+      RTWMemSecDataParameters "Inherit from model"
+      PMImportedID	      "RootGround"
+      UpdateFromCAD	      "on"
+      LeftPortType	      "env"
+      RightPortType	      "workingframe"
+      PhysicalDomain	      "Mechanical"
+      DialogClass	      "GroundBlock"
+      ClassName		      "Ground"
+      CoordPosition	      "[-14.614,-0.00495788,0.187193]"
+      CoordPositionUnits      "mm"
+      StateVectorMgrId	      "1"
+      MachineId		      "[2 1]"
+      ShowEnvPort	      on
+    }
+    Block {
+      BlockType		      Reference
+      Name		      "RootPart"
+      Ports		      [0, 0, 0, 0, 0, 1, 16]
+      Position		      [290, 933, 350, 1212]
+      ForegroundColor	      "[0.000000, 0.501961, 0.752941]"
+      DialogController	      "MECH.DynMechDlgSource"
+      SourceBlock	      "mblibv1/Bodies/Body"
+      SourceType	      "Body"
+      PhysicalDomain	      "mechanical"
+      SubClassName	      "Unknown"
+      LeftPortType	      "workingframe"
+      RightPortType	      "workingframe"
+      LConnTagsString	      "CS18"
+      RConnTagsString	      "CS2|CS3|CS4|CS5|CS6|CS7|CS8|CS9|CS10|CS11|CS12|CS13|CS14|CS15|CS16|CS17"
+      PMImportedID	      "RootPart"
+      UpdateFromCAD	      "on"
+      ClassName		      "Body"
+      DialogClass	      "MechanicalBodyBlock"
+      Mass		      "0"
+      MassUnits		      "kg"
+      InertiaUnits	      "kg*m^2"
+      Inertia		      "[0,0,0;0,0,0;0,0,0]"
+      Shape		      "Cylinder"
+      ShapeDims		      "[1 1]"
+      ShapeUnits	      "m"
+      ShapeUse		      "false"
+      Density		      "1"
+      DensityUnits	      "kg/m^3"
+      DensityUse	      "false"
+      GraphicsMode	      "MACHINE_DEFAULT"
+      BodyColorSelMode	      "MACHINE_DEFAULT"
+      BodyColor		      "[1 0 0]"
+      AttachedToCS	      "CS1"
+      CG		      "Right$CG$[-14.614 -0.00495788 0.187193]$WORLD$WORLD$mm$[1 0 0;0 1 0;0 0 1]$3x3 Transform$rad$WORLD$fa"
+      "lse$RootPart::CG(AUTOGEN)"
+      WorkingFrames	      "Right$CS1$[0 0 0]$WORLD$WORLD$mm$[1 0 0;0 1 0;0 0 1]$3x3 Transform$rad$WORLD$false$RootPart"
+      "::CS1(AUTOGEN)#Right$CS2$[-25 -66.7188 -48.4741]$WORLD$WORLD$mm$[1 0 0;0 1 0;0 0 1]$3x3 Transform$rad$WORLD$true"
+      "$44:-:RootPart::RootPart(AUTOGEN)#Right$CS3$[-25 -66.7188 48.4741]$WORLD$WORLD$mm$[1 0 0;0 1 0;0 0 1]$3x3 Transf"
+      "orm$rad$WORLD$true$91:-:RootPart::RootPart(AUTOGEN)#Right$CS4$[-25 82.469 0]$WORLD$WORLD$mm$[1 0 0;0 1 0;0 0 1]$"
+      "3x3 Transform$rad$WORLD$true$20:-:RootPart::RootPart(AUTOGEN)#Right$CS5$[-25 25.4843 -78.4327]$WORLD$WORLD$mm$[1"
+      " 0 0;0 1 0;0 0 1]$3x3 Transform$rad$WORLD$true$31:-:RootPart::RootPart(AUTOGEN)#Right$CS6$[-25 25.4843 78.4327]$"
+      "WORLD$WORLD$mm$[1 0 0;0 1 0;0 0 1]$3x3 Transform$rad$WORLD$true$64:-:RootPart::RootPart(AUTOGEN)#Right$CS7$[-25 "
+      "-37.6193 -27.332]$WORLD$WORLD$mm$[1 0 0;0 1 0;0 0 1]$3x3 Transform$rad$WORLD$true$43:-:RootPart::RootPart(AUTOGE"
+      "N)#Right$CS8$[-25 46.5 0]$WORLD$WORLD$mm$[1 0 0;0 1 0;0 0 1]$3x3 Transform$rad$WORLD$true$19:-:RootPart::RootPar"
+      "t(AUTOGEN)#Right$CS9$[-25 14.3693 -44.2241]$WORLD$WORLD$mm$[1 0 0;0 1 0;0 0 1]$3x3 Transform$rad$WORLD$true$30:-"
+      ":RootPart::RootPart(AUTOGEN)#Right$CS10$[-25 14.3693 44.2241]$WORLD$WORLD$mm$[1 0 0;0 1 0;0 0 1]$3x3 Transform$r"
+      "ad$WORLD$true$63:-:RootPart::RootPart(AUTOGEN)#Right$CS11$[-25 -37.6193 27.332]$WORLD$WORLD$mm$[1 0 0;0 1 0;0 0 "
+      "1]$3x3 Transform$rad$WORLD$true$90:-:RootPart::RootPart(AUTOGEN)#Right$CS12$[-25 -51.4707 -37.3957]$WORLD$WORLD$"
+      "mm$[1 0 0;0 1 0;0 0 1]$3x3 Transform$rad$WORLD$true$42:-:RootPart::RootPart(AUTOGEN)#Right$CS13$[-25 63.6213 0]$"
+      "WORLD$WORLD$mm$[1 0 0;0 1 0;0 0 1]$3x3 Transform$rad$WORLD$true$18:-:RootPart::RootPart(AUTOGEN)#Right$CS14$[-25"
+      " 19.6601 -60.5075]$WORLD$WORLD$mm$[1 0 0;0 1 0;0 0 1]$3x3 Transform$rad$WORLD$true$29:-:RootPart::RootPart(AUTOG"
+      "EN)#Right$CS15$[-25 19.6601 60.5075]$WORLD$WORLD$mm$[1 0 0;0 1 0;0 0 1]$3x3 Transform$rad$WORLD$true$62:-:RootPa"
+      "rt::RootPart(AUTOGEN)#Right$CS16$[-25 -51.4707 37.3957]$WORLD$WORLD$mm$[1 0 0;0 1 0;0 0 1]$3x3 Transform$rad$WOR"
+      "LD$true$89:-:RootPart::RootPart(AUTOGEN)#Right$CS17$[-5.05 0 0]$WORLD$WORLD$mm$[1 0 0;0 1 0;0 0 1]$3x3 Transform"
+      "$rad$WORLD$true$:-:RootPart::RootPart(AUTOGEN)#Left$CS18$[-14.614 -0.00495788 0.187193]$WORLD$WORLD$mm$[1 0 0;0 "
+      "1 0;0 0 1]$3x3 Transform$rad$WORLD$true$RootGround:-:RootPart::RootPart(AUTOGEN)"
+      CGPos		      "[-14.614 -0.00495788 0.187193]"
+      CGRot		      "[1 0 0;0 1 0;0 0 1]"
+      CS0Pos		      "[]"
+      CS0Rot		      "[]"
+      CS1Pos		      "[0 0 0]"
+      CS1Rot		      "[1 0 0;0 1 0;0 0 1]"
+      CS2Pos		      "[-25 -66.7188 -48.4741]"
+      CS2Rot		      "[1 0 0;0 1 0;0 0 1]"
+      CS3Pos		      "[-25 -66.7188 48.4741]"
+      CS3Rot		      "[1 0 0;0 1 0;0 0 1]"
+      CS4Pos		      "[-25 82.469 0]"
+      CS4Rot		      "[1 0 0;0 1 0;0 0 1]"
+      CS5Pos		      "[-25 25.4843 -78.4327]"
+      CS5Rot		      "[1 0 0;0 1 0;0 0 1]"
+      CS6Pos		      "[-25 25.4843 78.4327]"
+      CS6Rot		      "[1 0 0;0 1 0;0 0 1]"
+      CS7Pos		      "[-25 -37.6193 -27.332]"
+      CS7Rot		      "[1 0 0;0 1 0;0 0 1]"
+      CS8Pos		      "[-25 46.5 0]"
+      CS8Rot		      "[1 0 0;0 1 0;0 0 1]"
+      CS9Pos		      "[-25 14.3693 -44.2241]"
+      CS9Rot		      "[1 0 0;0 1 0;0 0 1]"
+      CS10Pos		      "[-25 14.3693 44.2241]"
+      CS10Rot		      "[1 0 0;0 1 0;0 0 1]"
+      CS11Pos		      "[-25 -37.6193 27.332]"
+      CS11Rot		      "[1 0 0;0 1 0;0 0 1]"
+      CS12Pos		      "[-25 -51.4707 -37.3957]"
+      CS12Rot		      "[1 0 0;0 1 0;0 0 1]"
+      CS13Pos		      "[-25 63.6213 0]"
+      CS13Rot		      "[1 0 0;0 1 0;0 0 1]"
+      CS14Pos		      "[-25 19.6601 -60.5075]"
+      CS14Rot		      "[1 0 0;0 1 0;0 0 1]"
+      CS15Pos		      "[-25 19.6601 60.5075]"
+      CS15Rot		      "[1 0 0;0 1 0;0 0 1]"
+      CS16Pos		      "[-25 -51.4707 37.3957]"
+      CS16Rot		      "[1 0 0;0 1 0;0 0 1]"
+      CS17Pos		      "[-5.05 0 0]"
+      CS17Rot		      "[1 0 0;0 1 0;0 0 1]"
+      CS18Pos		      "[-14.614 -0.00495788 0.187193]"
+      CS18Rot		      "[1 0 0;0 1 0;0 0 1]"
+      CS19Pos		      "[]"
+      CS19Rot		      "[]"
+      CS20Pos		      "[]"
+      CS20Rot		      "[]"
+    }
+    Block {
+      BlockType		      Reference
+      Name		      "SPINNER"
+      Ports		      [0, 0, 0, 0, 0, 1]
+      Position		      [1115, 2135, 1175, 2175]
+      ForegroundColor	      "[0.000000, 0.501961, 0.752941]"
+      DialogController	      "MECH.DynMechDlgSource"
+      SourceBlock	      "mblibv1/Bodies/Body"
+      SourceType	      "Body"
+      PhysicalDomain	      "mechanical"
+      SubClassName	      "Unknown"
+      LeftPortType	      "workingframe"
+      RightPortType	      "workingframe"
+      LConnTagsString	      "CS2"
+      PMImportedID	      "112"
+      UpdateFromCAD	      "on"
+      ClassName		      "Body"
+      DialogClass	      "MechanicalBodyBlock"
+      Mass		      "0"
+      MassUnits		      "kg"
+      InertiaUnits	      "kg*m^2"
+      Inertia		      "[0,0,0;0,0,0;0,0,0]"
+      Shape		      "Cylinder"
+      ShapeDims		      "[1 1]"
+      ShapeUnits	      "m"
+      ShapeUse		      "false"
+      Density		      "1"
+      DensityUnits	      "kg/m^3"
+      DensityUse	      "false"
+      GraphicsMode	      "GFXFILE"
+      GraphicsFileName	      "SPINNER_prt.stl"
+      BodyColorSelMode	      "MACHINE_DEFAULT"
+      BodyColor		      "[1 0 0]"
+      AttachedToCS	      "CS1"
+      CG		      "Right$CG$[77.2473 0 0]$WORLD$WORLD$mm$[1 0 0;0 -0.961247 0.275687;0 -0.275687 -0.961247]$3x3 Transfor"
+      "m$rad$WORLD$false$112::CG(AUTOGEN)"
+      WorkingFrames	      "Right$CS1$[77.2473 0 0]$WORLD$WORLD$mm$[1 0 0;0 -0.961247 0.275687;0 -0.275687 -0.961247]$3"
+      "x3 Transform$rad$WORLD$false$112::CS1(AUTOGEN)#Left$CS2$[77.2473 0 0]$WORLD$WORLD$mm$[1 0 0;0 1 0;0 0 1]$3x3 Tra"
+      "nsform$rad$WORLD$true$111:-:112::112(AUTOGEN)"
+      CGPos		      "[77.2473 0 0]"
+      CGRot		      "[1 0 0;0 -0.961247 0.275687;0 -0.275687 -0.961247]"
+      CS0Pos		      "[]"
+      CS0Rot		      "[]"
+      CS1Pos		      "[77.2473 0 0]"
+      CS1Rot		      "[1 0 0;0 -0.961247 0.275687;0 -0.275687 -0.961247]"
+      CS2Pos		      "[77.2473 0 0]"
+      CS2Rot		      "[1 0 0;0 1 0;0 0 1]"
+      CS3Pos		      "[]"
+      CS3Rot		      "[]"
+      CS4Pos		      "[]"
+      CS4Rot		      "[]"
+      CS5Pos		      "[]"
+      CS5Rot		      "[]"
+      CS6Pos		      "[]"
+      CS6Rot		      "[]"
+      CS7Pos		      "[]"
+      CS7Rot		      "[]"
+      CS8Pos		      "[]"
+      CS8Rot		      "[]"
+      CS9Pos		      "[]"
+      CS9Rot		      "[]"
+      CS10Pos		      "[]"
+      CS10Rot		      "[]"
+      CS11Pos		      "[]"
+      CS11Rot		      "[]"
+      CS12Pos		      "[]"
+      CS12Rot		      "[]"
+      CS13Pos		      "[]"
+      CS13Rot		      "[]"
+      CS14Pos		      "[]"
+      CS14Rot		      "[]"
+      CS15Pos		      "[]"
+      CS15Rot		      "[]"
+      CS16Pos		      "[]"
+      CS16Rot		      "[]"
+      CS17Pos		      "[]"
+      CS17Rot		      "[]"
+      CS18Pos		      "[]"
+      CS18Rot		      "[]"
+      CS19Pos		      "[]"
+      CS19Rot		      "[]"
+      CS20Pos		      "[]"
+      CS20Rot		      "[]"
+    }
+    Block {
+      BlockType		      Scope
+      Name		      "Scope"
+      Ports		      [1]
+      Position		      [1010, 2189, 1040, 2221]
+      Floating		      off
+      Location		      [188, 390, 512, 629]
+      Open		      off
+      NumInputPorts	      "1"
+      List {
+	ListType		AxesTitles
+	axes1			"%<SignalLabel>"
+      }
+      YMin		      "-1"
+      YMax		      "1"
+      DataFormat	      "StructureWithTime"
+      SampleTime	      "0"
+    }
+    Block {
+      BlockType		      Reference
+      Name		      "Weld"
+      Ports		      [0, 0, 0, 0, 0, 1, 1]
+      Position		      [430, 40, 480, 90]
+      ForegroundColor	      "[0.000000, 0.501961, 0.752941]"
+      DialogController	      "MECH.DynMechDlgSource"
+      SourceBlock	      "mblibv1/Joints/Weld"
+      SourceType	      "Weld"
+      PhysicalDomain	      "mechanical"
+      SubClassName	      "Unknown"
+      LeftPortType	      "blob"
+      RightPortType	      "blob"
+      LConnTagsString	      "__newl0"
+      RConnTagsString	      "__newr0"
+      PMImportedID	      "44:-:RootPart"
+      UpdateFromCAD	      "on"
+      NumSAPorts	      "0"
+      CutJoint		      "off"
+      MarkAsCut		      "off"
+      Primitives	      "weld"
+      PrimitiveProps	      "W$WORLD$[0.57735,0.57735,0.57735]$weld"
+      ClassName		      "Joint"
+      DialogClass	      "JointBlock"
+      WAxis		      "[0.57735,0.57735,0.57735]"
+    }
+    Block {
+      BlockType		      Reference
+      Name		      "Weld1"
+      Ports		      [0, 0, 0, 0, 0, 1, 1]
+      Position		      [430, 170, 480, 220]
+      ForegroundColor	      "[0.000000, 0.501961, 0.752941]"
+      DialogController	      "MECH.DynMechDlgSource"
+      SourceBlock	      "mblibv1/Joints/Weld"
+      SourceType	      "Weld"
+      PhysicalDomain	      "mechanical"
+      SubClassName	      "Unknown"
+      LeftPortType	      "blob"
+      RightPortType	      "blob"
+      LConnTagsString	      "__newl0"
+      RConnTagsString	      "__newr0"
+      PMImportedID	      "91:-:RootPart"
+      UpdateFromCAD	      "on"
+      NumSAPorts	      "0"
+      CutJoint		      "off"
+      MarkAsCut		      "off"
+      Primitives	      "weld"
+      PrimitiveProps	      "W$WORLD$[0.57735,0.57735,0.57735]$weld"
+      ClassName		      "Joint"
+      DialogClass	      "JointBlock"
+      WAxis		      "[0.57735,0.57735,0.57735]"
+    }
+    Block {
+      BlockType		      Reference
+      Name		      "Weld10"
+      Ports		      [0, 0, 0, 0, 0, 1, 1]
+      Position		      [430, 1340, 480, 1390]
+      ForegroundColor	      "[0.000000, 0.501961, 0.752941]"
+      DialogController	      "MECH.DynMechDlgSource"
+      SourceBlock	      "mblibv1/Joints/Weld"
+      SourceType	      "Weld"
+      PhysicalDomain	      "mechanical"
+      SubClassName	      "Unknown"
+      LeftPortType	      "blob"
+      RightPortType	      "blob"
+      LConnTagsString	      "__newl0"
+      RConnTagsString	      "__newr0"
+      PMImportedID	      "42:-:RootPart"
+      UpdateFromCAD	      "on"
+      NumSAPorts	      "0"
+      CutJoint		      "off"
+      MarkAsCut		      "off"
+      Primitives	      "weld"
+      PrimitiveProps	      "W$WORLD$[0.57735,0.57735,0.57735]$weld"
+      ClassName		      "Joint"
+      DialogClass	      "JointBlock"
+      WAxis		      "[0.57735,0.57735,0.57735]"
+    }
+    Block {
+      BlockType		      Reference
+      Name		      "Weld11"
+      Ports		      [0, 0, 0, 0, 0, 1, 1]
+      Position		      [565, 1650, 615, 1700]
+      ForegroundColor	      "[0.000000, 0.501961, 0.752941]"
+      DialogController	      "MECH.DynMechDlgSource"
+      SourceBlock	      "mblibv1/Joints/Weld"
+      SourceType	      "Weld"
+      PhysicalDomain	      "mechanical"
+      SubClassName	      "Unknown"
+      LeftPortType	      "blob"
+      RightPortType	      "blob"
+      LConnTagsString	      "__newl0"
+      RConnTagsString	      "__newr0"
+      PMImportedID	      "18:-:RootPart"
+      UpdateFromCAD	      "on"
+      NumSAPorts	      "0"
+      CutJoint		      "off"
+      MarkAsCut		      "off"
+      Primitives	      "weld"
+      PrimitiveProps	      "W$WORLD$[0.57735,0.57735,0.57735]$weld"
+      ClassName		      "Joint"
+      DialogClass	      "JointBlock"
+      WAxis		      "[0.57735,0.57735,0.57735]"
+    }
+    Block {
+      BlockType		      Reference
+      Name		      "Weld12"
+      Ports		      [0, 0, 0, 0, 0, 1, 1]
+      Position		      [430, 1470, 480, 1520]
+      ForegroundColor	      "[0.000000, 0.501961, 0.752941]"
+      DialogController	      "MECH.DynMechDlgSource"
+      SourceBlock	      "mblibv1/Joints/Weld"
+      SourceType	      "Weld"
+      PhysicalDomain	      "mechanical"
+      SubClassName	      "Unknown"
+      LeftPortType	      "blob"
+      RightPortType	      "blob"
+      LConnTagsString	      "__newl0"
+      RConnTagsString	      "__newr0"
+      PMImportedID	      "29:-:RootPart"
+      UpdateFromCAD	      "on"
+      NumSAPorts	      "0"
+      CutJoint		      "off"
+      MarkAsCut		      "off"
+      Primitives	      "weld"
+      PrimitiveProps	      "W$WORLD$[0.57735,0.57735,0.57735]$weld"
+      ClassName		      "Joint"
+      DialogClass	      "JointBlock"
+      WAxis		      "[0.57735,0.57735,0.57735]"
+    }
+    Block {
+      BlockType		      Reference
+      Name		      "Weld13"
+      Ports		      [0, 0, 0, 0, 0, 1, 1]
+      Position		      [430, 1605, 480, 1655]
+      ForegroundColor	      "[0.000000, 0.501961, 0.752941]"
+      DialogController	      "MECH.DynMechDlgSource"
+      SourceBlock	      "mblibv1/Joints/Weld"
+      SourceType	      "Weld"
+      PhysicalDomain	      "mechanical"
+      SubClassName	      "Unknown"
+      LeftPortType	      "blob"
+      RightPortType	      "blob"
+      LConnTagsString	      "__newl0"
+      RConnTagsString	      "__newr0"
+      PMImportedID	      "62:-:RootPart"
+      UpdateFromCAD	      "on"
+      NumSAPorts	      "0"
+      CutJoint		      "off"
+      MarkAsCut		      "off"
+      Primitives	      "weld"
+      PrimitiveProps	      "W$WORLD$[0.57735,0.57735,0.57735]$weld"
+      ClassName		      "Joint"
+      DialogClass	      "JointBlock"
+      WAxis		      "[0.57735,0.57735,0.57735]"
+    }
+    Block {
+      BlockType		      Reference
+      Name		      "Weld14"
+      Ports		      [0, 0, 0, 0, 0, 1, 1]
+      Position		      [565, 1780, 615, 1830]
+      ForegroundColor	      "[0.000000, 0.501961, 0.752941]"
+      DialogController	      "MECH.DynMechDlgSource"
+      SourceBlock	      "mblibv1/Joints/Weld"
+      SourceType	      "Weld"
+      PhysicalDomain	      "mechanical"
+      SubClassName	      "Unknown"
+      LeftPortType	      "blob"
+      RightPortType	      "blob"
+      LConnTagsString	      "__newl0"
+      RConnTagsString	      "__newr0"
+      PMImportedID	      "89:-:RootPart"
+      UpdateFromCAD	      "on"
+      NumSAPorts	      "0"
+      CutJoint		      "off"
+      MarkAsCut		      "off"
+      Primitives	      "weld"
+      PrimitiveProps	      "W$WORLD$[0.57735,0.57735,0.57735]$weld"
+      ClassName		      "Joint"
+      DialogClass	      "JointBlock"
+      WAxis		      "[0.57735,0.57735,0.57735]"
+    }
+    Block {
+      BlockType		      Reference
+      Name		      "Weld15"
+      Ports		      [0, 0, 0, 0, 0, 1, 1]
+      Position		      [705, 2075, 755, 2125]
+      ForegroundColor	      "[0.000000, 0.501961, 0.752941]"
+      DialogController	      "MECH.DynMechDlgSource"
+      SourceBlock	      "mblibv1/Joints/Weld"
+      SourceType	      "Weld"
+      PhysicalDomain	      "mechanical"
+      SubClassName	      "Unknown"
+      LeftPortType	      "blob"
+      RightPortType	      "blob"
+      LConnTagsString	      "__newl0"
+      RConnTagsString	      "__newr0"
+      PMImportedID	      "111:-:76"
+      UpdateFromCAD	      "on"
+      NumSAPorts	      "0"
+      CutJoint		      "off"
+      MarkAsCut		      "off"
+      Primitives	      "weld"
+      PrimitiveProps	      "W$WORLD$[0.57735,0.57735,0.57735]$weld"
+      ClassName		      "Joint"
+      DialogClass	      "JointBlock"
+      WAxis		      "[0.57735,0.57735,0.57735]"
+    }
+    Block {
+      BlockType		      Reference
+      Name		      "Weld16"
+      Ports		      [0, 0, 0, 0, 0, 1, 1]
+      Position		      [985, 2130, 1035, 2180]
+      ForegroundColor	      "[0.000000, 0.501961, 0.752941]"
+      DialogController	      "MECH.DynMechDlgSource"
+      SourceBlock	      "mblibv1/Joints/Weld"
+      SourceType	      "Weld"
+      PhysicalDomain	      "mechanical"
+      SubClassName	      "Unknown"
+      LeftPortType	      "blob"
+      RightPortType	      "blob"
+      LConnTagsString	      "__newl0"
+      RConnTagsString	      "__newr0"
+      PMImportedID	      "111:-:112"
+      UpdateFromCAD	      "on"
+      NumSAPorts	      "0"
+      CutJoint		      "off"
+      MarkAsCut		      "off"
+      Primitives	      "weld"
+      PrimitiveProps	      "W$WORLD$[0.57735,0.57735,0.57735]$weld"
+      ClassName		      "Joint"
+      DialogClass	      "JointBlock"
+      WAxis		      "[0.57735,0.57735,0.57735]"
+    }
+    Block {
+      BlockType		      Reference
+      Name		      "Weld17"
+      Ports		      [0, 0, 0, 0, 0, 1, 1]
+      Position		      [160, 1015, 210, 1065]
+      ForegroundColor	      "[0.000000, 0.501961, 0.752941]"
+      DialogController	      "MECH.DynMechDlgSource"
+      SourceBlock	      "mblibv1/Joints/Weld"
+      SourceType	      "Weld"
+      PhysicalDomain	      "mechanical"
+      SubClassName	      "Unknown"
+      LeftPortType	      "blob"
+      RightPortType	      "blob"
+      LConnTagsString	      "__newl0"
+      RConnTagsString	      "__newr0"
+      PMImportedID	      "RootGround:-:RootPart"
+      UpdateFromCAD	      "on"
+      NumSAPorts	      "0"
+      CutJoint		      "off"
+      MarkAsCut		      "off"
+      Primitives	      "weld"
+      PrimitiveProps	      "W$WORLD$[0.57735,0.57735,0.57735]$weld"
+      ClassName		      "Joint"
+      DialogClass	      "JointBlock"
+      WAxis		      "[0.57735,0.57735,0.57735]"
+    }
+    Block {
+      BlockType		      Reference
+      Name		      "Weld2"
+      Ports		      [0, 0, 0, 0, 0, 1, 1]
+      Position		      [430, 300, 480, 350]
+      ForegroundColor	      "[0.000000, 0.501961, 0.752941]"
+      DialogController	      "MECH.DynMechDlgSource"
+      SourceBlock	      "mblibv1/Joints/Weld"
+      SourceType	      "Weld"
+      PhysicalDomain	      "mechanical"
+      SubClassName	      "Unknown"
+      LeftPortType	      "blob"
+      RightPortType	      "blob"
+      LConnTagsString	      "__newl0"
+      RConnTagsString	      "__newr0"
+      PMImportedID	      "20:-:RootPart"
+      UpdateFromCAD	      "on"
+      NumSAPorts	      "0"
+      CutJoint		      "off"
+      MarkAsCut		      "off"
+      Primitives	      "weld"
+      PrimitiveProps	      "W$WORLD$[0.57735,0.57735,0.57735]$weld"
+      ClassName		      "Joint"
+      DialogClass	      "JointBlock"
+      WAxis		      "[0.57735,0.57735,0.57735]"
+    }
+    Block {
+      BlockType		      Reference
+      Name		      "Weld3"
+      Ports		      [0, 0, 0, 0, 0, 1, 1]
+      Position		      [430, 430, 480, 480]
+      ForegroundColor	      "[0.000000, 0.501961, 0.752941]"
+      DialogController	      "MECH.DynMechDlgSource"
+      SourceBlock	      "mblibv1/Joints/Weld"
+      SourceType	      "Weld"
+      PhysicalDomain	      "mechanical"
+      SubClassName	      "Unknown"
+      LeftPortType	      "blob"
+      RightPortType	      "blob"
+      LConnTagsString	      "__newl0"
+      RConnTagsString	      "__newr0"
+      PMImportedID	      "31:-:RootPart"
+      UpdateFromCAD	      "on"
+      NumSAPorts	      "0"
+      CutJoint		      "off"
+      MarkAsCut		      "off"
+      Primitives	      "weld"
+      PrimitiveProps	      "W$WORLD$[0.57735,0.57735,0.57735]$weld"
+      ClassName		      "Joint"
+      DialogClass	      "JointBlock"
+      WAxis		      "[0.57735,0.57735,0.57735]"
+    }
+    Block {
+      BlockType		      Reference
+      Name		      "Weld4"
+      Ports		      [0, 0, 0, 0, 0, 1, 1]
+      Position		      [430, 560, 480, 610]
+      ForegroundColor	      "[0.000000, 0.501961, 0.752941]"
+      DialogController	      "MECH.DynMechDlgSource"
+      SourceBlock	      "mblibv1/Joints/Weld"
+      SourceType	      "Weld"
+      PhysicalDomain	      "mechanical"
+      SubClassName	      "Unknown"
+      LeftPortType	      "blob"
+      RightPortType	      "blob"
+      LConnTagsString	      "__newl0"
+      RConnTagsString	      "__newr0"
+      PMImportedID	      "64:-:RootPart"
+      UpdateFromCAD	      "on"
+      NumSAPorts	      "0"
+      CutJoint		      "off"
+      MarkAsCut		      "off"
+      Primitives	      "weld"
+      PrimitiveProps	      "W$WORLD$[0.57735,0.57735,0.57735]$weld"
+      ClassName		      "Joint"
+      DialogClass	      "JointBlock"
+      WAxis		      "[0.57735,0.57735,0.57735]"
+    }
+    Block {
+      BlockType		      Reference
+      Name		      "Weld5"
+      Ports		      [0, 0, 0, 0, 0, 1, 1]
+      Position		      [430, 690, 480, 740]
+      ForegroundColor	      "[0.000000, 0.501961, 0.752941]"
+      DialogController	      "MECH.DynMechDlgSource"
+      SourceBlock	      "mblibv1/Joints/Weld"
+      SourceType	      "Weld"
+      PhysicalDomain	      "mechanical"
+      SubClassName	      "Unknown"
+      LeftPortType	      "blob"
+      RightPortType	      "blob"
+      LConnTagsString	      "__newl0"
+      RConnTagsString	      "__newr0"
+      PMImportedID	      "43:-:RootPart"
+      UpdateFromCAD	      "on"
+      NumSAPorts	      "0"
+      CutJoint		      "off"
+      MarkAsCut		      "off"
+      Primitives	      "weld"
+      PrimitiveProps	      "W$WORLD$[0.57735,0.57735,0.57735]$weld"
+      ClassName		      "Joint"
+      DialogClass	      "JointBlock"
+      WAxis		      "[0.57735,0.57735,0.57735]"
+    }
+    Block {
+      BlockType		      Reference
+      Name		      "Weld6"
+      Ports		      [0, 0, 0, 0, 0, 1, 1]
+      Position		      [430, 820, 480, 870]
+      ForegroundColor	      "[0.000000, 0.501961, 0.752941]"
+      DialogController	      "MECH.DynMechDlgSource"
+      SourceBlock	      "mblibv1/Joints/Weld"
+      SourceType	      "Weld"
+      PhysicalDomain	      "mechanical"
+      SubClassName	      "Unknown"
+      LeftPortType	      "blob"
+      RightPortType	      "blob"
+      LConnTagsString	      "__newl0"
+      RConnTagsString	      "__newr0"
+      PMImportedID	      "19:-:RootPart"
+      UpdateFromCAD	      "on"
+      NumSAPorts	      "0"
+      CutJoint		      "off"
+      MarkAsCut		      "off"
+      Primitives	      "weld"
+      PrimitiveProps	      "W$WORLD$[0.57735,0.57735,0.57735]$weld"
+      ClassName		      "Joint"
+      DialogClass	      "JointBlock"
+      WAxis		      "[0.57735,0.57735,0.57735]"
+    }
+    Block {
+      BlockType		      Reference
+      Name		      "Weld7"
+      Ports		      [0, 0, 0, 0, 0, 1, 1]
+      Position		      [430, 950, 480, 1000]
+      ForegroundColor	      "[0.000000, 0.501961, 0.752941]"
+      DialogController	      "MECH.DynMechDlgSource"
+      SourceBlock	      "mblibv1/Joints/Weld"
+      SourceType	      "Weld"
+      PhysicalDomain	      "mechanical"
+      SubClassName	      "Unknown"
+      LeftPortType	      "blob"
+      RightPortType	      "blob"
+      LConnTagsString	      "__newl0"
+      RConnTagsString	      "__newr0"
+      PMImportedID	      "30:-:RootPart"
+      UpdateFromCAD	      "on"
+      NumSAPorts	      "0"
+      CutJoint		      "off"
+      MarkAsCut		      "off"
+      Primitives	      "weld"
+      PrimitiveProps	      "W$WORLD$[0.57735,0.57735,0.57735]$weld"
+      ClassName		      "Joint"
+      DialogClass	      "JointBlock"
+      WAxis		      "[0.57735,0.57735,0.57735]"
+    }
+    Block {
+      BlockType		      Reference
+      Name		      "Weld8"
+      Ports		      [0, 0, 0, 0, 0, 1, 1]
+      Position		      [430, 1080, 480, 1130]
+      ForegroundColor	      "[0.000000, 0.501961, 0.752941]"
+      DialogController	      "MECH.DynMechDlgSource"
+      SourceBlock	      "mblibv1/Joints/Weld"
+      SourceType	      "Weld"
+      PhysicalDomain	      "mechanical"
+      SubClassName	      "Unknown"
+      LeftPortType	      "blob"
+      RightPortType	      "blob"
+      LConnTagsString	      "__newl0"
+      RConnTagsString	      "__newr0"
+      PMImportedID	      "63:-:RootPart"
+      UpdateFromCAD	      "on"
+      NumSAPorts	      "0"
+      CutJoint		      "off"
+      MarkAsCut		      "off"
+      Primitives	      "weld"
+      PrimitiveProps	      "W$WORLD$[0.57735,0.57735,0.57735]$weld"
+      ClassName		      "Joint"
+      DialogClass	      "JointBlock"
+      WAxis		      "[0.57735,0.57735,0.57735]"
+    }
+    Block {
+      BlockType		      Reference
+      Name		      "Weld9"
+      Ports		      [0, 0, 0, 0, 0, 1, 1]
+      Position		      [430, 1210, 480, 1260]
+      ForegroundColor	      "[0.000000, 0.501961, 0.752941]"
+      DialogController	      "MECH.DynMechDlgSource"
+      SourceBlock	      "mblibv1/Joints/Weld"
+      SourceType	      "Weld"
+      PhysicalDomain	      "mechanical"
+      SubClassName	      "Unknown"
+      LeftPortType	      "blob"
+      RightPortType	      "blob"
+      LConnTagsString	      "__newl0"
+      RConnTagsString	      "__newr0"
+      PMImportedID	      "90:-:RootPart"
+      UpdateFromCAD	      "on"
+      NumSAPorts	      "0"
+      CutJoint		      "off"
+      MarkAsCut		      "off"
+      Primitives	      "weld"
+      PrimitiveProps	      "W$WORLD$[0.57735,0.57735,0.57735]$weld"
+      ClassName		      "Joint"
+      DialogClass	      "JointBlock"
+      WAxis		      "[0.57735,0.57735,0.57735]"
+    }
+    Block {
+      BlockType		      Reference
+      Name		      "ZYL-KOPF"
+      Ports		      [0, 0, 0, 0, 0, 1]
+      Position		      [560, 45, 620, 85]
+      ForegroundColor	      "[0.000000, 0.501961, 0.752941]"
+      DialogController	      "MECH.DynMechDlgSource"
+      SourceBlock	      "mblibv1/Bodies/Body"
+      SourceType	      "Body"
+      PhysicalDomain	      "mechanical"
+      SubClassName	      "Unknown"
+      LeftPortType	      "workingframe"
+      RightPortType	      "workingframe"
+      LConnTagsString	      "CS2"
+      PMImportedID	      "44"
+      UpdateFromCAD	      "on"
+      ClassName		      "Body"
+      DialogClass	      "MechanicalBodyBlock"
+      Mass		      "0"
+      MassUnits		      "kg"
+      InertiaUnits	      "kg*m^2"
+      Inertia		      "eye(3)"
+      Shape		      "Cylinder"
+      ShapeDims		      "[1 1]"
+      ShapeUnits	      "m"
+      ShapeUse		      "false"
+      Density		      "1"
+      DensityUnits	      "kg/m^3"
+      DensityUse	      "false"
+      GraphicsMode	      "CONVHULL"
+      GraphicsFileName	      "ZYL-KOPF_prt.stl"
+      BodyColorSelMode	      "MACHINE_DEFAULT"
+      BodyColor		      "[1 0 0]"
+      AttachedToCS	      "CS1"
+      CG		      "Right$CG$[-25 -66.7188 -48.4741]$WORLD$WORLD$mm$[0 0 1;-0.587785 -0.809017 0;0.809017 -0.587785 0]$3x"
+      "3 Transform$rad$WORLD$false$44::CG(AUTOGEN)"
+      WorkingFrames	      "Right$CS1$[-25 -66.7188 -48.4741]$WORLD$WORLD$mm$[0 0 1;-0.587785 -0.809017 0;0.809017 -0.5"
+      "87785 0]$3x3 Transform$rad$WORLD$false$44::CS1(AUTOGEN)#Left$CS2$[-25 -66.7188 -48.4741]$WORLD$WORLD$mm$[1 0 0;0"
+      " 1 0;0 0 1]$3x3 Transform$rad$WORLD$true$44:-:RootPart::44(AUTOGEN)"
+      CGPos		      "[-25 -66.7188 -48.4741]"
+      CGRot		      "[0 0 1;-0.587785 -0.809017 0;0.809017 -0.587785 0]"
+      CS0Pos		      "[]"
+      CS0Rot		      "[]"
+      CS1Pos		      "[-25 -66.7188 -48.4741]"
+      CS1Rot		      "[0 0 1;-0.587785 -0.809017 0;0.809017 -0.587785 0]"
+      CS2Pos		      "[-25 -66.7188 -48.4741]"
+      CS2Rot		      "[1 0 0;0 1 0;0 0 1]"
+      CS3Pos		      "[]"
+      CS3Rot		      "[]"
+      CS4Pos		      "[]"
+      CS4Rot		      "[]"
+      CS5Pos		      "[]"
+      CS5Rot		      "[]"
+      CS6Pos		      "[]"
+      CS6Rot		      "[]"
+      CS7Pos		      "[]"
+      CS7Rot		      "[]"
+      CS8Pos		      "[]"
+      CS8Rot		      "[]"
+      CS9Pos		      "[]"
+      CS9Rot		      "[]"
+      CS10Pos		      "[]"
+      CS10Rot		      "[]"
+      CS11Pos		      "[]"
+      CS11Rot		      "[]"
+      CS12Pos		      "[]"
+      CS12Rot		      "[]"
+      CS13Pos		      "[]"
+      CS13Rot		      "[]"
+      CS14Pos		      "[]"
+      CS14Rot		      "[]"
+      CS15Pos		      "[]"
+      CS15Rot		      "[]"
+      CS16Pos		      "[]"
+      CS16Rot		      "[]"
+      CS17Pos		      "[]"
+      CS17Rot		      "[]"
+      CS18Pos		      "[]"
+      CS18Rot		      "[]"
+      CS19Pos		      "[]"
+      CS19Rot		      "[]"
+      CS20Pos		      "[]"
+      CS20Rot		      "[]"
+    }
+    Block {
+      BlockType		      Reference
+      Name		      "ZYL-KOPF-1"
+      Ports		      [0, 0, 0, 0, 0, 1]
+      Position		      [560, 175, 620, 215]
+      ForegroundColor	      "[0.000000, 0.501961, 0.752941]"
+      DialogController	      "MECH.DynMechDlgSource"
+      SourceBlock	      "mblibv1/Bodies/Body"
+      SourceType	      "Body"
+      PhysicalDomain	      "mechanical"
+      SubClassName	      "Unknown"
+      LeftPortType	      "workingframe"
+      RightPortType	      "workingframe"
+      LConnTagsString	      "CS2"
+      PMImportedID	      "91"
+      UpdateFromCAD	      "on"
+      ClassName		      "Body"
+      DialogClass	      "MechanicalBodyBlock"
+      Mass		      "1"
+      MassUnits		      "kg"
+      InertiaUnits	      "kg*m^2"
+      Inertia		      "eye(3)"
+      Shape		      "Cylinder"
+      ShapeDims		      "[1 1]"
+      ShapeUnits	      "m"
+      ShapeUse		      "false"
+      Density		      "1"
+      DensityUnits	      "kg/m^3"
+      DensityUse	      "false"
+      GraphicsMode	      "CONVHULL"
+      GraphicsFileName	      "ZYL-KOPF_prt.stl"
+      BodyColorSelMode	      "MACHINE_DEFAULT"
+      BodyColor		      "[1 0 0]"
+      AttachedToCS	      "CS1"
+      CG		      "Right$CG$[-25 -66.7188 48.4741]$WORLD$WORLD$mm$[0 0 1;0.587785 -0.809017 0;0.809017 0.587785 0]$3x3 T"
+      "ransform$rad$WORLD$false$91::CG(AUTOGEN)"
+      WorkingFrames	      "Right$CS1$[-25 -66.7188 48.4741]$WORLD$WORLD$mm$[0 0 1;0.587785 -0.809017 0;0.809017 0.5877"
+      "85 0]$3x3 Transform$rad$WORLD$false$91::CS1(AUTOGEN)#Left$CS2$[-25 -66.7188 48.4741]$WORLD$WORLD$mm$[1 0 0;0 1 0"
+      ";0 0 1]$3x3 Transform$rad$WORLD$true$91:-:RootPart::91(AUTOGEN)"
+      CGPos		      "[-25 -66.7188 48.4741]"
+      CGRot		      "[0 0 1;0.587785 -0.809017 0;0.809017 0.587785 0]"
+      CS0Pos		      "[]"
+      CS0Rot		      "[]"
+      CS1Pos		      "[-25 -66.7188 48.4741]"
+      CS1Rot		      "[0 0 1;0.587785 -0.809017 0;0.809017 0.587785 0]"
+      CS2Pos		      "[-25 -66.7188 48.4741]"
+      CS2Rot		      "[1 0 0;0 1 0;0 0 1]"
+      CS3Pos		      "[]"
+      CS3Rot		      "[]"
+      CS4Pos		      "[]"
+      CS4Rot		      "[]"
+      CS5Pos		      "[]"
+      CS5Rot		      "[]"
+      CS6Pos		      "[]"
+      CS6Rot		      "[]"
+      CS7Pos		      "[]"
+      CS7Rot		      "[]"
+      CS8Pos		      "[]"
+      CS8Rot		      "[]"
+      CS9Pos		      "[]"
+      CS9Rot		      "[]"
+      CS10Pos		      "[]"
+      CS10Rot		      "[]"
+      CS11Pos		      "[]"
+      CS11Rot		      "[]"
+      CS12Pos		      "[]"
+      CS12Rot		      "[]"
+      CS13Pos		      "[]"
+      CS13Rot		      "[]"
+      CS14Pos		      "[]"
+      CS14Rot		      "[]"
+      CS15Pos		      "[]"
+      CS15Rot		      "[]"
+      CS16Pos		      "[]"
+      CS16Rot		      "[]"
+      CS17Pos		      "[]"
+      CS17Rot		      "[]"
+      CS18Pos		      "[]"
+      CS18Rot		      "[]"
+      CS19Pos		      "[]"
+      CS19Rot		      "[]"
+      CS20Pos		      "[]"
+      CS20Rot		      "[]"
+    }
+    Block {
+      BlockType		      Reference
+      Name		      "ZYL-KOPF-2"
+      Ports		      [0, 0, 0, 0, 0, 1]
+      Position		      [560, 305, 620, 345]
+      ForegroundColor	      "[0.000000, 0.501961, 0.752941]"
+      DialogController	      "MECH.DynMechDlgSource"
+      SourceBlock	      "mblibv1/Bodies/Body"
+      SourceType	      "Body"
+      PhysicalDomain	      "mechanical"
+      SubClassName	      "Unknown"
+      LeftPortType	      "workingframe"
+      RightPortType	      "workingframe"
+      LConnTagsString	      "CS2"
+      PMImportedID	      "20"
+      UpdateFromCAD	      "on"
+      ClassName		      "Body"
+      DialogClass	      "MechanicalBodyBlock"
+      Mass		      "1"
+      MassUnits		      "kg"
+      InertiaUnits	      "kg*m^2"
+      Inertia		      "eye(3)"
+      Shape		      "Cylinder"
+      ShapeDims		      "[1 1]"
+      ShapeUnits	      "m"
+      ShapeUse		      "false"
+      Density		      "1"
+      DensityUnits	      "kg/m^3"
+      DensityUse	      "false"
+      GraphicsMode	      "CONVHULL"
+      GraphicsFileName	      "ZYL-KOPF_prt.stl"
+      BodyColorSelMode	      "MACHINE_DEFAULT"
+      BodyColor		      "[1 0 0]"
+      AttachedToCS	      "CS1"
+      CG		      "Right$CG$[-25 82.469 0]$WORLD$WORLD$mm$[0 0 1;0 1 0;-1 0 0]$3x3 Transform$rad$WORLD$false$20::CG(AUTO"
+      "GEN)"
+      WorkingFrames	      "Right$CS1$[-25 82.469 0]$WORLD$WORLD$mm$[0 0 1;0 1 0;-1 0 0]$3x3 Transform$rad$WORLD$false$"
+      "20::CS1(AUTOGEN)#Left$CS2$[-25 82.469 0]$WORLD$WORLD$mm$[1 0 0;0 1 0;0 0 1]$3x3 Transform$rad$WORLD$true$20:-:Ro"
+      "otPart::20(AUTOGEN)"
+      CGPos		      "[-25 82.469 0]"
+      CGRot		      "[0 0 1;0 1 0;-1 0 0]"
+      CS0Pos		      "[]"
+      CS0Rot		      "[]"
+      CS1Pos		      "[-25 82.469 0]"
+      CS1Rot		      "[0 0 1;0 1 0;-1 0 0]"
+      CS2Pos		      "[-25 82.469 0]"
+      CS2Rot		      "[1 0 0;0 1 0;0 0 1]"
+      CS3Pos		      "[]"
+      CS3Rot		      "[]"
+      CS4Pos		      "[]"
+      CS4Rot		      "[]"
+      CS5Pos		      "[]"
+      CS5Rot		      "[]"
+      CS6Pos		      "[]"
+      CS6Rot		      "[]"
+      CS7Pos		      "[]"
+      CS7Rot		      "[]"
+      CS8Pos		      "[]"
+      CS8Rot		      "[]"
+      CS9Pos		      "[]"
+      CS9Rot		      "[]"
+      CS10Pos		      "[]"
+      CS10Rot		      "[]"
+      CS11Pos		      "[]"
+      CS11Rot		      "[]"
+      CS12Pos		      "[]"
+      CS12Rot		      "[]"
+      CS13Pos		      "[]"
+      CS13Rot		      "[]"
+      CS14Pos		      "[]"
+      CS14Rot		      "[]"
+      CS15Pos		      "[]"
+      CS15Rot		      "[]"
+      CS16Pos		      "[]"
+      CS16Rot		      "[]"
+      CS17Pos		      "[]"
+      CS17Rot		      "[]"
+      CS18Pos		      "[]"
+      CS18Rot		      "[]"
+      CS19Pos		      "[]"
+      CS19Rot		      "[]"
+      CS20Pos		      "[]"
+      CS20Rot		      "[]"
+    }
+    Block {
+      BlockType		      Reference
+      Name		      "ZYL-KOPF-3"
+      Ports		      [0, 0, 0, 0, 0, 1]
+      Position		      [560, 435, 620, 475]
+      ForegroundColor	      "[0.000000, 0.501961, 0.752941]"
+      DialogController	      "MECH.DynMechDlgSource"
+      SourceBlock	      "mblibv1/Bodies/Body"
+      SourceType	      "Body"
+      PhysicalDomain	      "mechanical"
+      SubClassName	      "Unknown"
+      LeftPortType	      "workingframe"
+      RightPortType	      "workingframe"
+      LConnTagsString	      "CS2"
+      PMImportedID	      "31"
+      UpdateFromCAD	      "on"
+      ClassName		      "Body"
+      DialogClass	      "MechanicalBodyBlock"
+      Mass		      "1"
+      MassUnits		      "kg"
+      InertiaUnits	      "kg*m^2"
+      Inertia		      "eye(3)"
+      Shape		      "Cylinder"
+      ShapeDims		      "[1 1]"
+      ShapeUnits	      "m"
+      ShapeUse		      "false"
+      Density		      "1"
+      DensityUnits	      "kg/m^3"
+      DensityUse	      "false"
+      GraphicsMode	      "CONVHULL"
+      GraphicsFileName	      "ZYL-KOPF_prt.stl"
+      BodyColorSelMode	      "MACHINE_DEFAULT"
+      BodyColor		      "[1 0 0]"
+      AttachedToCS	      "CS1"
+      CG		      "Right$CG$[-25 25.4843 -78.4327]$WORLD$WORLD$mm$[0 0 1;-0.951057 0.309017 0;-0.309017 -0.951057 0]$3x3"
+      " Transform$rad$WORLD$false$31::CG(AUTOGEN)"
+      WorkingFrames	      "Right$CS1$[-25 25.4843 -78.4327]$WORLD$WORLD$mm$[0 0 1;-0.951057 0.309017 0;-0.309017 -0.95"
+      "1057 0]$3x3 Transform$rad$WORLD$false$31::CS1(AUTOGEN)#Left$CS2$[-25 25.4843 -78.4327]$WORLD$WORLD$mm$[1 0 0;0 1"
+      " 0;0 0 1]$3x3 Transform$rad$WORLD$true$31:-:RootPart::31(AUTOGEN)"
+      CGPos		      "[-25 25.4843 -78.4327]"
+      CGRot		      "[0 0 1;-0.951057 0.309017 0;-0.309017 -0.951057 0]"
+      CS0Pos		      "[]"
+      CS0Rot		      "[]"
+      CS1Pos		      "[-25 25.4843 -78.4327]"
+      CS1Rot		      "[0 0 1;-0.951057 0.309017 0;-0.309017 -0.951057 0]"
+      CS2Pos		      "[-25 25.4843 -78.4327]"
+      CS2Rot		      "[1 0 0;0 1 0;0 0 1]"
+      CS3Pos		      "[]"
+      CS3Rot		      "[]"
+      CS4Pos		      "[]"
+      CS4Rot		      "[]"
+      CS5Pos		      "[]"
+      CS5Rot		      "[]"
+      CS6Pos		      "[]"
+      CS6Rot		      "[]"
+      CS7Pos		      "[]"
+      CS7Rot		      "[]"
+      CS8Pos		      "[]"
+      CS8Rot		      "[]"
+      CS9Pos		      "[]"
+      CS9Rot		      "[]"
+      CS10Pos		      "[]"
+      CS10Rot		      "[]"
+      CS11Pos		      "[]"
+      CS11Rot		      "[]"
+      CS12Pos		      "[]"
+      CS12Rot		      "[]"
+      CS13Pos		      "[]"
+      CS13Rot		      "[]"
+      CS14Pos		      "[]"
+      CS14Rot		      "[]"
+      CS15Pos		      "[]"
+      CS15Rot		      "[]"
+      CS16Pos		      "[]"
+      CS16Rot		      "[]"
+      CS17Pos		      "[]"
+      CS17Rot		      "[]"
+      CS18Pos		      "[]"
+      CS18Rot		      "[]"
+      CS19Pos		      "[]"
+      CS19Rot		      "[]"
+      CS20Pos		      "[]"
+      CS20Rot		      "[]"
+    }
+    Block {
+      BlockType		      Reference
+      Name		      "ZYL-KOPF-4"
+      Ports		      [0, 0, 0, 0, 0, 1]
+      Position		      [560, 565, 620, 605]
+      ForegroundColor	      "[0.000000, 0.501961, 0.752941]"
+      DialogController	      "MECH.DynMechDlgSource"
+      SourceBlock	      "mblibv1/Bodies/Body"
+      SourceType	      "Body"
+      PhysicalDomain	      "mechanical"
+      SubClassName	      "Unknown"
+      LeftPortType	      "workingframe"
+      RightPortType	      "workingframe"
+      LConnTagsString	      "CS2"
+      PMImportedID	      "64"
+      UpdateFromCAD	      "on"
+      ClassName		      "Body"
+      DialogClass	      "MechanicalBodyBlock"
+      Mass		      "1"
+      MassUnits		      "kg"
+      InertiaUnits	      "kg*m^2"
+      Inertia		      "eye(3)"
+      Shape		      "Cylinder"
+      ShapeDims		      "[1 1]"
+      ShapeUnits	      "m"
+      ShapeUse		      "false"
+      Density		      "1"
+      DensityUnits	      "kg/m^3"
+      DensityUse	      "false"
+      GraphicsMode	      "CONVHULL"
+      GraphicsFileName	      "ZYL-KOPF_prt.stl"
+      BodyColorSelMode	      "MACHINE_DEFAULT"
+      BodyColor		      "[1 0 0]"
+      AttachedToCS	      "CS1"
+      CG		      "Right$CG$[-25 25.4843 78.4327]$WORLD$WORLD$mm$[0 0 1;0.951057 0.309017 0;-0.309017 0.951057 0]$3x3 Tr"
+      "ansform$rad$WORLD$false$64::CG(AUTOGEN)"
+      WorkingFrames	      "Right$CS1$[-25 25.4843 78.4327]$WORLD$WORLD$mm$[0 0 1;0.951057 0.309017 0;-0.309017 0.95105"
+      "7 0]$3x3 Transform$rad$WORLD$false$64::CS1(AUTOGEN)#Left$CS2$[-25 25.4843 78.4327]$WORLD$WORLD$mm$[1 0 0;0 1 0;0"
+      " 0 1]$3x3 Transform$rad$WORLD$true$64:-:RootPart::64(AUTOGEN)"
+      CGPos		      "[-25 25.4843 78.4327]"
+      CGRot		      "[0 0 1;0.951057 0.309017 0;-0.309017 0.951057 0]"
+      CS0Pos		      "[]"
+      CS0Rot		      "[]"
+      CS1Pos		      "[-25 25.4843 78.4327]"
+      CS1Rot		      "[0 0 1;0.951057 0.309017 0;-0.309017 0.951057 0]"
+      CS2Pos		      "[-25 25.4843 78.4327]"
+      CS2Rot		      "[1 0 0;0 1 0;0 0 1]"
+      CS3Pos		      "[]"
+      CS3Rot		      "[]"
+      CS4Pos		      "[]"
+      CS4Rot		      "[]"
+      CS5Pos		      "[]"
+      CS5Rot		      "[]"
+      CS6Pos		      "[]"
+      CS6Rot		      "[]"
+      CS7Pos		      "[]"
+      CS7Rot		      "[]"
+      CS8Pos		      "[]"
+      CS8Rot		      "[]"
+      CS9Pos		      "[]"
+      CS9Rot		      "[]"
+      CS10Pos		      "[]"
+      CS10Rot		      "[]"
+      CS11Pos		      "[]"
+      CS11Rot		      "[]"
+      CS12Pos		      "[]"
+      CS12Rot		      "[]"
+      CS13Pos		      "[]"
+      CS13Rot		      "[]"
+      CS14Pos		      "[]"
+      CS14Rot		      "[]"
+      CS15Pos		      "[]"
+      CS15Rot		      "[]"
+      CS16Pos		      "[]"
+      CS16Rot		      "[]"
+      CS17Pos		      "[]"
+      CS17Rot		      "[]"
+      CS18Pos		      "[]"
+      CS18Rot		      "[]"
+      CS19Pos		      "[]"
+      CS19Rot		      "[]"
+      CS20Pos		      "[]"
+      CS20Rot		      "[]"
+    }
+    Block {
+      BlockType		      Reference
+      Name		      "ZYLINDER"
+      Ports		      [0, 0, 0, 0, 0, 1]
+      Position		      [560, 695, 620, 735]
+      ForegroundColor	      "[0.000000, 0.501961, 0.752941]"
+      DialogController	      "MECH.DynMechDlgSource"
+      SourceBlock	      "mblibv1/Bodies/Body"
+      SourceType	      "Body"
+      PhysicalDomain	      "mechanical"
+      SubClassName	      "Unknown"
+      LeftPortType	      "workingframe"
+      RightPortType	      "workingframe"
+      LConnTagsString	      "CS2"
+      PMImportedID	      "43"
+      UpdateFromCAD	      "on"
+      ClassName		      "Body"
+      DialogClass	      "MechanicalBodyBlock"
+      Mass		      "0"
+      MassUnits		      "kg"
+      InertiaUnits	      "kg*m^2"
+      Inertia		      "[0,0,0;0,0,0;0,0,0]"
+      Shape		      "Cylinder"
+      ShapeDims		      "[1 1]"
+      ShapeUnits	      "m"
+      ShapeUse		      "false"
+      Density		      "1"
+      DensityUnits	      "kg/m^3"
+      DensityUse	      "false"
+      GraphicsMode	      "GFXFILE"
+      GraphicsFileName	      "ZYLINDER_prt.stl"
+      BodyColorSelMode	      "MACHINE_DEFAULT"
+      BodyColor		      "[1 0 0]"
+      AttachedToCS	      "CS1"
+      CG		      "Right$CG$[-25 -37.6193 -27.332]$WORLD$WORLD$mm$[0 0 1;-0.587785 -0.809017 0;0.809017 -0.587785 0]$3x3"
+      " Transform$rad$WORLD$false$43::CG(AUTOGEN)"
+      WorkingFrames	      "Right$CS1$[-25 -37.6193 -27.332]$WORLD$WORLD$mm$[0 0 1;-0.587785 -0.809017 0;0.809017 -0.58"
+      "7785 0]$3x3 Transform$rad$WORLD$false$43::CS1(AUTOGEN)#Left$CS2$[-25 -37.6193 -27.332]$WORLD$WORLD$mm$[1 0 0;0 1"
+      " 0;0 0 1]$3x3 Transform$rad$WORLD$true$43:-:RootPart::43(AUTOGEN)"
+      CGPos		      "[-25 -37.6193 -27.332]"
+      CGRot		      "[0 0 1;-0.587785 -0.809017 0;0.809017 -0.587785 0]"
+      CS0Pos		      "[]"
+      CS0Rot		      "[]"
+      CS1Pos		      "[-25 -37.6193 -27.332]"
+      CS1Rot		      "[0 0 1;-0.587785 -0.809017 0;0.809017 -0.587785 0]"
+      CS2Pos		      "[-25 -37.6193 -27.332]"
+      CS2Rot		      "[1 0 0;0 1 0;0 0 1]"
+      CS3Pos		      "[]"
+      CS3Rot		      "[]"
+      CS4Pos		      "[]"
+      CS4Rot		      "[]"
+      CS5Pos		      "[]"
+      CS5Rot		      "[]"
+      CS6Pos		      "[]"
+      CS6Rot		      "[]"
+      CS7Pos		      "[]"
+      CS7Rot		      "[]"
+      CS8Pos		      "[]"
+      CS8Rot		      "[]"
+      CS9Pos		      "[]"
+      CS9Rot		      "[]"
+      CS10Pos		      "[]"
+      CS10Rot		      "[]"
+      CS11Pos		      "[]"
+      CS11Rot		      "[]"
+      CS12Pos		      "[]"
+      CS12Rot		      "[]"
+      CS13Pos		      "[]"
+      CS13Rot		      "[]"
+      CS14Pos		      "[]"
+      CS14Rot		      "[]"
+      CS15Pos		      "[]"
+      CS15Rot		      "[]"
+      CS16Pos		      "[]"
+      CS16Rot		      "[]"
+      CS17Pos		      "[]"
+      CS17Rot		      "[]"
+      CS18Pos		      "[]"
+      CS18Rot		      "[]"
+      CS19Pos		      "[]"
+      CS19Rot		      "[]"
+      CS20Pos		      "[]"
+      CS20Rot		      "[]"
+    }
+    Block {
+      BlockType		      Reference
+      Name		      "ZYLINDER-1"
+      Ports		      [0, 0, 0, 0, 0, 1]
+      Position		      [560, 825, 620, 865]
+      ForegroundColor	      "[0.000000, 0.501961, 0.752941]"
+      DialogController	      "MECH.DynMechDlgSource"
+      SourceBlock	      "mblibv1/Bodies/Body"
+      SourceType	      "Body"
+      PhysicalDomain	      "mechanical"
+      SubClassName	      "Unknown"
+      LeftPortType	      "workingframe"
+      RightPortType	      "workingframe"
+      LConnTagsString	      "CS2"
+      PMImportedID	      "19"
+      UpdateFromCAD	      "on"
+      ClassName		      "Body"
+      DialogClass	      "MechanicalBodyBlock"
+      Mass		      "1"
+      MassUnits		      "kg"
+      InertiaUnits	      "kg*m^2"
+      Inertia		      "eye(3)"
+      Shape		      "Cylinder"
+      ShapeDims		      "[1 1]"
+      ShapeUnits	      "m"
+      ShapeUse		      "false"
+      Density		      "1"
+      DensityUnits	      "kg/m^3"
+      DensityUse	      "false"
+      GraphicsMode	      "CONVHULL"
+      GraphicsFileName	      "ZYLINDER_prt.stl"
+      BodyColorSelMode	      "MACHINE_DEFAULT"
+      BodyColor		      "[1 0 0]"
+      AttachedToCS	      "CS1"
+      CG		      "Right$CG$[-25 46.5 0]$WORLD$WORLD$mm$[0 0 1;0 1 0;-1 0 0]$3x3 Transform$rad$WORLD$false$19::CG(AUTOGE"
+      "N)"
+      WorkingFrames	      "Right$CS1$[-25 46.5 0]$WORLD$WORLD$mm$[0 0 1;0 1 0;-1 0 0]$3x3 Transform$rad$WORLD$false$19"
+      "::CS1(AUTOGEN)#Left$CS2$[-25 46.5 0]$WORLD$WORLD$mm$[1 0 0;0 1 0;0 0 1]$3x3 Transform$rad$WORLD$true$19:-:RootPa"
+      "rt::19(AUTOGEN)"
+      CGPos		      "[-25 46.5 0]"
+      CGRot		      "[0 0 1;0 1 0;-1 0 0]"
+      CS0Pos		      "[]"
+      CS0Rot		      "[]"
+      CS1Pos		      "[-25 46.5 0]"
+      CS1Rot		      "[0 0 1;0 1 0;-1 0 0]"
+      CS2Pos		      "[-25 46.5 0]"
+      CS2Rot		      "[1 0 0;0 1 0;0 0 1]"
+      CS3Pos		      "[]"
+      CS3Rot		      "[]"
+      CS4Pos		      "[]"
+      CS4Rot		      "[]"
+      CS5Pos		      "[]"
+      CS5Rot		      "[]"
+      CS6Pos		      "[]"
+      CS6Rot		      "[]"
+      CS7Pos		      "[]"
+      CS7Rot		      "[]"
+      CS8Pos		      "[]"
+      CS8Rot		      "[]"
+      CS9Pos		      "[]"
+      CS9Rot		      "[]"
+      CS10Pos		      "[]"
+      CS10Rot		      "[]"
+      CS11Pos		      "[]"
+      CS11Rot		      "[]"
+      CS12Pos		      "[]"
+      CS12Rot		      "[]"
+      CS13Pos		      "[]"
+      CS13Rot		      "[]"
+      CS14Pos		      "[]"
+      CS14Rot		      "[]"
+      CS15Pos		      "[]"
+      CS15Rot		      "[]"
+      CS16Pos		      "[]"
+      CS16Rot		      "[]"
+      CS17Pos		      "[]"
+      CS17Rot		      "[]"
+      CS18Pos		      "[]"
+      CS18Rot		      "[]"
+      CS19Pos		      "[]"
+      CS19Rot		      "[]"
+      CS20Pos		      "[]"
+      CS20Rot		      "[]"
+    }
+    Block {
+      BlockType		      Reference
+      Name		      "ZYLINDER-2"
+      Ports		      [0, 0, 0, 0, 0, 1]
+      Position		      [560, 955, 620, 995]
+      ForegroundColor	      "[0.000000, 0.501961, 0.752941]"
+      DialogController	      "MECH.DynMechDlgSource"
+      SourceBlock	      "mblibv1/Bodies/Body"
+      SourceType	      "Body"
+      PhysicalDomain	      "mechanical"
+      SubClassName	      "Unknown"
+      LeftPortType	      "workingframe"
+      RightPortType	      "workingframe"
+      LConnTagsString	      "CS2"
+      PMImportedID	      "30"
+      UpdateFromCAD	      "on"
+      ClassName		      "Body"
+      DialogClass	      "MechanicalBodyBlock"
+      Mass		      "0"
+      MassUnits		      "kg"
+      InertiaUnits	      "kg*m^2"
+      Inertia		      "[0,0,0;0,0,0;0,0,0]"
+      Shape		      "Cylinder"
+      ShapeDims		      "[1 1]"
+      ShapeUnits	      "m"
+      ShapeUse		      "false"
+      Density		      "1"
+      DensityUnits	      "kg/m^3"
+      DensityUse	      "false"
+      GraphicsMode	      "GFXFILE"
+      GraphicsFileName	      "ZYLINDER_prt.stl"
+      BodyColorSelMode	      "MACHINE_DEFAULT"
+      BodyColor		      "[1 0 0]"
+      AttachedToCS	      "CS1"
+      CG		      "Right$CG$[-25 14.3693 -44.2241]$WORLD$WORLD$mm$[0 0 1;-0.951057 0.309017 0;-0.309017 -0.951057 0]$3x3"
+      " Transform$rad$WORLD$false$30::CG(AUTOGEN)"
+      WorkingFrames	      "Right$CS1$[-25 14.3693 -44.2241]$WORLD$WORLD$mm$[0 0 1;-0.951057 0.309017 0;-0.309017 -0.95"
+      "1057 0]$3x3 Transform$rad$WORLD$false$30::CS1(AUTOGEN)#Left$CS2$[-25 14.3693 -44.2241]$WORLD$WORLD$mm$[1 0 0;0 1"
+      " 0;0 0 1]$3x3 Transform$rad$WORLD$true$30:-:RootPart::30(AUTOGEN)"
+      CGPos		      "[-25 14.3693 -44.2241]"
+      CGRot		      "[0 0 1;-0.951057 0.309017 0;-0.309017 -0.951057 0]"
+      CS0Pos		      "[]"
+      CS0Rot		      "[]"
+      CS1Pos		      "[-25 14.3693 -44.2241]"
+      CS1Rot		      "[0 0 1;-0.951057 0.309017 0;-0.309017 -0.951057 0]"
+      CS2Pos		      "[-25 14.3693 -44.2241]"
+      CS2Rot		      "[1 0 0;0 1 0;0 0 1]"
+      CS3Pos		      "[]"
+      CS3Rot		      "[]"
+      CS4Pos		      "[]"
+      CS4Rot		      "[]"
+      CS5Pos		      "[]"
+      CS5Rot		      "[]"
+      CS6Pos		      "[]"
+      CS6Rot		      "[]"
+      CS7Pos		      "[]"
+      CS7Rot		      "[]"
+      CS8Pos		      "[]"
+      CS8Rot		      "[]"
+      CS9Pos		      "[]"
+      CS9Rot		      "[]"
+      CS10Pos		      "[]"
+      CS10Rot		      "[]"
+      CS11Pos		      "[]"
+      CS11Rot		      "[]"
+      CS12Pos		      "[]"
+      CS12Rot		      "[]"
+      CS13Pos		      "[]"
+      CS13Rot		      "[]"
+      CS14Pos		      "[]"
+      CS14Rot		      "[]"
+      CS15Pos		      "[]"
+      CS15Rot		      "[]"
+      CS16Pos		      "[]"
+      CS16Rot		      "[]"
+      CS17Pos		      "[]"
+      CS17Rot		      "[]"
+      CS18Pos		      "[]"
+      CS18Rot		      "[]"
+      CS19Pos		      "[]"
+      CS19Rot		      "[]"
+      CS20Pos		      "[]"
+      CS20Rot		      "[]"
+    }
+    Block {
+      BlockType		      Reference
+      Name		      "ZYLINDER-3"
+      Ports		      [0, 0, 0, 0, 0, 1]
+      Position		      [560, 1085, 620, 1125]
+      ForegroundColor	      "[0.000000, 0.501961, 0.752941]"
+      DialogController	      "MECH.DynMechDlgSource"
+      SourceBlock	      "mblibv1/Bodies/Body"
+      SourceType	      "Body"
+      PhysicalDomain	      "mechanical"
+      SubClassName	      "Unknown"
+      LeftPortType	      "workingframe"
+      RightPortType	      "workingframe"
+      LConnTagsString	      "CS2"
+      PMImportedID	      "63"
+      UpdateFromCAD	      "on"
+      ClassName		      "Body"
+      DialogClass	      "MechanicalBodyBlock"
+      Mass		      "0"
+      MassUnits		      "kg"
+      InertiaUnits	      "kg*m^2"
+      Inertia		      "[0,0,0;0,0,0;0,0,0]"
+      Shape		      "Cylinder"
+      ShapeDims		      "[1 1]"
+      ShapeUnits	      "m"
+      ShapeUse		      "false"
+      Density		      "1"
+      DensityUnits	      "kg/m^3"
+      DensityUse	      "false"
+      GraphicsMode	      "GFXFILE"
+      GraphicsFileName	      "ZYLINDER_prt.stl"
+      BodyColorSelMode	      "MACHINE_DEFAULT"
+      BodyColor		      "[1 0 0]"
+      AttachedToCS	      "CS1"
+      CG		      "Right$CG$[-25 14.3693 44.2241]$WORLD$WORLD$mm$[0 0 1;0.951057 0.309017 0;-0.309017 0.951057 0]$3x3 Tr"
+      "ansform$rad$WORLD$false$63::CG(AUTOGEN)"
+      WorkingFrames	      "Right$CS1$[-25 14.3693 44.2241]$WORLD$WORLD$mm$[0 0 1;0.951057 0.309017 0;-0.309017 0.95105"
+      "7 0]$3x3 Transform$rad$WORLD$false$63::CS1(AUTOGEN)#Left$CS2$[-25 14.3693 44.2241]$WORLD$WORLD$mm$[1 0 0;0 1 0;0"
+      " 0 1]$3x3 Transform$rad$WORLD$true$63:-:RootPart::63(AUTOGEN)"
+      CGPos		      "[-25 14.3693 44.2241]"
+      CGRot		      "[0 0 1;0.951057 0.309017 0;-0.309017 0.951057 0]"
+      CS0Pos		      "[]"
+      CS0Rot		      "[]"
+      CS1Pos		      "[-25 14.3693 44.2241]"
+      CS1Rot		      "[0 0 1;0.951057 0.309017 0;-0.309017 0.951057 0]"
+      CS2Pos		      "[-25 14.3693 44.2241]"
+      CS2Rot		      "[1 0 0;0 1 0;0 0 1]"
+      CS3Pos		      "[]"
+      CS3Rot		      "[]"
+      CS4Pos		      "[]"
+      CS4Rot		      "[]"
+      CS5Pos		      "[]"
+      CS5Rot		      "[]"
+      CS6Pos		      "[]"
+      CS6Rot		      "[]"
+      CS7Pos		      "[]"
+      CS7Rot		      "[]"
+      CS8Pos		      "[]"
+      CS8Rot		      "[]"
+      CS9Pos		      "[]"
+      CS9Rot		      "[]"
+      CS10Pos		      "[]"
+      CS10Rot		      "[]"
+      CS11Pos		      "[]"
+      CS11Rot		      "[]"
+      CS12Pos		      "[]"
+      CS12Rot		      "[]"
+      CS13Pos		      "[]"
+      CS13Rot		      "[]"
+      CS14Pos		      "[]"
+      CS14Rot		      "[]"
+      CS15Pos		      "[]"
+      CS15Rot		      "[]"
+      CS16Pos		      "[]"
+      CS16Rot		      "[]"
+      CS17Pos		      "[]"
+      CS17Rot		      "[]"
+      CS18Pos		      "[]"
+      CS18Rot		      "[]"
+      CS19Pos		      "[]"
+      CS19Rot		      "[]"
+      CS20Pos		      "[]"
+      CS20Rot		      "[]"
+    }
+    Block {
+      BlockType		      Reference
+      Name		      "ZYLINDER-4"
+      Ports		      [0, 0, 0, 0, 0, 1]
+      Position		      [560, 1215, 620, 1255]
+      ForegroundColor	      "[0.000000, 0.501961, 0.752941]"
+      DialogController	      "MECH.DynMechDlgSource"
+      SourceBlock	      "mblibv1/Bodies/Body"
+      SourceType	      "Body"
+      PhysicalDomain	      "mechanical"
+      SubClassName	      "Unknown"
+      LeftPortType	      "workingframe"
+      RightPortType	      "workingframe"
+      LConnTagsString	      "CS2"
+      PMImportedID	      "90"
+      UpdateFromCAD	      "on"
+      ClassName		      "Body"
+      DialogClass	      "MechanicalBodyBlock"
+      Mass		      "0"
+      MassUnits		      "kg"
+      InertiaUnits	      "kg*m^2"
+      Inertia		      "[0,0,0;0,0,0;0,0,0]"
+      Shape		      "Cylinder"
+      ShapeDims		      "[1 1]"
+      ShapeUnits	      "m"
+      ShapeUse		      "false"
+      Density		      "1"
+      DensityUnits	      "kg/m^3"
+      DensityUse	      "false"
+      GraphicsMode	      "GFXFILE"
+      GraphicsFileName	      "ZYLINDER_prt.stl"
+      BodyColorSelMode	      "MACHINE_DEFAULT"
+      BodyColor		      "[1 0 0]"
+      AttachedToCS	      "CS1"
+      CG		      "Right$CG$[-25 -37.6193 27.332]$WORLD$WORLD$mm$[0 0 1;0.587785 -0.809017 0;0.809017 0.587785 0]$3x3 Tr"
+      "ansform$rad$WORLD$false$90::CG(AUTOGEN)"
+      WorkingFrames	      "Right$CS1$[-25 -37.6193 27.332]$WORLD$WORLD$mm$[0 0 1;0.587785 -0.809017 0;0.809017 0.58778"
+      "5 0]$3x3 Transform$rad$WORLD$false$90::CS1(AUTOGEN)#Left$CS2$[-25 -37.6193 27.332]$WORLD$WORLD$mm$[1 0 0;0 1 0;0"
+      " 0 1]$3x3 Transform$rad$WORLD$true$90:-:RootPart::90(AUTOGEN)"
+      CGPos		      "[-25 -37.6193 27.332]"
+      CGRot		      "[0 0 1;0.587785 -0.809017 0;0.809017 0.587785 0]"
+      CS0Pos		      "[]"
+      CS0Rot		      "[]"
+      CS1Pos		      "[-25 -37.6193 27.332]"
+      CS1Rot		      "[0 0 1;0.587785 -0.809017 0;0.809017 0.587785 0]"
+      CS2Pos		      "[-25 -37.6193 27.332]"
+      CS2Rot		      "[1 0 0;0 1 0;0 0 1]"
+      CS3Pos		      "[]"
+      CS3Rot		      "[]"
+      CS4Pos		      "[]"
+      CS4Rot		      "[]"
+      CS5Pos		      "[]"
+      CS5Rot		      "[]"
+      CS6Pos		      "[]"
+      CS6Rot		      "[]"
+      CS7Pos		      "[]"
+      CS7Rot		      "[]"
+      CS8Pos		      "[]"
+      CS8Rot		      "[]"
+      CS9Pos		      "[]"
+      CS9Rot		      "[]"
+      CS10Pos		      "[]"
+      CS10Rot		      "[]"
+      CS11Pos		      "[]"
+      CS11Rot		      "[]"
+      CS12Pos		      "[]"
+      CS12Rot		      "[]"
+      CS13Pos		      "[]"
+      CS13Rot		      "[]"
+      CS14Pos		      "[]"
+      CS14Rot		      "[]"
+      CS15Pos		      "[]"
+      CS15Rot		      "[]"
+      CS16Pos		      "[]"
+      CS16Rot		      "[]"
+      CS17Pos		      "[]"
+      CS17Rot		      "[]"
+      CS18Pos		      "[]"
+      CS18Rot		      "[]"
+      CS19Pos		      "[]"
+      CS19Rot		      "[]"
+      CS20Pos		      "[]"
+      CS20Rot		      "[]"
+    }
+    Block {
+      BlockType		      Reference
+      Name		      "ZYL_BUCHSE"
+      Ports		      [0, 0, 0, 0, 0, 1, 1]
+      Position		      [560, 1340, 620, 1380]
+      ForegroundColor	      "[0.000000, 0.501961, 0.752941]"
+      DialogController	      "MECH.DynMechDlgSource"
+      SourceBlock	      "mblibv1/Bodies/Body"
+      SourceType	      "Body"
+      PhysicalDomain	      "mechanical"
+      SubClassName	      "Unknown"
+      LeftPortType	      "workingframe"
+      RightPortType	      "workingframe"
+      LConnTagsString	      "CS2"
+      RConnTagsString	      "CS3"
+      PMImportedID	      "42"
+      UpdateFromCAD	      "on"
+      ClassName		      "Body"
+      DialogClass	      "MechanicalBodyBlock"
+      Mass		      "9.22021e+006"
+      MassUnits		      "kg"
+      InertiaUnits	      "kg*m^2"
+      Inertia		      "[1649.68,0,0;0,2339.31,0;0,0,2306.91]"
+      Shape		      "Cylinder"
+      ShapeDims		      "[1 1]"
+      ShapeUnits	      "m"
+      ShapeUse		      "false"
+      Density		      "1"
+      DensityUnits	      "kg/m^3"
+      DensityUse	      "false"
+      GraphicsMode	      "GFXFILE"
+      GraphicsFileName	      "ZYL_BUCHSE_prt.stl"
+      BodyColorSelMode	      "MACHINE_DEFAULT"
+      BodyColor		      "[1 0 0]"
+      AttachedToCS	      "CS1"
+      CG		      "Right$CG$[-25 -51.4707 -37.3957]$WORLD$WORLD$mm$[0 0 1;0.809017 -0.587785 0;0.587785 0.809017 0]$3x3 "
+      "Transform$rad$WORLD$false$42::CG(AUTOGEN)"
+      WorkingFrames	      "Right$CS1$[-25 -65.9098 -47.8863]$WORLD$WORLD$mm$[0 0 1;0.809017 -0.587785 0;0.587785 0.809"
+      "017 0]$3x3 Transform$rad$WORLD$false$42::CS1(AUTOGEN)#Left$CS2$[-25 -51.4707 -37.3957]$WORLD$WORLD$mm$[1 0 0;0 1"
+      " 0;0 0 1]$3x3 Transform$rad$WORLD$true$42:-:RootPart::42(AUTOGEN)#Right$CS3$[-25 -33.5491 -24.3749]$WORLD$WORLD$"
+      "mm$[1 0 0;0 1 0;0 0 1]$3x3 Transform$rad$WORLD$true$106:-:42::42(AUTOGEN)"
+      CGPos		      "[-25 -51.4707 -37.3957]"
+      CGRot		      "[0 0 1;0.809017 -0.587785 0;0.587785 0.809017 0]"
+      CS0Pos		      "[]"
+      CS0Rot		      "[]"
+      CS1Pos		      "[-25 -65.9098 -47.8863]"
+      CS1Rot		      "[0 0 1;0.809017 -0.587785 0;0.587785 0.809017 0]"
+      CS2Pos		      "[-25 -51.4707 -37.3957]"
+      CS2Rot		      "[1 0 0;0 1 0;0 0 1]"
+      CS3Pos		      "[-25 -33.5491 -24.3749]"
+      CS3Rot		      "[1 0 0;0 1 0;0 0 1]"
+      CS4Pos		      "[]"
+      CS4Rot		      "[]"
+      CS5Pos		      "[]"
+      CS5Rot		      "[]"
+      CS6Pos		      "[]"
+      CS6Rot		      "[]"
+      CS7Pos		      "[]"
+      CS7Rot		      "[]"
+      CS8Pos		      "[]"
+      CS8Rot		      "[]"
+      CS9Pos		      "[]"
+      CS9Rot		      "[]"
+      CS10Pos		      "[]"
+      CS10Rot		      "[]"
+      CS11Pos		      "[]"
+      CS11Rot		      "[]"
+      CS12Pos		      "[]"
+      CS12Rot		      "[]"
+      CS13Pos		      "[]"
+      CS13Rot		      "[]"
+      CS14Pos		      "[]"
+      CS14Rot		      "[]"
+      CS15Pos		      "[]"
+      CS15Rot		      "[]"
+      CS16Pos		      "[]"
+      CS16Rot		      "[]"
+      CS17Pos		      "[]"
+      CS17Rot		      "[]"
+      CS18Pos		      "[]"
+      CS18Rot		      "[]"
+      CS19Pos		      "[]"
+      CS19Rot		      "[]"
+      CS20Pos		      "[]"
+      CS20Rot		      "[]"
+    }
+    Block {
+      BlockType		      Reference
+      Name		      "ZYL_BUCHSE-1"
+      Ports		      [0, 0, 0, 0, 0, 1, 1]
+      Position		      [700, 1660, 760, 1700]
+      ForegroundColor	      "[0.000000, 0.501961, 0.752941]"
+      DialogController	      "MECH.DynMechDlgSource"
+      SourceBlock	      "mblibv1/Bodies/Body"
+      SourceType	      "Body"
+      PhysicalDomain	      "mechanical"
+      SubClassName	      "Unknown"
+      LeftPortType	      "workingframe"
+      RightPortType	      "workingframe"
+      LConnTagsString	      "CS2"
+      RConnTagsString	      "CS3"
+      PMImportedID	      "18"
+      UpdateFromCAD	      "on"
+      ClassName		      "Body"
+      DialogClass	      "MechanicalBodyBlock"
+      Mass		      "9.22021e+006"
+      MassUnits		      "kg"
+      InertiaUnits	      "kg*m^2"
+      Inertia		      "[1649.68,0,0;0,2339.31,0;0,0,2306.91]"
+      Shape		      "Cylinder"
+      ShapeDims		      "[1 1]"
+      ShapeUnits	      "m"
+      ShapeUse		      "false"
+      Density		      "1"
+      DensityUnits	      "kg/m^3"
+      DensityUse	      "false"
+      GraphicsMode	      "GFXFILE"
+      GraphicsFileName	      "ZYL_BUCHSE_prt.stl"
+      BodyColorSelMode	      "MACHINE_DEFAULT"
+      BodyColor		      "[1 0 0]"
+      AttachedToCS	      "CS1"
+      CG		      "Right$CG$[-25 63.6213 0]$WORLD$WORLD$mm$[0 0 1;-1 0 0;0 -1 0]$3x3 Transform$rad$WORLD$false$18::CG(AU"
+      "TOGEN)"
+      WorkingFrames	      "Right$CS1$[-25 81.469 0]$WORLD$WORLD$mm$[0 0 1;-1 0 0;0 -1 0]$3x3 Transform$rad$WORLD$false"
+      "$18::CS1(AUTOGEN)#Left$CS2$[-25 63.6213 0]$WORLD$WORLD$mm$[1 0 0;0 1 0;0 0 1]$3x3 Transform$rad$WORLD$true$18:-:"
+      "RootPart::18(AUTOGEN)#Right$CS3$[-25 41.469 0]$WORLD$WORLD$mm$[1 0 0;0 1 0;0 0 1]$3x3 Transform$rad$WORLD$true$1"
+      "8:-:73::18(AUTOGEN)"
+      CGPos		      "[-25 63.6213 0]"
+      CGRot		      "[0 0 1;-1 0 0;0 -1 0]"
+      CS0Pos		      "[]"
+      CS0Rot		      "[]"
+      CS1Pos		      "[-25 81.469 0]"
+      CS1Rot		      "[0 0 1;-1 0 0;0 -1 0]"
+      CS2Pos		      "[-25 63.6213 0]"
+      CS2Rot		      "[1 0 0;0 1 0;0 0 1]"
+      CS3Pos		      "[-25 41.469 0]"
+      CS3Rot		      "[1 0 0;0 1 0;0 0 1]"
+      CS4Pos		      "[]"
+      CS4Rot		      "[]"
+      CS5Pos		      "[]"
+      CS5Rot		      "[]"
+      CS6Pos		      "[]"
+      CS6Rot		      "[]"
+      CS7Pos		      "[]"
+      CS7Rot		      "[]"
+      CS8Pos		      "[]"
+      CS8Rot		      "[]"
+      CS9Pos		      "[]"
+      CS9Rot		      "[]"
+      CS10Pos		      "[]"
+      CS10Rot		      "[]"
+      CS11Pos		      "[]"
+      CS11Rot		      "[]"
+      CS12Pos		      "[]"
+      CS12Rot		      "[]"
+      CS13Pos		      "[]"
+      CS13Rot		      "[]"
+      CS14Pos		      "[]"
+      CS14Rot		      "[]"
+      CS15Pos		      "[]"
+      CS15Rot		      "[]"
+      CS16Pos		      "[]"
+      CS16Rot		      "[]"
+      CS17Pos		      "[]"
+      CS17Rot		      "[]"
+      CS18Pos		      "[]"
+      CS18Rot		      "[]"
+      CS19Pos		      "[]"
+      CS19Rot		      "[]"
+      CS20Pos		      "[]"
+      CS20Rot		      "[]"
+    }
+    Block {
+      BlockType		      Reference
+      Name		      "ZYL_BUCHSE-2"
+      Ports		      [0, 0, 0, 0, 0, 1, 1]
+      Position		      [700, 1535, 760, 1575]
+      ForegroundColor	      "[0.000000, 0.501961, 0.752941]"
+      DialogController	      "MECH.DynMechDlgSource"
+      SourceBlock	      "mblibv1/Bodies/Body"
+      SourceType	      "Body"
+      PhysicalDomain	      "mechanical"
+      SubClassName	      "Unknown"
+      LeftPortType	      "workingframe"
+      RightPortType	      "workingframe"
+      LConnTagsString	      "CS2"
+      RConnTagsString	      "CS3"
+      PMImportedID	      "29"
+      UpdateFromCAD	      "on"
+      ClassName		      "Body"
+      DialogClass	      "MechanicalBodyBlock"
+      Mass		      "9.22021e+006"
+      MassUnits		      "kg"
+      InertiaUnits	      "kg*m^2"
+      Inertia		      "[1649.68,0,0;0,2339.31,0;0,0,2306.91]"
+      Shape		      "Cylinder"
+      ShapeDims		      "[1 1]"
+      ShapeUnits	      "m"
+      ShapeUse		      "false"
+      Density		      "1"
+      DensityUnits	      "kg/m^3"
+      DensityUse	      "false"
+      GraphicsMode	      "GFXFILE"
+      GraphicsFileName	      "ZYL_BUCHSE_prt.stl"
+      BodyColorSelMode	      "MACHINE_DEFAULT"
+      BodyColor		      "[1 0 0]"
+      AttachedToCS	      "CS1"
+      CG		      "Right$CG$[-25 19.6601 -60.5075]$WORLD$WORLD$mm$[0 0 1;-0.309017 -0.951057 0;0.951057 -0.309017 0]$3x3"
+      " Transform$rad$WORLD$false$29::CG(AUTOGEN)"
+      WorkingFrames	      "Right$CS1$[-25 25.1753 -77.4816]$WORLD$WORLD$mm$[0 0 1;-0.309017 -0.951057 0;0.951057 -0.30"
+      "9017 0]$3x3 Transform$rad$WORLD$false$29::CS1(AUTOGEN)#Left$CS2$[-25 19.6601 -60.5075]$WORLD$WORLD$mm$[1 0 0;0 1"
+      " 0;0 0 1]$3x3 Transform$rad$WORLD$true$29:-:RootPart::29(AUTOGEN)#Right$CS3$[-25 12.8146 -39.4393]$WORLD$WORLD$m"
+      "m$[1 0 0;0 1 0;0 0 1]$3x3 Transform$rad$WORLD$true$29:-:75::29(AUTOGEN)"
+      CGPos		      "[-25 19.6601 -60.5075]"
+      CGRot		      "[0 0 1;-0.309017 -0.951057 0;0.951057 -0.309017 0]"
+      CS0Pos		      "[]"
+      CS0Rot		      "[]"
+      CS1Pos		      "[-25 25.1753 -77.4816]"
+      CS1Rot		      "[0 0 1;-0.309017 -0.951057 0;0.951057 -0.309017 0]"
+      CS2Pos		      "[-25 19.6601 -60.5075]"
+      CS2Rot		      "[1 0 0;0 1 0;0 0 1]"
+      CS3Pos		      "[-25 12.8146 -39.4393]"
+      CS3Rot		      "[1 0 0;0 1 0;0 0 1]"
+      CS4Pos		      "[]"
+      CS4Rot		      "[]"
+      CS5Pos		      "[]"
+      CS5Rot		      "[]"
+      CS6Pos		      "[]"
+      CS6Rot		      "[]"
+      CS7Pos		      "[]"
+      CS7Rot		      "[]"
+      CS8Pos		      "[]"
+      CS8Rot		      "[]"
+      CS9Pos		      "[]"
+      CS9Rot		      "[]"
+      CS10Pos		      "[]"
+      CS10Rot		      "[]"
+      CS11Pos		      "[]"
+      CS11Rot		      "[]"
+      CS12Pos		      "[]"
+      CS12Rot		      "[]"
+      CS13Pos		      "[]"
+      CS13Rot		      "[]"
+      CS14Pos		      "[]"
+      CS14Rot		      "[]"
+      CS15Pos		      "[]"
+      CS15Rot		      "[]"
+      CS16Pos		      "[]"
+      CS16Rot		      "[]"
+      CS17Pos		      "[]"
+      CS17Rot		      "[]"
+      CS18Pos		      "[]"
+      CS18Rot		      "[]"
+      CS19Pos		      "[]"
+      CS19Rot		      "[]"
+      CS20Pos		      "[]"
+      CS20Rot		      "[]"
+    }
+    Block {
+      BlockType		      Reference
+      Name		      "ZYL_BUCHSE-3"
+      Ports		      [0, 0, 0, 0, 0, 1, 1]
+      Position		      [700, 1415, 760, 1455]
+      ForegroundColor	      "[0.000000, 0.501961, 0.752941]"
+      DialogController	      "MECH.DynMechDlgSource"
+      SourceBlock	      "mblibv1/Bodies/Body"
+      SourceType	      "Body"
+      PhysicalDomain	      "mechanical"
+      SubClassName	      "Unknown"
+      LeftPortType	      "workingframe"
+      RightPortType	      "workingframe"
+      LConnTagsString	      "CS2"
+      RConnTagsString	      "CS3"
+      PMImportedID	      "62"
+      UpdateFromCAD	      "on"
+      ClassName		      "Body"
+      DialogClass	      "MechanicalBodyBlock"
+      Mass		      "9.22021e+006"
+      MassUnits		      "kg"
+      InertiaUnits	      "kg*m^2"
+      Inertia		      "[1649.68,0,0;0,2339.31,0;0,0,2306.91]"
+      Shape		      "Cylinder"
+      ShapeDims		      "[1 1]"
+      ShapeUnits	      "m"
+      ShapeUse		      "false"
+      Density		      "1"
+      DensityUnits	      "kg/m^3"
+      DensityUse	      "false"
+      GraphicsMode	      "GFXFILE"
+      GraphicsFileName	      "ZYL_BUCHSE_prt.stl"
+      BodyColorSelMode	      "MACHINE_DEFAULT"
+      BodyColor		      "[1 0 0]"
+      AttachedToCS	      "CS1"
+      CG		      "Right$CG$[-25 19.6601 60.5075]$WORLD$WORLD$mm$[0 0 1;-0.309017 0.951057 0;-0.951057 -0.309017 0]$3x3 "
+      "Transform$rad$WORLD$false$62::CG(AUTOGEN)"
+      WorkingFrames	      "Right$CS1$[-25 25.1753 77.4816]$WORLD$WORLD$mm$[0 0 1;-0.309017 0.951057 0;-0.951057 -0.309"
+      "017 0]$3x3 Transform$rad$WORLD$false$62::CS1(AUTOGEN)#Left$CS2$[-25 19.6601 60.5075]$WORLD$WORLD$mm$[1 0 0;0 1 0"
+      ";0 0 1]$3x3 Transform$rad$WORLD$true$62:-:RootPart::62(AUTOGEN)#Right$CS3$[-25 12.8146 39.4393]$WORLD$WORLD$mm$["
+      "1 0 0;0 1 0;0 0 1]$3x3 Transform$rad$WORLD$true$110:-:62::62(AUTOGEN)"
+      CGPos		      "[-25 19.6601 60.5075]"
+      CGRot		      "[0 0 1;-0.309017 0.951057 0;-0.951057 -0.309017 0]"
+      CS0Pos		      "[]"
+      CS0Rot		      "[]"
+      CS1Pos		      "[-25 25.1753 77.4816]"
+      CS1Rot		      "[0 0 1;-0.309017 0.951057 0;-0.951057 -0.309017 0]"
+      CS2Pos		      "[-25 19.6601 60.5075]"
+      CS2Rot		      "[1 0 0;0 1 0;0 0 1]"
+      CS3Pos		      "[-25 12.8146 39.4393]"
+      CS3Rot		      "[1 0 0;0 1 0;0 0 1]"
+      CS4Pos		      "[]"
+      CS4Rot		      "[]"
+      CS5Pos		      "[]"
+      CS5Rot		      "[]"
+      CS6Pos		      "[]"
+      CS6Rot		      "[]"
+      CS7Pos		      "[]"
+      CS7Rot		      "[]"
+      CS8Pos		      "[]"
+      CS8Rot		      "[]"
+      CS9Pos		      "[]"
+      CS9Rot		      "[]"
+      CS10Pos		      "[]"
+      CS10Rot		      "[]"
+      CS11Pos		      "[]"
+      CS11Rot		      "[]"
+      CS12Pos		      "[]"
+      CS12Rot		      "[]"
+      CS13Pos		      "[]"
+      CS13Rot		      "[]"
+      CS14Pos		      "[]"
+      CS14Rot		      "[]"
+      CS15Pos		      "[]"
+      CS15Rot		      "[]"
+      CS16Pos		      "[]"
+      CS16Rot		      "[]"
+      CS17Pos		      "[]"
+      CS17Rot		      "[]"
+      CS18Pos		      "[]"
+      CS18Rot		      "[]"
+      CS19Pos		      "[]"
+      CS19Rot		      "[]"
+      CS20Pos		      "[]"
+      CS20Rot		      "[]"
+    }
+    Block {
+      BlockType		      Reference
+      Name		      "ZYL_BUCHSE-4"
+      Ports		      [0, 0, 0, 0, 0, 1, 1]
+      Position		      [700, 1780, 760, 1820]
+      ForegroundColor	      "[0.000000, 0.501961, 0.752941]"
+      DialogController	      "MECH.DynMechDlgSource"
+      SourceBlock	      "mblibv1/Bodies/Body"
+      SourceType	      "Body"
+      PhysicalDomain	      "mechanical"
+      SubClassName	      "Unknown"
+      LeftPortType	      "workingframe"
+      RightPortType	      "workingframe"
+      LConnTagsString	      "CS2"
+      RConnTagsString	      "CS3"
+      PMImportedID	      "89"
+      UpdateFromCAD	      "on"
+      ClassName		      "Body"
+      DialogClass	      "MechanicalBodyBlock"
+      Mass		      "9.22021e+006"
+      MassUnits		      "kg"
+      InertiaUnits	      "kg*m^2"
+      Inertia		      "[1649.68,0,0;0,2339.31,0;0,0,2306.91]"
+      Shape		      "Cylinder"
+      ShapeDims		      "[1 1]"
+      ShapeUnits	      "m"
+      ShapeUse		      "false"
+      Density		      "1"
+      DensityUnits	      "kg/m^3"
+      DensityUse	      "false"
+      GraphicsMode	      "GFXFILE"
+      GraphicsFileName	      "ZYL_BUCHSE_prt.stl"
+      BodyColorSelMode	      "MACHINE_DEFAULT"
+      BodyColor		      "[1 0 0]"
+      AttachedToCS	      "CS1"
+      CG		      "Right$CG$[-25 -51.4707 37.3957]$WORLD$WORLD$mm$[0 0 1;0.809017 0.587785 0;-0.587785 0.809017 0]$3x3 T"
+      "ransform$rad$WORLD$false$89::CG(AUTOGEN)"
+      WorkingFrames	      "Right$CS1$[-25 -65.9098 47.8863]$WORLD$WORLD$mm$[0 0 1;0.809017 0.587785 0;-0.587785 0.8090"
+      "17 0]$3x3 Transform$rad$WORLD$false$89::CS1(AUTOGEN)#Left$CS2$[-25 -51.4707 37.3957]$WORLD$WORLD$mm$[1 0 0;0 1 0"
+      ";0 0 1]$3x3 Transform$rad$WORLD$true$89:-:RootPart::89(AUTOGEN)#Right$CS3$[-25 -33.5491 24.3749]$WORLD$WORLD$mm$"
+      "[1 0 0;0 1 0;0 0 1]$3x3 Transform$rad$WORLD$true$81:-:89::89(AUTOGEN)"
+      CGPos		      "[-25 -51.4707 37.3957]"
+      CGRot		      "[0 0 1;0.809017 0.587785 0;-0.587785 0.809017 0]"
+      CS0Pos		      "[]"
+      CS0Rot		      "[]"
+      CS1Pos		      "[-25 -65.9098 47.8863]"
+      CS1Rot		      "[0 0 1;0.809017 0.587785 0;-0.587785 0.809017 0]"
+      CS2Pos		      "[-25 -51.4707 37.3957]"
+      CS2Rot		      "[1 0 0;0 1 0;0 0 1]"
+      CS3Pos		      "[-25 -33.5491 24.3749]"
+      CS3Rot		      "[1 0 0;0 1 0;0 0 1]"
+      CS4Pos		      "[]"
+      CS4Rot		      "[]"
+      CS5Pos		      "[]"
+      CS5Rot		      "[]"
+      CS6Pos		      "[]"
+      CS6Rot		      "[]"
+      CS7Pos		      "[]"
+      CS7Rot		      "[]"
+      CS8Pos		      "[]"
+      CS8Rot		      "[]"
+      CS9Pos		      "[]"
+      CS9Rot		      "[]"
+      CS10Pos		      "[]"
+      CS10Rot		      "[]"
+      CS11Pos		      "[]"
+      CS11Rot		      "[]"
+      CS12Pos		      "[]"
+      CS12Rot		      "[]"
+      CS13Pos		      "[]"
+      CS13Rot		      "[]"
+      CS14Pos		      "[]"
+      CS14Rot		      "[]"
+      CS15Pos		      "[]"
+      CS15Rot		      "[]"
+      CS16Pos		      "[]"
+      CS16Rot		      "[]"
+      CS17Pos		      "[]"
+      CS17Rot		      "[]"
+      CS18Pos		      "[]"
+      CS18Rot		      "[]"
+      CS19Pos		      "[]"
+      CS19Rot		      "[]"
+      CS20Pos		      "[]"
+      CS20Rot		      "[]"
+    }
+    Line {
+      LineType		      "Connection"
+      SrcBlock		      "RootPart"
+      SrcPort		      RConn1
+      Points		      [25, 0; 0, -895]
+      DstBlock		      "Weld"
+      DstPort		      LConn1
+    }
+    Line {
+      LineType		      "Connection"
+      SrcBlock		      "Weld"
+      SrcPort		      RConn1
+      DstBlock		      "ZYL-KOPF"
+      DstPort		      LConn1
+    }
+    Line {
+      LineType		      "Connection"
+      SrcBlock		      "RootPart"
+      SrcPort		      RConn2
+      Points		      [45, 0; 0, -780]
+      DstBlock		      "Weld1"
+      DstPort		      LConn1
+    }
+    Line {
+      LineType		      "Connection"
+      SrcBlock		      "Weld1"
+      SrcPort		      RConn1
+      DstBlock		      "ZYL-KOPF-1"
+      DstPort		      LConn1
+    }
+    Line {
+      LineType		      "Connection"
+      SrcBlock		      "RootPart"
+      SrcPort		      RConn3
+      Points		      [45, 0; 0, -665]
+      DstBlock		      "Weld2"
+      DstPort		      LConn1
+    }
+    Line {
+      LineType		      "Connection"
+      SrcBlock		      "Weld2"
+      SrcPort		      RConn1
+      DstBlock		      "ZYL-KOPF-2"
+      DstPort		      LConn1
+    }
+    Line {
+      LineType		      "Connection"
+      SrcBlock		      "RootPart"
+      SrcPort		      RConn4
+      Points		      [45, 0; 0, -550]
+      DstBlock		      "Weld3"
+      DstPort		      LConn1
+    }
+    Line {
+      LineType		      "Connection"
+      SrcBlock		      "Weld3"
+      SrcPort		      RConn1
+      DstBlock		      "ZYL-KOPF-3"
+      DstPort		      LConn1
+    }
+    Line {
+      LineType		      "Connection"
+      SrcBlock		      "RootPart"
+      SrcPort		      RConn5
+      Points		      [45, 0; 0, -435]
+      DstBlock		      "Weld4"
+      DstPort		      LConn1
+    }
+    Line {
+      LineType		      "Connection"
+      SrcBlock		      "Weld4"
+      SrcPort		      RConn1
+      DstBlock		      "ZYL-KOPF-4"
+      DstPort		      LConn1
+    }
+    Line {
+      LineType		      "Connection"
+      SrcBlock		      "RootPart"
+      SrcPort		      RConn6
+      Points		      [45, 0; 0, -320]
+      DstBlock		      "Weld5"
+      DstPort		      LConn1
+    }
+    Line {
+      LineType		      "Connection"
+      SrcBlock		      "Weld5"
+      SrcPort		      RConn1
+      DstBlock		      "ZYLINDER"
+      DstPort		      LConn1
+    }
+    Line {
+      LineType		      "Connection"
+      SrcBlock		      "RootPart"
+      SrcPort		      RConn7
+      Points		      [45, 0; 0, -205]
+      DstBlock		      "Weld6"
+      DstPort		      LConn1
+    }
+    Line {
+      LineType		      "Connection"
+      SrcBlock		      "Weld6"
+      SrcPort		      RConn1
+      DstBlock		      "ZYLINDER-1"
+      DstPort		      LConn1
+    }
+    Line {
+      LineType		      "Connection"
+      SrcBlock		      "RootPart"
+      SrcPort		      RConn8
+      Points		      [45, 0; 0, -90]
+      DstBlock		      "Weld7"
+      DstPort		      LConn1
+    }
+    Line {
+      LineType		      "Connection"
+      SrcBlock		      "Weld7"
+      SrcPort		      RConn1
+      DstBlock		      "ZYLINDER-2"
+      DstPort		      LConn1
+    }
+    Line {
+      LineType		      "Connection"
+      SrcBlock		      "RootPart"
+      SrcPort		      RConn9
+      Points		      [25, 0; 0, 25]
+      DstBlock		      "Weld8"
+      DstPort		      LConn1
+    }
+    Line {
+      LineType		      "Connection"
+      SrcBlock		      "Weld8"
+      SrcPort		      RConn1
+      DstBlock		      "ZYLINDER-3"
+      DstPort		      LConn1
+    }
+    Line {
+      LineType		      "Connection"
+      SrcBlock		      "RootPart"
+      SrcPort		      RConn10
+      Points		      [15, 0; 0, 140]
+      DstBlock		      "Weld9"
+      DstPort		      LConn1
+    }
+    Line {
+      LineType		      "Connection"
+      SrcBlock		      "Weld9"
+      SrcPort		      RConn1
+      DstBlock		      "ZYLINDER-4"
+      DstPort		      LConn1
+    }
+    Line {
+      LineType		      "Connection"
+      SrcBlock		      "RootPart"
+      SrcPort		      RConn11
+      Points		      [5, 0; 0, 255]
+      DstBlock		      "Weld10"
+      DstPort		      LConn1
+    }
+    Line {
+      LineType		      "Connection"
+      SrcBlock		      "Weld10"
+      SrcPort		      RConn1
+      Points		      [25, 0; 0, -5]
+      DstBlock		      "ZYL_BUCHSE"
+      DstPort		      LConn1
+    }
+    Line {
+      LineType		      "Connection"
+      SrcBlock		      "RootPart"
+      SrcPort		      RConn12
+      Points		      [60, 0; 0, 80; 115, 0; 0, 470]
+      DstBlock		      "Weld11"
+      DstPort		      LConn1
+    }
+    Line {
+      LineType		      "Connection"
+      SrcBlock		      "Weld11"
+      SrcPort		      RConn1
+      Points		      [25, 0; 0, 5]
+      DstBlock		      "ZYL_BUCHSE-1"
+      DstPort		      LConn1
+    }
+    Line {
+      LineType		      "Connection"
+      SrcBlock		      "RootPart"
+      SrcPort		      RConn13
+      Points		      [45, 0; 0, 355]
+      DstBlock		      "Weld12"
+      DstPort		      LConn1
+    }
+    Line {
+      LineType		      "Connection"
+      SrcBlock		      "Weld12"
+      SrcPort		      RConn1
+      Points		      [185, 0; 0, 60]
+      DstBlock		      "ZYL_BUCHSE-2"
+      DstPort		      LConn1
+    }
+    Line {
+      LineType		      "Connection"
+      SrcBlock		      "RootPart"
+      SrcPort		      RConn14
+      Points		      [45, 0; 0, 475]
+      DstBlock		      "Weld13"
+      DstPort		      LConn1
+    }
+    Line {
+      LineType		      "Connection"
+      SrcBlock		      "Weld13"
+      SrcPort		      RConn1
+      Points		      [185, 0; 0, -195]
+      DstBlock		      "ZYL_BUCHSE-3"
+      DstPort		      LConn1
+    }
+    Line {
+      LineType		      "Connection"
+      SrcBlock		      "RootPart"
+      SrcPort		      RConn15
+      Points		      [175, 0; 0, 635]
+      DstBlock		      "Weld14"
+      DstPort		      LConn1
+    }
+    Line {
+      LineType		      "Connection"
+      SrcBlock		      "Weld14"
+      SrcPort		      RConn1
+      Points		      [25, 0; 0, -5]
+      DstBlock		      "ZYL_BUCHSE-4"
+      DstPort		      LConn1
+    }
+    Line {
+      LineType		      "Connection"
+      SrcBlock		      "ZYL_BUCHSE-3"
+      SrcPort		      RConn1
+      DstBlock		      "Cylindrical"
+      DstPort		      LConn1
+    }
+    Line {
+      LineType		      "Connection"
+      SrcBlock		      "Cylindrical"
+      SrcPort		      RConn1
+      Points		      [450, 0; 0, 185]
+      DstBlock		      "KOLBEN-3"
+      DstPort		      LConn1
+    }
+    Line {
+      LineType		      "Connection"
+      SrcBlock		      "ZYL_BUCHSE-4"
+      SrcPort		      RConn1
+      Points		      [30, 0; 0, -190]
+      DstBlock		      "Cylindrical1"
+      DstPort		      LConn1
+    }
+    Line {
+      LineType		      "Connection"
+      SrcBlock		      "Cylindrical1"
+      SrcPort		      RConn1
+      Points		      [65, 0; 0, -60; 385, 0; 0, -95]
+      DstBlock		      "KOLBEN-4"
+      DstPort		      LConn1
+    }
+    Line {
+      LineType		      "Connection"
+      SrcBlock		      "KURBELWELLE"
+      SrcPort		      RConn1
+      Points		      [25, 0; 0, -25]
+      DstBlock		      "Cylindrical2"
+      DstPort		      LConn1
+    }
+    Line {
+      LineType		      "Connection"
+      SrcBlock		      "Cylindrical2"
+      SrcPort		      RConn1
+      Points		      [30, 0; 0, -115]
+      DstBlock		      "HAUPT_PLEUEL"
+      DstPort		      LConn1
+    }
+    Line {
+      LineType		      "Connection"
+      SrcBlock		      "KURBELWELLE"
+      SrcPort		      RConn2
+      Points		      [25, 0; 0, 130]
+      DstBlock		      "Weld15"
+      DstPort		      LConn1
+    }
+    Line {
+      LineType		      "Connection"
+      SrcBlock		      "Weld15"
+      SrcPort		      RConn1
+      Points		      [30, 0; 0, 55]
+      DstBlock		      "PROPELLER"
+      DstPort		      LConn1
+    }
+    Line {
+      LineType		      "Connection"
+      SrcBlock		      "RootPart"
+      SrcPort		      RConn16
+      Points		      [45, 0; 0, 655]
+      DstBlock		      "Revolute"
+      DstPort		      LConn1
+    }
+    Line {
+      LineType		      "Connection"
+      SrcBlock		      "Revolute"
+      SrcPort		      RConn1
+      Points		      [25, 0; 0, 115]
+      DstBlock		      "KURBELWELLE"
+      DstPort		      LConn1
+    }
+    Line {
+      LineType		      "Connection"
+      SrcBlock		      "HAUPT_PLEUEL"
+      SrcPort		      RConn1
+      Points		      [45, 0; 0, -270]
+      DstBlock		      "Revolute1"
+      DstPort		      LConn1
+    }
+    Line {
+      LineType		      "Connection"
+      SrcBlock		      "Revolute1"
+      SrcPort		      RConn1
+      Points		      [25, 0; 0, -5]
+      DstBlock		      "PLEUEL"
+      DstPort		      LConn1
+    }
+    Line {
+      LineType		      "Connection"
+      SrcBlock		      "HAUPT_PLEUEL"
+      SrcPort		      RConn2
+      Points		      [45, 0; 0, -160]
+      DstBlock		      "Revolute2"
+      DstPort		      LConn1
+    }
+    Line {
+      LineType		      "Connection"
+      SrcBlock		      "Revolute2"
+      SrcPort		      RConn1
+      Points		      [25, 0; 0, -10]
+      DstBlock		      "PLEUEL-1"
+      DstPort		      LConn1
+    }
+    Line {
+      LineType		      "Connection"
+      SrcBlock		      "HAUPT_PLEUEL"
+      SrcPort		      RConn3
+      Points		      [45, 0; 0, -50]
+      DstBlock		      "Revolute3"
+      DstPort		      LConn1
+    }
+    Line {
+      LineType		      "Connection"
+      SrcBlock		      "Revolute3"
+      SrcPort		      RConn1
+      Points		      [25, 0; 0, -15]
+      DstBlock		      "PLEUEL-2"
+      DstPort		      LConn1
+    }
+    Line {
+      LineType		      "Connection"
+      SrcBlock		      "HAUPT_PLEUEL"
+      SrcPort		      RConn4
+      Points		      [25, 0; 0, 60]
+      DstBlock		      "Revolute4"
+      DstPort		      LConn1
+    }
+    Line {
+      LineType		      "Connection"
+      SrcBlock		      "Revolute4"
+      SrcPort		      RConn1
+      DstBlock		      "PLEUEL-3"
+      DstPort		      LConn1
+    }
+    Line {
+      LineType		      "Connection"
+      SrcBlock		      "HAUPT_PLEUEL"
+      SrcPort		      RConn5
+      Points		      [15, 0; 0, 170]
+      DstBlock		      "Cylindrical3"
+      DstPort		      LConn1
+    }
+    Line {
+      LineType		      "Connection"
+      SrcBlock		      "Cylindrical3"
+      SrcPort		      RConn1
+      Points		      [25, 0; 0, -15]
+      DstBlock		      "KOLBEN-2"
+      DstPort		      LConn1
+    }
+    Line {
+      LineType		      "Connection"
+      SrcBlock		      "PLEUEL"
+      SrcPort		      RConn1
+      Points		      [45, 0; 0, -130]
+      DstBlock		      "Cylindrical4"
+      DstPort		      LConn1
+    }
+    Line {
+      LineType		      "Connection"
+      SrcBlock		      "Cylindrical4"
+      SrcPort		      RConn1
+      Points		      [25, 0; 0, -80]
+      DstBlock		      "KOLBEN"
+      DstPort		      LConn1
+    }
+    Line {
+      LineType		      "Connection"
+      SrcBlock		      "PLEUEL-1"
+      SrcPort		      RConn1
+      Points		      [45, 0; 0, -120]
+      DstBlock		      "Cylindrical5"
+      DstPort		      LConn1
+    }
+    Line {
+      LineType		      "Connection"
+      SrcBlock		      "Cylindrical5"
+      SrcPort		      RConn1
+      Points		      [45, 0; 0, -20]
+      DstBlock		      "KOLBEN-4"
+      DstPort		      LConn2
+    }
+    Line {
+      LineType		      "Connection"
+      SrcBlock		      "PLEUEL-2"
+      SrcPort		      RConn1
+      Points		      [25, 0; 0, -55]
+      DstBlock		      "Cylindrical6"
+      DstPort		      LConn1
+    }
+    Line {
+      LineType		      "Connection"
+      SrcBlock		      "Cylindrical6"
+      SrcPort		      RConn1
+      Points		      [25, 0; 0, -45]
+      DstBlock		      "KOLBEN-3"
+      DstPort		      LConn2
+    }
+    Line {
+      LineType		      "Connection"
+      SrcBlock		      "PLEUEL-3"
+      SrcPort		      RConn1
+      Points		      [25, 0; 0, 30]
+      DstBlock		      "Cylindrical7"
+      DstPort		      LConn1
+    }
+    Line {
+      LineType		      "Connection"
+      SrcBlock		      "Cylindrical7"
+      SrcPort		      RConn1
+      Points		      [25, 0; 0, 60]
+      DstBlock		      "KOLBEN-1"
+      DstPort		      LConn1
+    }
+    Line {
+      LineType		      "Connection"
+      SrcBlock		      "PROPELLER"
+      SrcPort		      RConn1
+      Points		      [0, 10]
+      DstBlock		      "Weld16"
+      DstPort		      LConn1
+    }
+    Line {
+      LineType		      "Connection"
+      SrcBlock		      "Weld16"
+      SrcPort		      RConn1
+      DstBlock		      "SPINNER"
+      DstPort		      LConn1
+    }
+    Line {
+      LineType		      "Connection"
+      SrcBlock		      "ZYL_BUCHSE"
+      SrcPort		      RConn1
+      Points		      [100, 0; 0, -55]
+      DstBlock		      "Cylindrical8"
+      DstPort		      LConn1
+    }
+    Line {
+      LineType		      "Connection"
+      SrcBlock		      "Cylindrical8"
+      SrcPort		      RConn1
+      Points		      [450, 0; 0, 15]
+      DstBlock		      "KOLBEN"
+      DstPort		      LConn2
+    }
+    Line {
+      LineType		      "Connection"
+      SrcBlock		      "ZYL_BUCHSE-1"
+      SrcPort		      RConn1
+      Points		      [460, 0; 0, 395]
+      DstBlock		      "Cylindrical9"
+      DstPort		      LConn1
+    }
+    Line {
+      LineType		      "Connection"
+      SrcBlock		      "Cylindrical9"
+      SrcPort		      RConn1
+      Points		      [25, 0; 0, -60]
+      DstBlock		      "KOLBEN-1"
+      DstPort		      LConn2
+    }
+    Line {
+      LineType		      "Connection"
+      SrcBlock		      "ZYL_BUCHSE-2"
+      SrcPort		      RConn1
+      Points		      [50, 0; 0, 440]
+      DstBlock		      "Cylindrical10"
+      DstPort		      LConn1
+    }
+    Line {
+      LineType		      "Connection"
+      SrcBlock		      "Cylindrical10"
+      SrcPort		      RConn1
+      Points		      [10, 0; 0, 75; 170, 0; 0, -30]
+      DstBlock		      "KOLBEN-2"
+      DstPort		      LConn2
+    }
+    Line {
+      LineType		      "Connection"
+      SrcBlock		      "RootGround"
+      SrcPort		      RConn1
+      DstBlock		      "Weld17"
+      DstPort		      LConn1
+    }
+    Line {
+      LineType		      "Connection"
+      SrcBlock		      "Weld17"
+      SrcPort		      RConn1
+      Points		      [25, 0; 0, 35]
+      DstBlock		      "RootPart"
+      DstPort		      LConn1
+    }
+    Line {
+      LineType		      "Connection"
+      SrcBlock		      "RootGround"
+      SrcPort		      LConn1
+      Points		      [-10, 0; 0, -50]
+      DstBlock		      "Machine\nEnvironment"
+      DstPort		      RConn1
+    }
+    Line {
+      LineType		      "Connection"
+      SrcBlock		      "Joint Actuator"
+      SrcPort		      RConn1
+      Points		      [100, 0; 0, -115]
+      DstBlock		      "Cylindrical2"
+      DstPort		      LConn2
+    }
+    Line {
+      SrcBlock		      "Constant"
+      SrcPort		      1
+      Points		      [20, 0; 0, 5]
+      DstBlock		      "Joint Actuator"
+      DstPort		      1
+    }
+    Line {
+      SrcBlock		      "Body Sensor1"
+      SrcPort		      1
+      Points		      [255, 0]
+      DstBlock		      "Scope"
+      DstPort		      1
+    }
+    Line {
+      LineType		      "Connection"
+      SrcBlock		      "Body Sensor1"
+      SrcPort		      LConn1
+      Points		      [-5, 0; 0, 40; 250, 0; 0, -50]
+      DstBlock		      "PROPELLER"
+      DstPort		      RConn2
+    }
+  }
+}
+MatData {
+  NumRecords		  1
+  DataRecord {
+    Tag			    DataTag0
+    Data		    "  %)30     .    4     8    (    !          %    \"     $    :     0         0    &@   $%)4D-204947T5.1T"
+    "E.12]2;V]T1W)O=6YD        "
+  }
+}
