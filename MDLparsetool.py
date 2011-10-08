@@ -3,17 +3,27 @@ import re
 import string
 
 """
-This tool is for parsing .mdl file, which is created directly under Matlab's SimMechanics system.
-"""
+This tool is for parsing MDL file, which is created directly under Matlab's SimMechanics system.
 
-"""
+Methods:
+	getParam(mdlSys, attriName, ex = 1)
+	findBlock(mdlSys, obj, attriName, keyVal)
+	getWorkingFrame(mdlSys, value)
+	getConnection(mdlSys, jointList)
+
+Take a look at main() part to learn how to use them
+
+Author: StevenTen
+E-mail: steventenie@gmail.com
+
 Credits:
-Most of the code is based on the json parser example distributed with
+Code for parsing mdl file into nest list was writtern by Kjell Magne Fauske,
+and most of his code is based on the json parser example distributed with
 pyparsing. The code in jsonParser.py was written by Paul McGuire
 
-Code for parsing mdl file into nest list was writtern by Kjell Magne Fauske
-
 """
+
+## Code from Kjell Magne Fauske #############
 
 # A high level grammar of the Simulink mdl file format
 SIMULINK_BNF = """
@@ -97,11 +107,13 @@ def mdlParser(mdlFilePath):
 	mdlparser = mdlObject
 	result = mdlparser.parseString(mdldata)
 	return result
+## end of his code #############
 
 def getParam(mdlSys, attriName, ex = 1):
-	""" Find the value of a special attribute in the mdl system sequence
-		If ex = 1 : list [Block Name, value]
-		If ex = 0 : list only the value of the attribute
+	""" 
+	Find the value of a specified attribute in the mdl system sequence
+		If ex = 1 : list style would be like: [Block Name, value]
+		If ex = 0 : list style would only be the value of the attribute
 	"""
 	result = []
 	for syslist in mdlSys:
@@ -146,8 +158,9 @@ def getParam(mdlSys, attriName, ex = 1):
 	return result
 		
 
-def	findBlock(mdlSys, obj, attriName, keyVal):
-	"""Find all the Blocks that has an keyVal in an Attribute
+def findBlock(mdlSys, obj, attriName, keyVal):
+	"""
+	Find all the Blocks that has an keyVal in an Attribute
 	"""
 	result = []
 	for syslist in mdlSys:
@@ -163,7 +176,8 @@ def	findBlock(mdlSys, obj, attriName, keyVal):
 	
 	
 def getWorkingFrame(mdlSys, value):
-	"""Speical used for parsing the WorkingFrames Attribute of Body Blocks
+	"""
+	Speical used for parsing the WorkingFrames Attribute of Body Blocks
 	   Can Get the CG and CS systems
 	"""
 	wPattern = getParam(mdlSys, value)
@@ -278,45 +292,6 @@ def getConnection(mdlSys, jointList):
 #		numMatrix = eval(stringMatrix)
 #	return numMatrix
 
-def main():
-	import os
-	from pprint import pprint
-	filePath = os.path.join(os.getcwd(),'testExample','fourBar.mdl')
-	#testdata = open('AIRCRAFT_ENGINE.mdl','r').read()
-	result = mdlParser(filePath)
-	mdldata = result.asList()
-	#mdldata = result
-	
-	bodyListCG = getWorkingFrame(mdldata, 'CG')
-	bodyListCS = getWorkingFrame(mdldata, 'WorkingFrames')
-	print 'bodyListCG'
-	pprint(bodyListCG)
-	JointList = findBlock(mdldata,'Block','DialogClass','JointBlock')
-	JointNameList = getParam(JointList,'Name',0)
-	ConnList = getConnection(mdldata, JointNameList)
-	print 'ConnList'
-	pprint(ConnList)
-	print 'ConnList[1]'
-	pprint(ConnList[1])
-	print 'ConnList[1][1]'
-	pprint(ConnList[1][1])
-	fListT = open('fourBarTemplete.txt','wb')
-	import pickle
-	mechInfo = [bodyListCS,bodyListCG,JointList,ConnList]
-	pickle.dump(mechInfo,fListT) # directly store an object into file
-	fListT.close()
-	readTemp = open('fourBarTemplete.txt','rb')
-	rListT = pickle.load(readTemp)
-#	print 'rListT',rListT
-#	rbodyListCS = rListT[0]
-#	rJointList = rListT[1]
-#	rConnList = rListT[2]
-#	print 'rbodyListCS', rbodyListCS
-#	print 'rJointList', rJointList
-# test stuff
-if __name__ == '__main__':
-	main()
-
 #mmt = parseMatrix('-122.558,14.7511,2.5')
 #print mmt
 #print mmt[1]
@@ -361,3 +336,45 @@ if __name__ == '__main__':
 #		print 1
 #		if value in item:
 #			return index, item
+
+
+def main():
+	import os
+	from pprint import pprint
+	filePath = os.path.join(os.getcwd(),'testExample','fourBar.mdl')
+	#testdata = open('AIRCRAFT_ENGINE.mdl','r').read()
+	result = mdlParser(filePath)
+	mdldata = result.asList()
+	#mdldata = result
+	
+	bodyListCG = getWorkingFrame(mdldata, 'CG')
+	bodyListCS = getWorkingFrame(mdldata, 'WorkingFrames')
+	print 'bodyListCG'
+	pprint(bodyListCG)
+	JointList = findBlock(mdldata,'Block','DialogClass','JointBlock')
+	JointNameList = getParam(JointList,'Name',0)
+	ConnList = getConnection(mdldata, JointNameList)
+	print 'ConnList'
+	pprint(ConnList)
+	print 'ConnList[1]'
+	pprint(ConnList[1])
+	print 'ConnList[1][1]'
+	pprint(ConnList[1][1])
+	fListT = open('fourBarTemplete.txt','wb')
+	import pickle
+	mechInfo = [bodyListCS,bodyListCG,JointList,ConnList]
+	pickle.dump(mechInfo,fListT) # directly store an object into file
+	fListT.close()
+	readTemp = open('fourBarTemplete.txt','rb')
+	rListT = pickle.load(readTemp)
+#	print 'rListT',rListT
+#	rbodyListCS = rListT[0]
+#	rJointList = rListT[1]
+#	rConnList = rListT[2]
+#	print 'rbodyListCS', rbodyListCS
+#	print 'rJointList', rJointList
+
+### test stuff
+if __name__ == '__main__':
+	main()
+
