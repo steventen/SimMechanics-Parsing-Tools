@@ -13,7 +13,7 @@ Methods:
 
 Take a look at main() part to learn how to use them
 
-Author: StevenTen
+Author: Cong (Steven) Yue
 E-mail: steventenie@gmail.com
 
 Credits:
