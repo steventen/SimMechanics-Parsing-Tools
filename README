@@ -13,5 +13,6 @@ To run this tool, you'll need:
 	* for mdl file parser, you need to install pyparsing module
 
 ##-- Credits --##
+Project author: Cong (Steven) Yue
 Most of the code for parsing mdl file into nest list was writtern by Kjell Magne Fauske
 
